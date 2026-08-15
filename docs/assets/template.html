@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — {{PERIOD}}</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">{{PERIOD}} ／ {{HEADLINE}}</h1>
+  <p class="lead">{{LEAD}}</p>
+  <div class="meta-row">
+    <span>期間: {{PERIOD}}</span>
+    <span>エントリ数: {{ENTRY_COUNT}}</span>
+    <span>ソース: {{SOURCES}}</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <!-- カテゴリの数だけ <li> を繰り返す。num は 01, 02, ... の連番、href はカテゴリセクションの id と対応させる -->
+    <li><a href="#c1"><span class="num">01</span>{{CAT_NAME}}<span class="cnt">{{N}}</span></a></li>
+    <!-- <li><a href="#c2"><span class="num">02</span>{{CAT_NAME}}<span class="cnt">{{N}}</span></a></li> -->
+  </ol>
+</nav>
+
+<!-- カテゴリセクション。カテゴリの数だけ <section class="cat" id="cN"> ブロックを繰り返す -->
+<section class="cat" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>{{CAT_TITLE}}</h2>
+  <p class="cat-desc">{{CAT_DESC}}</p>
+
+  <!-- 記事エントリ。カテゴリ内の記事数だけ <article class="entry"> ブロックを繰り返す -->
+  <article class="entry">
+    <h3><a href="{{URL}}" target="_blank" rel="noopener">{{TITLE}}</a></h3>
+    <p class="summary">{{SUMMARY}}</p>
+    <div class="tags"><span class="tag date">{{DATE}}</span><span class="tag">{{SOURCE}}</span><span class="tag">{{TOPIC}}</span></div>
+  </article>
+</section>
+
+<footer class="foot">
+  <p>{{FOOTNOTE}}</p>
+  <p>Generated {{GENERATED_DATE}} — companion to <code>{{DIGEST_MD_FILENAME}}</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>
