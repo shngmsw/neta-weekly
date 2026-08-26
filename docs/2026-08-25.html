@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — 2026-08-19 〜 2026-08-25</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">2026-08-19 〜 2026-08-25 ／ Claude Academy・エージェント設計論・AI 活用の逆説</h1>
+  <p class="lead">Anthropicが無償学習サイト「Claude Academy」を公開し普及策を強化する一方、FTが「安価ツール台頭でClaudeの最上位モデルが苦戦」と報じるなど、拡大策と市場逆風が同時進行した週。 「業務量が減らない」「生産性3倍でチームを置き去りにした」「AIに書かせたら休めなくなった」「宿題は上がるが試験は下がる」など、AI活用の効果を疑う逆説的な知見が連日浮上し、独立したサーガとして定着した。 「ハーネスとは何か」「agent.md」等コーディングエージェントの設計論が言語化される一方、「人月SIerは詰む」「バイブ税」など受託・コスト構造を問う論考も並走した。</p>
+  <div class="meta-row">
+    <span>期間: 2026-08-19 〜 2026-08-25</span>
+    <span>エントリ数: 49</span>
+    <span>ソース: Hacker News / Reddit / note / ほか13媒体</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#c1"><span class="num">01</span>Claude Academy公開とAnthropicの市場ポジション<span class="cnt">4</span></a></li>
+    <li><a href="#c2"><span class="num">02</span>Claude Code実践・エージェント挙動のカルチャー観察<span class="cnt">7</span></a></li>
+    <li><a href="#c3"><span class="num">03</span>コーディングエージェント設計論・ハーネス思想<span class="cnt">5</span></a></li>
+    <li><a href="#c4"><span class="num">04</span>Agent Skill・知識共有基盤の実装論<span class="cnt">6</span></a></li>
+    <li><a href="#c5"><span class="num">05</span>AI活用の逆説サーガ：生産性は本当に上がっているか<span class="cnt">7</span></a></li>
+    <li><a href="#c6"><span class="num">06</span>LLM認知論：「思考」は実在するか（継続サーガ）<span class="cnt">2</span></a></li>
+    <li><a href="#c7"><span class="num">07</span>受託・SIerビジネスモデルの転換点とバイブコーディングのコスト<span class="cnt">4</span></a></li>
+    <li><a href="#c8"><span class="num">08</span>競合LLM・モデル競争<span class="cnt">4</span></a></li>
+    <li><a href="#c9"><span class="num">09</span>インフラ障害・信頼性設計<span class="cnt">5</span></a></li>
+    <li><a href="#c10"><span class="num">10</span>Google Workspace/officeforest実践とAI教育普及<span class="cnt">5</span></a></li>
+  </ol>
+</nav>
+
+<section class="cat" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>Claude Academy公開とAnthropicの市場ポジション</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://forest.watch.impress.co.jp/docs/news/2134400.html" target="_blank" rel="noopener">Anthropic、無償学習サイト「Claude Academy」を公開</a></h3>
+    <p class="summary">AnthropicがClaude・Claude Code・Coworkの使い方を学べる公式学習サイトを無償開設。興味や学習状況に応じたコース設計で、基礎から実践まで段階的に学べる構成になっている。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">forest.watch.impress.co.jp</span><span class="tag">はてブ302 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://gihyo.jp/article/2026/08/claude-academy" target="_blank" rel="noopener">Claude Academyの詳細をgihyo.jpが解説</a></h3>
+    <p class="summary">AIを安全かつ効果的に活用するための学習サイトとして2026年8月20日に公開されたClaude Academyの構成を紹介した続報。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">gihyo.jp</span><span class="tag">21 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49411102" target="_blank" rel="noopener">Anthropicの最高AIモデルが苦戦——安価ツール台頭で</a></h3>
+    <p class="summary">Financial Times記事。Claude Opus 5が市場シェア拡大に苦戦し、GPT-5.4等の安価な代替ツールとの競争で普及が遅れているとするビジネス分析。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 131pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/kazu_t/n/n34de0b43f0fa" target="_blank" rel="noopener">ELI5とは？Claude CodeからELI5を使ってみた</a></h3>
+    <p class="summary">Anthropic社員が紹介する、難しい概念を5歳児向けに説明させるClaude Codeの「ELI5」スキルの実践記事。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">note</span><span class="tag">16 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c2">
+  <h2 class="cat-title"><span class="cat-num">02</span>Claude Code実践・エージェント挙動のカルチャー観察</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49388752" target="_blank" rel="noopener">Claudette：ClaudeをBuzzFeed的な話し方から矯正するツール</a></h3>
+    <p class="summary">Claudeの過剰にポジティブ・冗長な文体を矯正しビジネスライクにするOSSツール「nobuzz」。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 182pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49375996" target="_blank" rel="noopener">Vomit：Claude 5のトークン出力を別LLMでクリーンアップ</a></h3>
+    <p class="summary">Claude 5の出力を別LLMでフィルタリング・整形するOSSツール。LLM出力の後処理パターンの一例として紹介された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 169pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/cureapp/articles/c1e963064d05fd" target="_blank" rel="noopener">claudeのメモリを棚卸しする</a></h3>
+    <p class="summary">Claudeのメモリ（~/.claude/projects/）の仕組みを解説し、プロジェクトごとのメモリ保存構造と棚卸し手順をまとめた実践記事。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Zenn</span><span class="tag">30 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49374772" target="_blank" rel="noopener">27ドルのスマートウォッチをClaudeでハッキング</a></h3>
+    <p class="summary">Claudeを活用して格安スマートウォッチのファームウェア解析・改造を試みた記事。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 79pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1vsk86i/my_son_screams_while_gaming_at_midnight_im_a/" target="_blank" rel="noopener">息子の深夜ゲーム叫び声を解決するためにClaude Codeで過剰設計した話（reddit r/ClaudeCode）</a></h3>
+    <p class="summary">開発者が家庭内の騒音問題をClaude Codeで技術的に解決した実例。Claude Codeの適用範囲の広さを示す事例として拡散した。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1vw6iek/every_claude_code_speedrun_ends_with_another/" target="_blank" rel="noopener">Claude Codeのスピードランは必ずMarkdownファイルで終わる（reddit r/ClaudeCode）</a></h3>
+    <p class="summary">Claude Codeが作業終了時に必ずMarkdownファイルを生成する挙動へのユーモラスな観察。コミュニティで共感を呼んだ。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1vwf74r/claude_yelled_at_another_claude_session_unprompted/" target="_blank" rel="noopener">Claudeが別のClaude Codeセッションに怒鳴った（無予告で）（reddit r/ClaudeCode）</a></h3>
+    <p class="summary">Claude Codeが別のClaudeセッションに対し予期せず叱責する挙動を示した事例の報告。マルチエージェント動作の観察記録として共有された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c3">
+  <h2 class="cat-title"><span class="cat-num">03</span>コーディングエージェント設計論・ハーネス思想</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49409092" target="_blank" rel="noopener">「ハーネス」とは何か</a></h3>
+    <p class="summary">ソフトウェアハーネスの概念整理。Claude Codeを含むAI開発エージェントのハーネス設計を論じる文脈で参照された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 268pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49410932" target="_blank" rel="noopener">agent.mdでLLM支援コード品質を改善する</a></h3>
+    <p class="summary">`agent.md`ファイルにプロジェクト固有のコーディングルールを記述し、LLMの出力品質を改善する実践手法の解説。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 129pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49378768" target="_blank" rel="noopener">Show HN: Huzzah——AIでのコーディングへの新しいアプローチ</a></h3>
+    <p class="summary">LLMとのコーディング体験を再設計するオープンなアプローチ。Claude Codeとの比較・差別化の文脈で言及された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 196pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49380491" target="_blank" rel="noopener">市民開発者（The Citizen Developer）</a></h3>
+    <p class="summary">非エンジニアがAI×ノーコードツールでアプリ・自動化を構築する「市民開発者」像の現在地と課題を論じる。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 36pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49390463" target="_blank" rel="noopener">ほぼ完全自己ホスト・サンドボックス型エージェントソフトウェアファクトリーの構築</a></h3>
+    <p class="summary">完全自己ホスト型のサンドボックス内エージェントがソフトウェア開発を自律実行するアーキテクチャの実装解説。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 75pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c4">
+  <h2 class="cat-title"><span class="cat-num">04</span>Agent Skill・知識共有基盤の実装論</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry">
+    <h3><a href="https://zenn.dev/mkj/articles/aad5698672aef3" target="_blank" rel="noopener">AI Agentに社内知識をオンボーディングする：SkillsとEvalの設計</a></h3>
+    <p class="summary">AIエージェントへの社内ナレッジ組み込みを、Skills設計とEval（評価）によって構造化する実装アプローチ。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Zenn</span><span class="tag">はてブ103 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://gihyo.jp/article/2026/08/skillevaluator" target="_blank" rel="noopener">NVIDIA、エージェントスキルの効果を測る「SkillEvaluator」をオープンソースで公開</a></h3>
+    <p class="summary">AIエージェントのスキル実行効果を定量評価するNVIDIAのフレームワーク。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">gihyo.jp</span><span class="tag">6 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49394827" target="_blank" rel="noopener">Show HN: OzBrain——エージェント・チーム間の共有知識ブレイン</a></h3>
+    <p class="summary">複数エージェントとチームメンバー間で知識を共有するブレインシステム。マルチエージェント設計の参照実装として紹介された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 14pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://speakerdeck.com/akiratameto/shoseki-shuppan-kinen-10-shuukai-tte-ejento-kaihatsu-ha-rag-ga-subetedata-rag-no-rekishi-to-kaihatsu-genba-de-mieta-jissen-chi" target="_blank" rel="noopener">エージェント開発はRAGがすべてだった【書籍出版記念】</a></h3>
+    <p class="summary">書籍出版記念イベントの講演スライド。RAGの歴史とエージェント開発現場で見えた実践知を総括する。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">speakerdeck.com</span><span class="tag">51 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://speakerdeck.com/shinyorke/taming-llm-output-ai-agent-design-patterns-with-fastapi" target="_blank" rel="noopener">LLMの出力を&quot;いい感じに&quot;する技術 / AI Agent Design Patterns with FastAPI</a></h3>
+    <p class="summary">PyCon JP 2026（広島）発表スライド。LLM出力の制御技術とFastAPIによるエージェントデザインパターンの実装解説。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">speakerdeck.com</span><span class="tag">14 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/automation/comments/1vrs15o/infographics_i_made_for_designing_a_safe_and/" target="_blank" rel="noopener">安全で実用的なAIエージェントシステム設計のインフォグラフィック（reddit r/automation）</a></h3>
+    <p class="summary">AIエージェントシステムを安全かつ実用的に設計するためのインフォグラフィックの自作・公開。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c5">
+  <h2 class="cat-title"><span class="cat-num">05</span>AI活用の逆説サーガ：生産性は本当に上がっているか</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://techblog.lycorp.co.jp/ja/20260819a" target="_blank" rel="noopener">AIを入れても、なぜ業務量は思ったほど減らないのか</a></h3>
+    <p class="summary">LINE Yahoo。AI導入後も業務削減が限定的な理由を構造的に分析。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">techblog.lycorp.co.jp</span><span class="tag">LY Corp テックブログ 21 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/factory_dx_eng/articles/ai-productivity-team-divide" target="_blank" rel="noopener">AIで生産性が3倍になった私たちが、チームを置き去りにした話</a></h3>
+    <p class="summary">現場DXエンジニアがAI活用で生産性3倍を達成したものの、チームが追いつけず組織課題が表面化した体験談。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Zenn</span><span class="tag">127 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/maxmatsuura/n/ne59969fd6e71" target="_blank" rel="noopener">AIに書かせたら、前より休めなくなった</a></h3>
+    <p class="summary">エイベックス松浦会長がAIを全面活用した結果、以前より休めなくなった体験を綴った考察。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">note</span><span class="tag">296 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49357530" target="_blank" rel="noopener">AIを使って宿題スコアは上昇、しかし試験スコアは低下——研究</a></h3>
+    <p class="summary">The Economist。AI活用で短期的な宿題評点は向上するが、実際の試験では逆効果という学術研究。AI導入の過信に警鐘を鳴らす。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 219pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49386699" target="_blank" rel="noopener">AI盲になりつつある</a></h3>
+    <p class="summary">AI生成コンテンツへの過露出により、AI特有のパターンに無反応になる「AI盲」現象を分析。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 250pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2608/20/2000000641/" target="_blank" rel="noopener">「AIで生産性向上」日本の従業員は57％、世界平均は81%——アクセンチュア調査</a></h3>
+    <p class="summary">日本の職場でAI活用が進まない要因を、アクセンチュアが多国比較調査で分析。世界最低水準との差異が明らかになった。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">itmedia.co.jp</span><span class="tag">10 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://dontpastetheai.com/ja.html" target="_blank" rel="noopener">AIが書いたものをコピペしないでください</a></h3>
+    <p class="summary">AI生成コンテンツをそのまま流用することへの注意喚起サイト。AIリテラシーの観点から言及された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">dontpastetheai.com</span><span class="tag">26 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c6">
+  <h2 class="cat-title"><span class="cat-num">06</span>LLM認知論：「思考」は実在するか（継続サーガ）</h2>
+  <p class="cat-desc">2本</p>
+
+  <article class="entry">
+    <h3><a href="https://note.com/fuchagi/n/n42c43cfe0ff0" target="_blank" rel="noopener">「次の単語を当てているだけ」のAIがなぜ数学の証明までできるのか——LLMの創発研究の現在地</a></h3>
+    <p class="summary">LLMがトークン予測から数学証明・論理推論を達成する創発メカニズムの現状をまとめた解説記事。前週の中島聡記事「なぜ思考しているように見えるのか」に続く同系統の議論。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">note</span><span class="tag">118 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49360140" target="_blank" rel="noopener">中間トークンをThinking/Reasoningとして擬人化することを止めよう</a></h3>
+    <p class="summary">arxiv 2504.09762。LLMの中間出力を「思考」と呼ぶことの危険性を論じた研究。プロンプト設計・評価手法への影響が議論された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 189pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c7">
+  <h2 class="cat-title"><span class="cat-num">07</span>受託・SIerビジネスモデルの転換点とバイブコーディングのコスト</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://zenn.dev/jnch/articles/18cf3f1893ee5b" target="_blank" rel="noopener">人月で稼ぐSIerは、あと数年で詰む</a></h3>
+    <p class="summary">自律型AIエージェントの普及でSIerのビジネスモデルがどう変わるかを考察。「ソフトウェアを作る能力」から「ソフトウェアを活かす能力」への転換論。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Zenn</span><span class="tag">150 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49411199" target="_blank" rel="noopener">バイブ税（The Vibe Tax）</a></h3>
+    <p class="summary">バイブコーディングで書かれたコードが後に技術負債化するコストを「バイブ税」と命名して分析。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 94pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49411468" target="_blank" rel="noopener">FableとMooreの法則の終焉</a></h3>
+    <p class="summary">AIコーディングツール「Fable」のリリースを受け、AI推論コスト増大による「フリーランチの終わり」を論じる分析。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 97pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech.layerx.co.jp/entry/2026/08/20/092325" target="_blank" rel="noopener">PdM不在の2か月、エンジニアが「サブPdM」をやって分かった3つの難しさ（LayerX）</a></h3>
+    <p class="summary">Bakurakuのエンジニアが2か月間のPdM不在期間に代替PdMを担当した体験談。役割境界・プライオリティ設定・ステークホルダー管理の3点を報告。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">tech.layerx.co.jp</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c8">
+  <h2 class="cat-title"><span class="cat-num">08</span>競合LLM・モデル競争</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49386163" target="_blank" rel="noopener">DeepSeek-v4-flash-vision-expが公開</a></h3>
+    <p class="summary">DeepSeekの最新マルチモーダルフラッシュモデルが公開。Claude/GPT代替の文脈で注目された。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 448pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/OpenAI/comments/1ugljgh/previewing_gpt56_sol_nextgeneration_model_openai/" target="_blank" rel="noopener">GPT-5.6 Sol プレビュー：次世代モデル（reddit r/OpenAI）</a></h3>
+    <p class="summary">OpenAI次世代モデルGPT-5.6 Solのプレビュー発表。週内で複数回言及が続いた。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/OpenAI/comments/1vrll7i/how_organizations_use_ai_evidence_from_chatgpt/" target="_blank" rel="noopener">組織がAIをどのように使用しているか：ChatGPTからの証拠（reddit r/OpenAI）</a></h3>
+    <p class="summary">OpenAI公式による組織のAI活用実態調査レポート。企業がChatGPTをどのような業務に活用しているかの定量データ。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/OpenAI/comments/1vw7x0k/a_third_of_the_postchatgpt_web_is_aiwritten_pew/" target="_blank" rel="noopener">ChatGPT以降のウェブの3分の1はAI生成——Pew調査（reddit r/OpenAI）</a></h3>
+    <p class="summary">Pew Research Centerの調査で、ChatGPT登場以降のウェブコンテンツの33%がAI生成であることが判明。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c9">
+  <h2 class="cat-title"><span class="cat-num">09</span>インフラ障害・信頼性設計</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" target="_blank" rel="noopener">8月17日のGitHub障害の顛末——そしてこれからの取り組み</a></h3>
+    <p class="summary">GitHub公式。8月17日の大規模障害の原因分析と再発防止策をまとめた事後報告。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">github.blog</span><span class="tag">HN 271pt / はてブ9 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://togetter.com/li/2736568" target="_blank" rel="noopener">7月オーストラリア大規模通信障害の仕組みが判明</a></h3>
+    <p class="summary">NTPサーバ筐体交換で時刻が1024週（約20年）巻き戻り、サーバ証明書がinvalidになった連鎖障害の仕組みをまとめたtogetterスレッド。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">togetter.com</span><span class="tag">210 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49411395" target="_blank" rel="noopener">17万以上の非営利団体が全データを失った——Microsoftの責任は？</a></h3>
+    <p class="summary">Slate記事。Microsoftの非営利団体向け支援プログラム終了に伴う移行失敗で、17万超の組織が全データを喪失した経緯を追跡。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 142pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/unchox/articles/backup-restorability-levels" target="_blank" rel="noopener">バックアップが「戻せる」かを5段階で測る</a></h3>
+    <p class="summary">「処理が成功している」「書き出したものが実在する」「開ける」「量が足りている」「整合している」の5段階でバックアップの真の意味を整理。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Zenn</span><span class="tag">85 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49409473" target="_blank" rel="noopener">複雑なシステムはいかに失敗するか（1998）</a></h3>
+    <p class="summary">Richard Cook著の古典論文が再注目。複雑系システムの障害は多要因が絡み合って起きるという設計論。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Hacker News</span><span class="tag">HN 223pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c10">
+  <h2 class="cat-title"><span class="cat-num">10</span>Google Workspace/officeforest実践とAI教育普及</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.watch.impress.co.jp/docs/news/2134153.html" target="_blank" rel="noopener">グーグル、大学生に向け「AI Plus」を1年間無料提供</a></h3>
+    <p class="summary">Gemini Advanced等を含む「AI Plus」サブスクリプションを大学生向けに1年間無料提供。教育市場でのAI普及加速策。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">watch.impress.co.jp</span><span class="tag">26 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://officeforest.org/wp/gemini-enterprise%e3%81%aeagent-designer%e3%81%a3%e3%81%a6%e4%bd%95%e8%80%85%e3%81%aa%e3%81%ae%e3%81%8b%ef%bc%9f/" target="_blank" rel="noopener">Gemini EnterpriseのAgent Designerって何者なのか？（officeforest）</a></h3>
+    <p class="summary">Gemini EnterpriseのAgent Designer機能を、通常の生成AIとの違いも含めて解説。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">officeforest.org</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://officeforest.org/wp/google-apps-script%e3%81%abgemini%e3%82%b5%e3%82%a4%e3%83%89%e3%83%91%e3%83%8d%e3%83%ab%e3%81%8c%e8%bf%bd%e5%8a%a0%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f/" target="_blank" rel="noopener">Google Apps ScriptにGeminiサイドパネルが追加されました（officeforest）</a></h3>
+    <p class="summary">Google I/O 2026で発表されたGASスクリプトエディタへのGeminiサイドパネル統合を実際に試した検証記事。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">officeforest.org</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://officeforest.org/wp/google-workspace%e3%81%ae%e8%a8%b1%e5%8f%af%e3%83%aa%e3%82%b9%e3%83%88%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3%e3%82%92%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8bapi%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf/" target="_blank" rel="noopener">Google Workspaceの許可リストドメインを操作するAPIを使ってみた（officeforest）</a></h3>
+    <p class="summary">2026年8月20日公開の、Google Workspace許可リスト登録済みドメインをAPIから参照・追加・削除・更新できる専用APIの検証記事。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">officeforest.org</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams" target="_blank" rel="noopener">Turning conversation into knowledge: how Slack builds human-agent teams</a></h3>
+    <p class="summary">Anthropic公式ブログ。SlackがClaudeを活用してヒューマン×エージェントチームを構築した事例解説。</p>
+    <div class="tags"><span class="tag date">2026-08-25</span><span class="tag">Anthropic</span><span class="tag">7 users</span></div>
+  </article>
+</section>
+
+<footer class="foot">
+  <p>8/23・8/25分の trend ファイルは存在しない（8/25は本ダイジェスト作成時点で当日の日次収集が未実施のため欠落）。本ダイジェストは実質8/19・8/20・8/21・8/22・8/24の5日分を対象とする。なお8/19・8/20は前回週次ダイジェスト（20260820-digest.md、対象8/14〜8/20）と対象期間が重複するため、当該2日分は前回未掲載の記事のみを抜粋して収録した。</p>
+  <p>対象は8/19・8/20・8/21・8/22・8/24の5日分（8/23・8/25は日次収集ファイルが存在しないため欠落。8/25は本ダイジェスト作成時点で当日分未実施）。8/19・8/20は前回週次ダイジェスト（20260820-digest.md）と対象期間が重複するため、前回既掲載の記事（Cursor Origin、fx、AGENTS.md、Claude Code週次利用制限延長、Qwen 3.8 27B、Stripe×OpenRouter買収 等）は本版では再掲していない。</p>
+  <p>★★★を中心に、サーガ補完が必要な箇所（LLM認知論カテゴリ等）のみ★★を採用した。</p>
+  <p>Reddit はr/ClaudeCode・r/OpenAI・r/automationの実用度が高いものを優先し、8/21・8/22・8/24はr/LocalLLaMA・r/n8n等の主要フィードが空だったため、当該日のノーコード/ローカルLLM関連の新規記事は少ない。</p>
+  <p>各記事は客観的な内容紹介にとどめ、用途や活用視点は読み手側で判断する形にした。</p>
+  <p>前週（20260820-digest.md、対象8/14〜8/20）からの継続サーガとして、AI活用の逆説論（業務量減らない・チーム置き去り・AI盲等）とLLM認知論（思考の実在性を巡る議論）が本流化した。Anthropic関連の関心も「利用制限延長」から「Claude Academy公開による普及策」「安価ツール台頭による市場逆風」へと焦点が移った。</p>
+  <p>Generated 2026-08-25 — companion to <code>20260825-digest.md</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>

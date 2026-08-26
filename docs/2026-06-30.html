@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — 2026-06-24 〜 2026-06-30</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">2026-06-24 〜 2026-06-30 ／ Fable 5 停止騒動・OSS モデル台頭・Claude Code 最適化</h1>
+  <p class="lead">Fable 5 の突然停止、Sonnet 5 の噂、GPT-5.6 Sol プレビューと米政府承認制が同時に走り、フロンティアモデルの「乱立と不安定」が一気に表面化した週。 Qwen 3.6 27B・GLM-5.2・Ornith-1.0・DeepSeek DSpark と中国／OSS モデルが相次ぎ、GLM-5.2 がベンチマークで Claude を上回ったとの報告まで出て、マルチモデル調達が現実の論点に。 AI 長者への反感、Ford のベテラン再雇用、エンジニアのアイデンティティ危機と、AI バックラッシュが社会面・実業界の両方で顕在化した。</p>
+  <div class="meta-row">
+    <span>期間: 2026-06-24 〜 2026-06-30</span>
+    <span>エントリ数: 59</span>
+    <span>ソース: Hacker News / Reddit / note / ほか7媒体</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#c1"><span class="num">01</span>フロンティアモデル乱立とFable 5停止騒動<span class="cnt">8</span></a></li>
+    <li><a href="#c2"><span class="num">02</span>中国・OSSモデルがClaudeに迫る<span class="cnt">7</span></a></li>
+    <li><a href="#c3"><span class="num">03</span>Claude Code最適化の深化<span class="cnt">8</span></a></li>
+    <li><a href="#c4"><span class="num">04</span>仕様駆動開発とコード⇔仕様の往復<span class="cnt">5</span></a></li>
+    <li><a href="#c5"><span class="num">05</span>AIバックラッシュと実業界の揺り戻し<span class="cnt">6</span></a></li>
+    <li><a href="#c6"><span class="num">06</span>市民開発・n8n業務自動化の本番化<span class="cnt">7</span></a></li>
+    <li><a href="#c7"><span class="num">07</span>AI規制と政府調達の新段階<span class="cnt">5</span></a></li>
+    <li><a href="#c8"><span class="num">08</span>Google Workspace のエージェント化<span class="cnt">4</span></a></li>
+    <li><a href="#c9"><span class="num">09</span>PM・受託開発・設計論<span class="cnt">5</span></a></li>
+    <li><a href="#c10"><span class="num">10</span>インフラ・VCS・ナレッジ運用<span class="cnt">4</span></a></li>
+  </ol>
+</nav>
+
+<section class="cat" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>フロンティアモデル乱立とFable 5停止騒動</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://note.com/goto_finance/n/n2c8b1fdf8a9d" target="_blank" rel="noopener">【論点整理】Claude「Fable5」突然の停止（note 1057スキ）</a></h3>
+    <p class="summary">Fable 5 の突然の提供停止について、ビジネス影響・代替策・Anthropic の 意図を多角的に整理した論点記事。前週から続く Anthropic の供給不安定 サーガの最新エントリーで、API 依存リスク評価の文脈で読まれている。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">note</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1ufe12u/i_was_sick_of_checking_for_fable_5_to_be_restored/" target="_blank" rel="noopener">Fable 5 の可用性チェッカーを作った（いつでも「available」と表示してくれる）（r/ClaudeCode）</a></h3>
+    <p class="summary">Fable 5 の復活を待ち続けるコミュニティのユーモア投稿。常に「available」 と表示するだけのチェッカーで、Fable 5 待望の温度感を反映している。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1ufcj6k/am_i_the_only_one_more_excited_for_sonnet_5_than/" target="_blank" rel="noopener">Sonnet 5 の方が Fable 5 より楽しみという声（r/ClaudeCode）</a></h3>
+    <p class="summary">次期モデルへの期待を巡る議論。Fable 5 と Sonnet 5 の比較で、ハーネス 最適化・モデル選定をどう構えるかという準備論につながっている。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1udo6nx/sonnet_5_incoming_sonnet_text_is_looking_sus_when/" target="_blank" rel="noopener">Sonnet 5 近日公開か？／Model コマンドで謎のテキスト目撃（r/ClaudeCode）</a></h3>
+    <p class="summary">Claude Code の /Model コマンド入力時に Sonnet 5 らしきテキストが見えた という目撃談。次期モデルの近日リリース示唆として注目された。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48689028" target="_blank" rel="noopener">Previewing GPT-5.6 Sol：次世代モデルのプレビュー</a></h3>
+    <p class="summary">OpenAI が GPT-5.6 Sol をプレビュー発表。Claude・Gemini 対抗の次期大型 モデルで、同日に米政府承認制の話題と二重で HN 上位に並んだ。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 774pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/OpenAI/comments/1uf6702/gpt_56_preview_is_about_to_be_dropped/" target="_blank" rel="noopener">GPT-5.6 プレビューが間もなく展開開始（r/OpenAI）</a></h3>
+    <p class="summary">GPT-5.6 のプレビュー展開が近いとする投稿。Sol の正式プレビューと前後し、 OpenAI の次期モデル投入のテンポを示す。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1ufk62f/people_who_say_they_cant_work_with_opus_after/" target="_blank" rel="noopener">Opus の後に Fable を使った人は「AI との協力の仕方を知らないだけ」（r/ClaudeCode）</a></h3>
+    <p class="summary">Fable 5 を使った後で Opus に戻れないという声への反論。「AI との協力 スキルが不十分なだけ」という主張で、モデル差よりハーネス設計を問う議論。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1ufe12u/i_was_sick_of_checking_for_fable_5_to_be_restored/" target="_blank" rel="noopener">Claude Code v2.1.190 で Fable 5 復活示唆（r/ClaudeCode）</a></h3>
+    <p class="summary">Claude Code の文字列から Fable 5 復活の兆候を読み取った投稿。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c2">
+  <h2 class="cat-title"><span class="cat-num">02</span>中国・OSSモデルがClaudeに迫る</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48721903" target="_blank" rel="noopener">Qwen 3.6 27B がローカル開発のスイートスポット</a></h3>
+    <p class="summary">Qwen 3.6 27B がローカル LLM 開発における性能・コストのバランス点として 注目を集めた。本週の HN 最高ポイントで、ローカルモデル選定論の中心。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 549pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48709670" target="_blank" rel="noopener">GLM-5.2、Claude をサイバーセキュリティベンチマークで上回る</a></h3>
+    <p class="summary">Semgrep が GLM-5.2（中国系 OSS モデル）を自社サイバーベンチで検証し、 Claude を上回ったと発表。エクスポート規制を背景にした代替モデル台頭の 象徴的なデータポイント。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 342pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48639840" target="_blank" rel="noopener">GLM-5.2 はオープンエージェントの転換点</a></h3>
+    <p class="summary">智譜 AI の GLM-5.2 がオープンソースエージェント性能の「段階的変化」と 評価される分析（interconnects.ai）。上の Semgrep 報告と同系統で、OSS エージェントの実力評価サーガを形づくる。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 99pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48722052" target="_blank" rel="noopener">Ornith-1.0：エージェントコーディング向け自己改善型 OSS モデル</a></h3>
+    <p class="summary">自己スキャフォールディング型 LLM がエージェントコーディングに特化した OSS モデルとしてリリース。Claude Code 競合の OSS 側の動きとして。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 140pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48696585" target="_blank" rel="noopener">DSpark：投機的デコードで LLM 推論を高速化</a></h3>
+    <p class="summary">DeepSeek が投機的デコードで LLM 推論を大幅高速化する「DSpark」を論文 公開。生成速度を最大 85% 向上させるとされ、推論コスト削減技術の最前線。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">DeepSeek論文 / HN 714pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48697958" target="_blank" rel="noopener">アジア AI スタートアップが Mythos 類似モデルを続々リリース</a></h3>
+    <p class="summary">Anthropic の Mythos エクスポート規制が続く中、アジアの AI スタートアップ が競合モデルを相次いで投入。代替調達リスク管理の新情報として。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">TechCrunch / HN 112pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1udkxde/7_chinese_companies_are_already_shipping/" target="_blank" rel="noopener">中国7社が H100/H200 相当チップを量産出荷・大半が直近6ヶ月で IPO（r/LocalLLaMA）</a></h3>
+    <p class="summary">中国の半導体7社が H100/H200 相当チップを量産出荷し、その多くが直近半年 で IPO したとの動向マップ。OSS モデルの背後にある供給網の文脈。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c3">
+  <h2 class="cat-title"><span class="cat-num">03</span>Claude Code最適化の深化</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://zenn.dev/takupeso/articles/claude-ontology-knowledge-structuring" target="_blank" rel="noopener">Claude に「オントロジー」を持たせたら、コスト半分・3倍速になるかも</a></h3>
+    <p class="summary">Claude Code に構造化知識（オントロジー）を与えることで API 呼び出し コスト半減・速度3倍を達成したという検証。本週の Claude Code 最適化系で 最大の反響を取った実装ネタ。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Zenn</span><span class="tag">はてブ 262 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48708795" target="_blank" rel="noopener">「トークンマクシング」は死んだ — エージェント時代の新しい最適化論</a></h3>
+    <p class="summary">トークン消費量を最大化する戦略がエージェント時代に通用しなくなった 背景と、次の最適化論を論じた記事。上のオントロジー記事と同じ「効率化 へ舵を切る」流れに位置づく。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 105pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48688700" target="_blank" rel="noopener">Smart model routing directly in Claude, Codex and Cursor</a></h3>
+    <p class="summary">Claude/Codex/Cursor 上でモデルを動的に切り替えるルーティングミドル ウェア「workweave/router」。タスク別モデル選択の自動化で、モデル乱立 期のコスト最適化に対応する。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 133pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48708941" target="_blank" rel="noopener">Claude Code で自分の MRI 画像をセカンドオピニオンとして分析してみた</a></h3>
+    <p class="summary">筆者が自分の MRI 画像を Claude Code + Opus で分析し、医師のセカンド オピニオン代わりに使った事例。Claude Code × マルチモーダル活用の具体例。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 308pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://qiita.com/tehito/items/356e5f1dba112a075be1" target="_blank" rel="noopener">正直に言う。お前の Claude Code の使い方は間違っている</a></h3>
+    <p class="summary">「CLAUDE.md は憲法、Skills は六法全書」という比喩で Agent Skills の正しい 使い方を説く記事。特定作業時だけ読み込まれる Skills に知識を逃がすこと の重要性を解説。本週の Claude Code 実践系で最も参照された一本。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Qiita</span><span class="tag">Qiita 154 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/kajiken0630/n/n597f3da0249a" target="_blank" rel="noopener">週末に「Claude Code」を一気に学びたい人のための記事・動画ガイド（note 2279スキ）</a></h3>
+    <p class="summary">Claude Code 学習リソースの決定版まとめ。初心者から上級者まで対応する 記事・動画を体系的に整理した、本週 note 最多スキの記事。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">note</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/breakbot/articles/53e7f1c6564f26" target="_blank" rel="noopener">Claude Code のセッションを見下ろし型オフィスとして可視化するツールを作った</a></h3>
+    <p class="summary">Claude Code の並列セッションを「見下ろし型オフィス」UI で可視化する ツールの開発記。複数エージェント管理 UI のアイデアとして。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Zenn</span><span class="tag">はてブ 18 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48701512" target="_blank" rel="noopener">Adrafinil：ふた閉じ Mac をエージェント作業中だけ起こし続けるツール</a></h3>
+    <p class="summary">MacBook のふたを閉じた状態で Coding Agent が作業中だけ Mac を起動し 続ける GitHub ツール。Claude Code の長時間バックグラウンド実行の実用例。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 73pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c4">
+  <h2 class="cat-title"><span class="cat-num">04</span>仕様駆動開発とコード⇔仕様の往復</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://blog.wh-plus.co.jp/entry/2026/06/23/113209" target="_blank" rel="noopener">NotebookLM で要件定義が楽になった話 ― 仕様駆動開発（SDD）の前段を整える</a></h3>
+    <p class="summary">WHITEPLUS が NotebookLM を仕様駆動開発の前段に活用し、AI が実行可能な 構造化仕様書を先行作成する手法を公開。仕様書→AI 実装フローの実証事例。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">blog.wh-plus.co.jp</span><span class="tag">はてブ 225 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/daishiro/articles/cc-rsg-web-release" target="_blank" rel="noopener">コードから仕様書を逆生成する Web アプリ「cc-rsg-web」を公開しました</a></h3>
+    <p class="summary">Claude Code で開発したコード→仕様書逆生成ツールの公開記事。コードベース から自然言語仕様書を自動生成する。SDD が「仕様→コード」だけでなく 「コード→仕様」の往復に広がっていることを示す。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Zenn</span><span class="tag">Zenn 141 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/nrs/articles/e4a2ae8a9fb785" target="_blank" rel="noopener">ループエンジニアリングを takt exec で気軽に始めよう</a></h3>
+    <p class="summary">「自分がエージェントに指示を出す役割をシステムに置き換える」ループ エンジニアリングを takt exec で手軽に始める入門。前週のループ エンジニアリング・サーガの実装側続編。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Zenn</span><span class="tag">Zenn 64 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/yottayoshida/articles/rag-knowledge-ops-agent-search" target="_blank" rel="noopener">RAG を作るのではなく、検索される知識を運用する</a></h3>
+    <p class="summary">「RAG を作る」から「知識を運用する」へのパラダイム転換を提唱。ナレッジ 管理 × エージェント検索を、構築ではなく運用の問題として捉え直す。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Zenn</span><span class="tag">はてブ 106 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://refactoringenglish.com/excerpts/write-an-effective-design-doc/" target="_blank" rel="noopener">How to Write an Effective Software Design Document</a></h3>
+    <p class="summary">ソフトウェア設計ドキュメントの書き方ガイド。AI 実装の前段としての設計 書が改めて重視される文脈で、はてブと r/programming に同時に乗った。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">refactoringenglish.com</span><span class="tag">はてブ 30 users / r/programming</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c5">
+  <h2 class="cat-title"><span class="cat-num">05</span>AIバックラッシュと実業界の揺り戻し</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/technology/comments/1uizc18/ai_zillionaires_are_starting_to_get_scared_as_the/" target="_blank" rel="noopener">世論が AI 長者に反感を抱き始め、AI 長者たちが恐怖を感じ始めている（r/technology）</a></h3>
+    <p class="summary">AI 大手のオーナーたちが一般市民の反感に恐怖を感じ始めているという記事 への反応。AI 産業の社会的受容・ブランディングリスクの象徴。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/technology/comments/1ug4lut/the_ai_backlash_is_only_getting_started/" target="_blank" rel="noopener">AI バックラッシュは始まったばかりだ（r/technology）</a></h3>
+    <p class="summary">AI への反発がまだ序章に過ぎないとする論。上の AI 長者反感の記事と 同系統で、本週通じて流れたバックラッシュ・サーガの起点。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/technology/comments/1ui7kif/ford_rehires_gray_beard_engineers_after_ai_falls/" target="_blank" rel="noopener">フォード、AI が期待を裏切り「ベテランエンジニア」を再雇用（r/technology）</a></h3>
+    <p class="summary">AI が自動車設計・製造ラインで期待通りの成果を出せず、ベテランエンジニア を再雇用した事例。AI の「適用領域の見極め」を問う実業界の揺り戻し。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/technology/comments/1ueidyv/software_engineers_are_facing_an_identity_crisis/" target="_blank" rel="noopener">ソフトウェアエンジニアはアイデンティティ危機に直面（r/technology）</a></h3>
+    <p class="summary">Menlo Ventures パートナーによる「ソフトウェアエンジニアがアイデンティ ティ危機に直面」との発言。AI 時代のエンジニアの役割変革を巡る議論。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.gizmodo.jp/article/a-report-full-of-hallucinations/" target="_blank" rel="noopener">大手コンサル作「AI のすごさを証明する報告書」がハルシネーションだらけ</a></h3>
+    <p class="summary">大手コンサルが AI 導入効果を示すために作成した報告書がハルシネーション で埋まっていたという記事。AI 検証不足・品質担保の重要性を示す反面教師。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">gizmodo.jp</span><span class="tag">はてブ 18 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/konno_masayuki/n/n5fae3e161dd5" target="_blank" rel="noopener">「Claude Code あるから出来るよね」の一言にイラッとした話（note 358スキ）</a></h3>
+    <p class="summary">Claude Code 活用が当たり前化する職場での「期待値のズレ」と生産性圧力を 率直に語る。AI 普及がもたらす現場の摩擦を内側から描いた一本。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">note</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c6">
+  <h2 class="cat-title"><span class="cat-num">06</span>市民開発・n8n業務自動化の本番化</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/n8n/comments/1ufjz3g/finally_finished_building_an_ai_invoice/" target="_blank" rel="noopener">n8n で AI 請求書処理システムを構築完了 — アーキテクチャ共有（r/n8n）</a></h3>
+    <p class="summary">n8n で請求書の OCR→構造化→仕訳→会計システム連携を一気通貫で自動化した 実装事例。アーキテクチャを公開しており、業務自動化の実装テンプレに。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/automation/comments/1ufc54m/workflow_included_i_built_an_n8n_pipeline_that/" target="_blank" rel="noopener">サプライヤー資料→店舗コンテンツの n8n パイプライン（Workflow Included / r/automation）</a></h3>
+    <p class="summary">サプライヤーの雑多なドキュメントを AI で解析し、EC サイト公開用の商品 コンテンツに変換する n8n ワークフローを完全公開。流通系 DX の実装例。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/n8n/comments/1uh3sn6/i_built_an_ai_receptionist_for_a_pet_clinic/" target="_blank" rel="noopener">n8n でペットクリニックの AI 受付担当者を構築した（r/n8n）</a></h3>
+    <p class="summary">n8n と AI で動物病院の受付を自動化した事例。中小事業者の現場での AI 受付という、市民開発が本番運用に届いた具体例。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/nocode/comments/1uivcu6/can_you_really_ship_a_serious_app_on/" target="_blank" rel="noopener">Lovable や Base44 でコードに触れずに本格的なアプリはリリースできる？（r/nocode）</a></h3>
+    <p class="summary">AI ビルダーで実用に堪えるアプリを「コードなし」で完成させることの現実論 を議論。ノーコード適用範囲の境界線を見極めるスレッド。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/punimaru_dev/n/n88d20110060a" target="_blank" rel="noopener">未経験から、Claude Code で iOS アプリ開発。2ヶ月目に月10万円（note 899スキ）</a></h3>
+    <p class="summary">非エンジニアが Claude Code で iOS アプリを開発し、2ヶ月で月10万円を 達成した事例。市民開発 × AI コーディングの可能性と限界を示す実証。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">note</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/shiro_life0/n/n7f2eb049e349" target="_blank" rel="noopener">僕が Claude Code で1億事業を作った方法を全公開（note 753スキ）</a></h3>
+    <p class="summary">Claude Code を活用して1億円規模の事業を構築した全プロセスを公開。 個人開発の成果として本週 note で大きく伸びた記事。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">note</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/n8n/comments/1uj2f9v/airtable_alternatives_people_actually_use/" target="_blank" rel="noopener">Airtable の代替ツール、実際に使われているもの（r/n8n）</a></h3>
+    <p class="summary">n8n コミュニティが Airtable から移行する際に実際に使っているツールを 議論。ノーコード × データベース系のツール選定の実践情報。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c7">
+  <h2 class="cat-title"><span class="cat-num">07</span>AI規制と政府調達の新段階</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48690101" target="_blank" rel="noopener">米国政府が GPT-5.6 の利用者を決定へ</a></h3>
+    <p class="summary">政府承認制で GPT-5.6 のアクセスが制限される可能性を報じた記事。AI 規制 強化の新段階で、本週モデル乱立の裏面として大きな反響を取った。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">WashingtonPost / HN 745pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/OpenAI/comments/1ufnwkh/breaking_trump_administration_asks_openai_to/" target="_blank" rel="noopener">BREAKING: トランプ政権が GPT-5.6 の段階的リリースを要請（r/OpenAI）</a></h3>
+    <p class="summary">トランプ政権が OpenAI に GPT-5.6 の段階的展開を要請したとする速報。 上の政府承認制の流れと一体で、モデル供給への国家関与を示す。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48692995" target="_blank" rel="noopener">米国が Anthropic の Mythos を「信頼できるパートナー」に提供を許可</a></h3>
+    <p class="summary">米政府が Anthropic Mythos モデルを承認済みの信頼できるパートナーに提供 する許可を付与。Anthropic の B2B・政府調達領域への浸透の動向。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 107pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/technology/comments/1uhf8xb/anthropic_and_openai_waged_a_27_million_proxy_war/" target="_blank" rel="noopener">Anthropic と OpenAI がマンハッタン議員選挙で $2700万プロキシ戦争（r/technology）</a></h3>
+    <p class="summary">Anthropic と OpenAI が地方選挙を舞台に多額の政治献金で対立したとする 記事。AI 業界の規制を巡る政治的なせめぎ合いの可視化。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/OpenAI/comments/1uhn4y9/why_is_every_ai_lab_suddenly_trying_to_build/" target="_blank" rel="noopener">なぜ今すべての AI ラボが自社チップ開発を急ぐのか？（r/OpenAI）</a></h3>
+    <p class="summary">Anthropic・OpenAI・Meta などが相次いで自社 AI 推論チップ開発に乗り出した 背景を議論。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c8">
+  <h2 class="cat-title"><span class="cat-num">08</span>Google Workspace のエージェント化</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/june-2026-workspace-feature-drop" target="_blank" rel="noopener">June 2026 Workspace Feature Drop</a></h3>
+    <p class="summary">Drive の AI 整理提案、Sheets の数式エラー自動修正（Gemini）、Gmail の Help me write 改善、AI Inbox の拡大、Sheets 28言語対応など、6月の Workspace 機能まとめ。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence" target="_blank" rel="noopener">Workspace Intelligence 発表</a></h3>
+    <p class="summary">メール・チャット・ファイルを横断集約する Gemini 統合型のパーソナル AI。 過去の仕事パターンから個人化学習し、学習データは外部流出しない設計。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/ai-and-machine-learning/building-a-foundation-for-the-agentic-ai-era" target="_blank" rel="noopener">エージェント型 AI 時代の Workspace 基盤構築</a></h3>
+    <p class="summary">エージェント型 AI 時代に向けた Workspace のアーキテクチャ方針を解説。 Workspace Intelligence の背後にある設計思想として読める。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48662999" target="_blank" rel="noopener">Gemini 3.5 Flash に「コンピュータ操作」機能が搭載</a></h3>
+    <p class="summary">Google が Gemini 3.5 Flash で Computer Use を発表。Claude Computer Use に対抗する Google の自律操作 AI で、ブラウザ自動化エージェント設計の 次の一手として注目された。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 148pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c9">
+  <h2 class="cat-title"><span class="cat-num">09</span>PM・受託開発・設計論</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://note.com/goto_finance/n/n17b30b03459a" target="_blank" rel="noopener">AI は仕事を減らす？増やす？（note 460スキ）</a></h3>
+    <p class="summary">AI 導入がワーカーの仕事量に与える影響を多角的に検討。AI 導入提案で必ず 問われる「AI で人は減るか」への回答フレームとして読める。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">note</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48710082" target="_blank" rel="noopener">YAGNI のコストは実は「実装しなかったこと」ではない</a></h3>
+    <p class="summary">Kent Beck の「YAGNI のコストは何か」を再考する記事。過剰設計のコストと 設計不足のコストの非対称性を論じる、PM 判断の参考フレーム。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 92pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech.medpeer.co.jp/entry/2026/06/26/122446" target="_blank" rel="noopener">Claude Enterprise 全社導入で何を検討し、何をやらなかったか</a></h3>
+    <p class="summary">メドピアが Claude Enterprise を全社導入した際の検討プロセスと「やらな かったこと」の判断基準を解説。「何をしないか」の決断に踏み込んだ、 エンタープライズ AI 展開のリアルな意思決定事例。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">tech.medpeer.co.jp</span><span class="tag">メドピア / はてブ 91 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48696982" target="_blank" rel="noopener">Fintech Engineering Handbook</a></h3>
+    <p class="summary">フィンテック領域のエンジニアリングハンドブック。FinTech 系開発・DX プロジェクトの技術設計の参考書として HN 上位に。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 451pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48698188" target="_blank" rel="noopener">スラップの世界でソフトウェアジャムを運営すること</a></h3>
+    <p class="summary">AI 生成コードのスラップが溢れる時代に、人間主体のソフトウェアジャム イベントを開催した体験記。AI 品質と人間の創造性の使い分け論。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 37pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c10">
+  <h2 class="cat-title"><span class="cat-num">10</span>インフラ・VCS・ナレッジ運用</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/programming/comments/1uhbf79/the_aws_data_hall_cooling_failure_linked_to/" target="_blank" rel="noopener">AWS データセンター冷却障害が150以上のクラウドサービス障害に（r/programming）</a></h3>
+    <p class="summary">AWS のデータホール冷却障害が150を超えるクラウドサービスの障害に連鎖した 事例。AI ワークロードが集中するクラウドの可用性リスクを示す。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/programming/comments/1uh1qm4/mojo_programming_language_will_become_opensource/" target="_blank" rel="noopener">Mojo プログラミング言語がまもなく OSS に（r/programming）</a></h3>
+    <p class="summary">AI 向け高性能言語 Mojo がオープンソース化へ。AI 推論・カーネル最適化の 低レイヤを担う言語の動向として。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48659798" target="_blank" rel="noopener">Qualcomm が AI スタートアップ「Modular」を買収</a></h3>
+    <p class="summary">Qualcomm が AI ランタイム最適化スタートアップ Modular を買収。エッジ AI・ ローカル LLM 実行最適化の業界再編の動き。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 115pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48642510" target="_blank" rel="noopener">MicroVMs: フルライフサイクル制御で隔離サンドボックス実行</a></h3>
+    <p class="summary">AWS の MicroVM（Firecracker）でサンドボックス環境を管理する技術。AI エージェントの安全な実行環境・コード実行サンドボックスとして。</p>
+    <div class="tags"><span class="tag date">2026-06-30</span><span class="tag">Hacker News</span><span class="tag">HN 237pt</span></div>
+  </article>
+</section>
+
+<footer class="foot">
+  <p>6/24〜6/30 の trend ファイル7日分から、興味度★★★を中心にキュレーションした。前週（6/18〜6/24）のサーガ続編（ループエンジニアリング、Anthropic 供給不安定、代替 LLM 選定、市民開発の本番化、Google Workspace のエージェント化）を継承しつつ、本週新たに立ち上がった本流（フロンティアモデル乱立と Fable 5 停止、中国・OSS モデルの Claude 接近、AI バックラッシュの顕在化、仕様駆動開発の往復化）を軸にカテゴリを組み直した。</p>
+  <p>各記事は客観的な内容紹介にとどめ、用途や活用視点は読み手側で判断する形にした。</p>
+  <p>Reddit 系は r/ClaudeCode・r/LocalLLaMA・r/n8n・r/nocode・r/automation から実用性・反響度の高いものを優先選出。r/technology の AI バックラッシュ系は本週の本流として例外的に採用した。</p>
+  <p>note.com は週前半（6/24〜6/29）アクセスブロックで取得不可だったが 6/30 に復旧し、Fable 5 停止・Claude Code 学習ガイドなど高スキ記事を補完できた。</p>
+  <p>一部記事は trend ファイル上で URL が省略形のため、ドメイン階層までの記載にとどめた。</p>
+  <p>Generated 2026-06-30 — companion to <code>20260630-digest.md</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>

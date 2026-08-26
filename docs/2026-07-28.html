@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — 2026-07-22 〜 2026-07-28</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">2026-07-22 〜 2026-07-28 ／ Claude Opus 5・オープンウェイト規制論争・ハーネス再設計</h1>
+  <p class="lead">Anthropicが「Claude Opus 5」を発表（HN 1222pt）。ベンチマーク1位を獲得しコンテキストエンジニアリングの新ルールも公式に示された一方、コミュニティは「思考が浅い」問題や既存プロンプトの逆効果化への対策模索に追われた一週間だった。 前週から続く「中国発オープンウェイトAI覇権論」は、創業者ロビー活動・Nvidia/Microsoft/Metaの規制反対表明・Debianの利用決議を経て、週末にAnthropic自身が「オープンウェイトモデルへの公式見解」を表明する形で一つの節目を迎えた。 Claude Codeのスキル設計・CLAUDE.md標準化・ハーネス管理アプリなど「運用知」の蓄積が続く一方、「コーディングが解決されてもソフトは悪化する」「AIへの委任は理解を失わせる」といった品質・組織論も並走した。</p>
+  <div class="meta-row">
+    <span>期間: 2026-07-22 〜 2026-07-28</span>
+    <span>エントリ数: 58</span>
+    <span>ソース: Hacker News / ほか25媒体</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#c1"><span class="num">01</span>Claude Opus 5発表とハーネス再設計<span class="cnt">9</span></a></li>
+    <li><a href="#c2"><span class="num">02</span>オープンウェイトAI規制論争とAnthropicの公式見解表明<span class="cnt">8</span></a></li>
+    <li><a href="#c3"><span class="num">03</span>Claude Code実践知：スキル設計・ハーネス管理<span class="cnt">10</span></a></li>
+    <li><a href="#c4"><span class="num">04</span>AI駆動開発の品質保証と「委任の境界線」論<span class="cnt">7</span></a></li>
+    <li><a href="#c5"><span class="num">05</span>エンタープライズ・受託DX実装事例<span class="cnt">8</span></a></li>
+    <li><a href="#c6"><span class="num">06</span>Google Workspace/Gemini週次アップデート<span class="cnt">5</span></a></li>
+    <li><a href="#c7"><span class="num">07</span>AI×数学研究の最前線<span class="cnt">5</span></a></li>
+    <li><a href="#c8"><span class="num">08</span>MCP・ローカルLLM・業界動向トピックス<span class="cnt">6</span></a></li>
+  </ol>
+</nav>
+
+<section class="cat" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>Claude Opus 5発表とハーネス再設計</h2>
+  <p class="cat-desc">9本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49038433" target="_blank" rel="noopener">Claude Opus 5</a></h3>
+    <p class="summary">週最大のニュース、667コメント。Fable 5相当の性能を同価格（入力$5/Mトークン）で 提供。既存Opus 4.8ユーザーはそのまま移行可能。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 1222pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://pc.watch.impress.co.jp/docs/news/2127832.html" target="_blank" rel="noopener">「Fable 5級を半額で」Claude Opus 5登場。Proでも最強モデルに</a></h3>
+    <p class="summary">上記発表の日本語まとめ。Proプランでも最強モデルとして提供される点を強調。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">pc.watch.impress.co.jp</span><span class="tag">pc.watch 16 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49040741" target="_blank" rel="noopener">Claude Opus 5がArtificial Analysis Intelligence Leaderboardに</a></h3>
+    <p class="summary">リリース直後にAIベンチマークで1位を獲得。モデル選定の客観的根拠として。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 86pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" target="_blank" rel="noopener">Claude 5世代モデルのコンテキストエンジニアリングの新ルール</a></h3>
+    <p class="summary">Anthropic公式。システムプロンプトを約80%削減し、モデルに裁量を与える新戦略を提示。 翌日はてブでも拡散し、ハーネス設計の根本的な見直し論として広く参照された。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Anthropic</span><span class="tag">HN 126pt／はてブ 61 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/u1/articles/claude5-rules-collapse-and-fix" target="_blank" rel="noopener">Opus5が思考が浅いように感じる問題への対策</a></h3>
+    <p class="summary">Opus 5で思考が浅くなる現象を再現・原因分析し、rules.md崩壊パターンへの対策を提示。 上記の公式コンテキストエンジニアリング論の実践的な後追い検証にあたる。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Zenn</span><span class="tag">zenn 287 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/little_hand_s/articles/72646a09f49d2a" target="_blank" rel="noopener">Opus 5では今までのプロンプトが逆効果に</a></h3>
+    <p class="summary">公式プロンプトガイドを読み解き、「検証して」を削除し「簡潔に」と書くべき等、 Opus 5向け最適化ルールを整理。既存ハーネスの見直し根拠として。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Zenn</span><span class="tag">zenn 134 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://platform.claude.com/docs/ja/build-with-claude/prompt-engineering/prompting-claude-opus-5" target="_blank" rel="noopener">Claude Opus 5のプロンプティング（公式ドキュメント日本語版）</a></h3>
+    <p class="summary">Anthropic公式。上記2記事の一次ソース。Opus 5向けの具体的な変更点を解説。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Anthropic</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/uhyo/articles/react-profession-bench-14" target="_blank" rel="noopener">Opus 5、React習熟度ベンチマークでFable 5超え</a></h3>
+    <p class="summary">独自のReact習熟度ベンチマークでOpus 5がFable 5を上回る結果を報告。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Zenn</span><span class="tag">zenn uhyo 31 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49076391" target="_blank" rel="noopener">Opus 5をSlopCodeBenchでベンチマーク</a></h3>
+    <p class="summary">コーディング能力を独自ベンチマークで実測したデータを公開。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 43pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c2">
+  <h2 class="cat-title"><span class="cat-num">02</span>オープンウェイトAI規制論争とAnthropicの公式見解表明</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49023016" target="_blank" rel="noopener">スタートアップ創業者たちが米政府に「中国製オープンウェイトAIを遮断しないよう」働きかけ</a></h3>
+    <p class="summary">オープンウェイトAIの規制がイノベーションを阻害するとする創業者ロビー活動。 前週の「中国発オープンウェイトAI覇権論」の直接的な続編にあたる。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 686pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49020999" target="_blank" rel="noopener">AI企業が莫大な負債を隠そうとしている</a></h3>
+    <p class="summary">AI企業の財務実態への懐疑論。AI投資バブル論とコスト最適化圧力を再確認させる内容。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 580pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49035303" target="_blank" rel="noopener">Nvidia・Microsoft・MetaがオープンウェイトAI過剰規制に反対</a></h3>
+    <p class="summary">OpenAI・Anthropicと対立する形で3社が規制反対を表明。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 467pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49048034" target="_blank" rel="noopener">オープンウェイトAIはKubernetesモーメントを迎えている</a></h3>
+    <p class="summary">239コメント。米国AIラボがQwen・DeepSeekに対抗するためフロンティア級モデルを オープン化すべきという論考。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 297pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49050859" target="_blank" rel="noopener">DebianのLLM使用に関する一般決議</a></h3>
+    <p class="summary">OSSコミュニティ初の公式LLM使用ガイドライン。AI生成コードとライセンスに関する 業界の態度表明として画期的。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 47pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49052912" target="_blank" rel="noopener">DeepSeekが資金調達を一時停止</a></h3>
+    <p class="summary">米国との計算資源格差に関するコメントが流出したとされる。中国AI動向の一断面。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 6pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.itmedia.co.jp/news/articles/2607/26/news014.html" target="_blank" rel="noopener">MicrosoftやNVIDIAなど、AIのオープンウェイト規制に反対する書簡</a></h3>
+    <p class="summary">両社を含む複数社が規制反対の連名書簡を提出。上記HN記事群の日本語文脈。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">itmedia.co.jp</span><span class="tag">itmedia 40 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener">Anthropicのオープンウェイトモデルへの立場</a></h3>
+    <p class="summary">Anthropic公式。週を通じて続いた規制論争に対し、自社の立場を初めて明文化。 一連のサーガの一つの区切りとなる声明。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Anthropic</span><span class="tag">HN 328pt／はてブ 12 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c3">
+  <h2 class="cat-title"><span class="cat-num">03</span>Claude Code実践知：スキル設計・ハーネス管理</h2>
+  <p class="cat-desc">10本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49008211" target="_blank" rel="noopener">Show HN: Bento - HTMLファイル1つにPowerPoint全部入り</a></h3>
+    <p class="summary">143コメント。Claude Codeで制作されたプレゼンツール。reveal.js+GSAP+echarts+ Cloudflare Durable Objectsを1ファイルに自己完結させた実装。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 612pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/singularity/articles/diy-terminal-500-commits" target="_blank" rel="noopener">ターミナルを自作したら、1日のコミット数が500を超えて</a></h3>
+    <p class="summary">カスタムターミナル構築＋Claude Code連携で1日500コミット超えを達成した記録。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Zenn</span><span class="tag">zenn 246 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md" target="_blank" rel="noopener">advanced-context-engineering-for-coding-agents</a></h3>
+    <p class="summary">コーディングエージェント向けの高度なコンテキストエンジニアリング実践ガイド。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">GitHub</span><span class="tag">HumanLayer 17 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49063186" target="_blank" rel="noopener">Show HN: Cursor Bridge – CursorサブスクでClaude Codeを無制限利用</a></h3>
+    <p class="summary">Cursorサブスクリプションを Claude Codeのバックエンドとして利用するブリッジツール。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 12pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://blog.shibayu36.org/entry/2026/07/27/163000" target="_blank" rel="noopener">Claude Code ActionのSkillをgh skill installで実行時に入れる</a></h3>
+    <p class="summary">スキルをリポジトリにコミットせず、GitHub Actionsの実行時に動的インストールする手法。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">blog.shibayu36.org</span><span class="tag">47 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech-blog.rakus.co.jp/entry/20260716/claude" target="_blank" rel="noopener">Claude Codeのスキル設計で効く4つのポイント</a></h3>
+    <p class="summary">責務分離・汎用性・エラーハンドリング・テスト容易性の4軸でスキル設計を整理。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">tech-blog.rakus.co.jp</span><span class="tag">ラクス 153 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://lp.ai-plus.findy.io/articles/claude-code-skills-top5/" target="_blank" rel="noopener">【Claude Code活用特集】あの会社で一番使われてるSkillsは？</a></h3>
+    <p class="summary">各社で採用率の高いClaude Code Skills Top5を特集。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">lp.ai-plus.findy.io</span><span class="tag">Findy AI+ 156 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://qiita.com/hikariclaude01/items/e54c70c90c6aa84d0f66" target="_blank" rel="noopener">CLAUDE.md 設計パターン集</a></h3>
+    <p class="summary">プロジェクト規模別のCLAUDE.mdテンプレートを体系化。週内で複数回拡散。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Qiita</span><span class="tag">qiita 87 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://engineering.dena.com/blog/2026/07/claude-code-harness-app/" target="_blank" rel="noopener">Claude Codeのハーネスを育てるアプリを作ってみた</a></h3>
+    <p class="summary">Claude Codeのハーネス（設定・スキル体系）を継続的に管理・育成するアプリの実装記。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">engineering.dena.com</span><span class="tag">DeNA 27 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/peka2/articles/21858f0528bf3b" target="_blank" rel="noopener">Claude Code/Codexがドキュメントをもっと上手に使えるようにするテクニック</a></h3>
+    <p class="summary">ドキュメントをClaude Code/Codexに効果的に読ませるためのコンテキスト設計集。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Zenn</span><span class="tag">16 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c4">
+  <h2 class="cat-title"><span class="cat-num">04</span>AI駆動開発の品質保証と「委任の境界線」論</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49033004" target="_blank" rel="noopener">コーディングが解決されたなら、なぜソフトウェアは悪化し続けるのか</a></h3>
+    <p class="summary">374コメント。AIコーディング普及で開発効率は上がったが品質は低下したという逆説論。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 452pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech.layerx.co.jp/entry/quit-qa-start-qa" target="_blank" rel="noopener">QAをやめて、QAをはじめる（LayerX）</a></h3>
+    <p class="summary">確認型テストから価値検証へシフトした10ヶ月の軌跡。AI時代のQA戦略再設計の記録。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">tech.layerx.co.jp</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://speakerdeck.com/mineo_matsuya/rethinking-the-fundamentals-of-testing-in-the-ai-era" target="_blank" rel="noopener">AI時代におけるテストの基礎の再定義</a></h3>
+    <p class="summary">AI時代にテストの「基礎」をどう再定義するかを考察したスライド。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">speakerdeck.com</span><span class="tag">speakerdeck 124 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49060592" target="_blank" rel="noopener">「詳細を手放すことは力にならない」——AIへの過度な委任に警鐘</a></h3>
+    <p class="summary">175コメント。AIに細部を丸投げすることで理解が失われる危険性を論じる。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 171pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://blog.shin1x1.com/entry/dont-let-go-of-understanding" target="_blank" rel="noopener">理解を手放さない</a></h3>
+    <p class="summary">AIに任せることと理解を維持することの間の緊張を論じる。上記HN記事と同系統の論点。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">blog.shin1x1.com</span><span class="tag">shin1x1 307 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49057877" target="_blank" rel="noopener">AIの新たな超能力：フォーカスとフォロースルー</a></h3>
+    <p class="summary">AIが得意とする「集中力と継続力」を最大化する活用法論。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 122pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://japan.zdnet.com/article/35250695/" target="_blank" rel="noopener">L.トーバルズ氏、AI反対派に強硬姿勢--「フォークしろ」</a></h3>
+    <p class="summary">LinuxカーネルへのAI活用に反対するコントリビュータに、Linusが強硬姿勢を示した一件。 OSSコミュニティでのAI受容論として週内で複数回話題化。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">japan.zdnet.com</span><span class="tag">zdnet 149 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c5">
+  <h2 class="cat-title"><span class="cat-num">05</span>エンタープライズ・受託DX実装事例</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://azukiazusa.dev/blog/hermes-agent-slack-workflow/" target="_blank" rel="noopener">Hermes Agent と Slack で設計し、Linear のチケットから Draft PR まで作成するワークフロー</a></h3>
+    <p class="summary">AIエージェント＋Slack設計＋Linear連携で、チケットからDraft PRまで自動生成する ワークフローの実験記。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">azukiazusa.dev</span><span class="tag">47 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech.layerx.co.jp/entry/ai-pmo-redesign" target="_blank" rel="noopener">AIでPMO業務を再設計してみよう（LayerX）</a></h3>
+    <p class="summary">PMO業務へのAI導入優先順位付けと実施事例。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">tech.layerx.co.jp</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://cloud.google.com/blog/ja/topics/public-sector/gemini-in-workspace-gemini-fedramp-high" target="_blank" rel="noopener">Gemini in Workspace と Gemini アプリが FedRAMP High 認証を初めて取得</a></h3>
+    <p class="summary">政府・医療・防衛など規制業界への展開を可能にする認証取得。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">cloud.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.publickey1.jp/blog/26/jiraaiclaudecopilotai.html" target="_blank" rel="noopener">アトラシアン、JiraにAIによる要件定義自動作成機能（Claude・Copilot対応）</a></h3>
+    <p class="summary">JiraがClaude・Copilot連携で要件定義を自動生成する新機能を搭載。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">publickey1.jp</span><span class="tag">30 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://aws.amazon.com/jp/blogs/news/bengo4com-devops-agent-case-study/" target="_blank" rel="noopener">弁護士ドットコムにおける AWS DevOps Agentの活用事例</a></h3>
+    <p class="summary">AWS公式ブログ。国内エンタープライズでのAIエージェント活用事例。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">aws.amazon.com</span><span class="tag">39 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://aws.amazon.com/jp/blogs/news/multitenant-ai-agent-saas-architecture-aws-summit-japan-2026/" target="_blank" rel="noopener">AWS Summit Japan 2026：完全自律型AIエージェントが変えるSaaSの世界</a></h3>
+    <p class="summary">マルチテナントSaaSにおける完全自律型AIエージェントのアーキテクチャ設計論。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">aws.amazon.com</span><span class="tag">20 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2607/27/2000000223/" target="_blank" rel="noopener">MIXI、新卒エンジニア向け研修資料＆動画を無料公開（実践的AI活用術12科目）</a></h3>
+    <p class="summary">LLM活用・エージェント開発等12科目の新卒研修教材を無償公開。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">itmedia.co.jp</span><span class="tag">240 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://cursor.com/blog/agent-swarm-model-economics" target="_blank" rel="noopener">Agent swarms and the new model economics</a></h3>
+    <p class="summary">複数エージェントを並列稼働させるswarmモデルのコスト設計論。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">cursor.com</span><span class="tag">Cursor Blog 18 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c6">
+  <h2 class="cat-title"><span class="cat-num">06</span>Google Workspace/Gemini週次アップデート</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence" target="_blank" rel="noopener">Workspace Intelligence の紹介</a></h3>
+    <p class="summary">Docs・Slides・Gmail・Drive全体に統合されたAIレイヤー。優先タスクを自動推薦する 機能を含む、週を通じて繰り返し言及された基盤機能。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/june-2026-workspace-feature-drop" target="_blank" rel="noopener">June 2026 Workspace Drops</a></h3>
+    <p class="summary">Drive「ファイル整理AI提案」・Sheets数式エラー自動修正・Gmail「Help me write」改良。 Gemini in Sheetsが日本語を含む28言語に追加対応。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/introducing-gemini-omni-flash-in-google-vids" target="_blank" rel="noopener">Google VidsにGemini Omni Flash導入——AIアバターで動画編集</a></h3>
+    <p class="summary">自然言語で既存動画を編集でき、本人そっくりのAIアバター動画も作成可能に （18歳以上・英語主言語ユーザー対象、SynthIDウォーターマーク付与）。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/ai-and-machine-learning/how-ai-can-help-make-work-more-neuro-inclusive" target="_blank" rel="noopener">AIが神経多様性（ニューロインクルーシブ）な職場をどう支援するか</a></h3>
+    <p class="summary">多様な認知スタイルに対応するAI支援を、Workspaceの新しい活用軸として提示。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://cloud.google.com/blog/ja/products/ai-machine-learning/google-cloud-empowers-businesses-with-generative-ai-advancements" target="_blank" rel="noopener">Google Cloud、企業における生成AI運用を支援する最新アップデートを発表</a></h3>
+    <p class="summary">企業のGenAI運用を支援する最新機能アップデート群。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">cloud.google.com</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c7">
+  <h2 class="cat-title"><span class="cat-num">07</span>AI×数学研究の最前線</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49010345" target="_blank" rel="noopener">テレンス・タオのChatGPT会話 〜ヤコビアン予想の反例について〜</a></h3>
+    <p class="summary">346コメント。世界最高峰の数学者がChatGPTに「keep going」を繰り返すだけで 難問を解く過程を公開。前週の「AIが数学者をカウンター事例で追い詰めている」の続編。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 546pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49022137" target="_blank" rel="noopener">フィールズ賞 2026</a></h3>
+    <p class="summary">2026年フィールズ賞発表。AIとの数学研究連携が注目される中での授賞式。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 129pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://finance.biggo.jp/news/bca88ca4-8438-4d70-b512-75cda1dd3bd1" target="_blank" rel="noopener">フィールズ賞新受賞者ツィマーマン、OpenAIに加わりAI安全性を研究へ</a></h3>
+    <p class="summary">ICM 2026でフィールズ賞を受賞したツィマーマンがOpenAIのAI安全性研究チームに参加。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">finance.biggo.jp</span><span class="tag">79 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.gizmodo.jp/article/erdos-unit-distance-conjecture-has-been-refuted-by-ai/" target="_blank" rel="noopener">AIが世界中の数学者を80年間も悩ませてきた超難問を解いてしまった</a></h3>
+    <p class="summary">エルデシュ単位距離予想の反例をAIが初めて発見。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">gizmodo.jp</span><span class="tag">gizmodo 28 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf" target="_blank" rel="noopener">Mathematics in the age of AI - Terence Tao at ICM 2026</a></h3>
+    <p class="summary">テレンス・タオ本人によるICM 2026講演資料。AI時代の数学研究のあり方を総括。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">teorth.github.io</span><span class="tag">20 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c8">
+  <h2 class="cat-title"><span class="cat-num">08</span>MCP・ローカルLLM・業界動向トピックス</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.publickey1.jp/blog/26/mcp728mcpgithub_mcp.html" target="_blank" rel="noopener">MCP仕様が明日アップデート、7月28日版MCPからはステートレスな接続が正式仕様に</a></h3>
+    <p class="summary">GitHub MCPサーバは既に対応済み。MCP設計・実装の見直しが必要になる時宜を得た情報。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">publickey1.jp</span><span class="tag">39 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49050512" target="_blank" rel="noopener">8ドルマイコン上で28.9MパラメータのLLMを動作させる</a></h3>
+    <p class="summary">超低コストハードウェアでのLLM動作実証。ローカルLLMのコスト下限突破の事例。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 42pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49008434" target="_blank" rel="noopener">Show HN: Yorishiro – AIエージェントが住むmacOSターミナル</a></h3>
+    <p class="summary">macOSターミナルにAIエージェントが常駐するツール。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">Hacker News</span><span class="tag">HN 33pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.nikkei.com/article/DGXZQOUA223GZ0S6A720C2000000/" target="_blank" rel="noopener">日本の生成AI利用まだ6割、仕事中心・米国は「友達」使い</a></h3>
+    <p class="summary">日本の生成AI利用率6割に対し米国は7割超で用途も広いという調査結果。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">nikkei.com</span><span class="tag">nikkei 129 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://techfeed.io/entries/6a65420cd0c20765e83dd880" target="_blank" rel="noopener">「AIを使えるところを探す」という発想が間違っている</a></h3>
+    <p class="summary">「AIありき」ではなく「課題ありき」でAIを位置づける発想転換論。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">techfeed.io</span><span class="tag">techfeed 25 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.itmedia.co.jp/news/articles/2607/27/news092.html" target="_blank" rel="noopener">Z世代に聞く次の流行、「AIイラスト」が1位・「Claude Code」も上位</a></h3>
+    <p class="summary">Z世代のAIツール流行調査。Claude Codeが一般層にも認知されてきたことを示す結果。</p>
+    <div class="tags"><span class="tag date">2026-07-28</span><span class="tag">itmedia.co.jp</span><span class="tag">21 users</span></div>
+  </article>
+</section>
+
+<footer class="foot">
+  <p>対象は7/22〜7/28のtrendファイル7日分（欠落なし）。ただし7/22分は前回の週次ダイジェスト（20260722-digest.md、対象7/16〜7/22）と大きく重複するため、本ダイジェストでは実質的に7/23〜7/28の新着情報を主軸としてキュレーションした。</p>
+  <p>前週の「中国発オープンウェイトAI覇権論とAnthropicへの脅威」サーガは、本週「オープンウェイトAI規制論争」として継続。Nvidia/Microsoft/Metaの規制反対表明・Debianの利用決議を経て、週末にAnthropicが公式見解を表明する形で一つの区切りを迎えた。同時にAnthropic自身は「Claude Opus 5」を投入し、性能面でも対抗姿勢を強めた。</p>
+  <p>各記事は客観的な内容紹介にとどめ、用途や活用視点は読み手側で判断する形にした。</p>
+  <p>Reddit は本週も全期間・全10〜13サブレッドでAPI取得失敗（HTML返却）が継続しており、Reddit発の話題は本ダイジェストの対象外とした（20260720〜継続中の課題）。</p>
+  <p>Google Workspace関連の発表は複数日にまたがり重複掲載されるため、本ダイジェストではカテゴリ6に代表的な5件のみ集約した。</p>
+  <p>Generated 2026-07-28 — companion to <code>20260728-digest.md</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>

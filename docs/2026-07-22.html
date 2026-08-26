@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — 2026-07-16 〜 2026-07-22</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">2026-07-16 〜 2026-07-22 ／ オープンウェイト覇権論・Claude Code 実践知・品質保証論</h1>
+  <p class="lead">前週の「Kimi K3ショック」は今週「中国オープンウェイトAI覇権論」へと発展。HNで926ptを集めた「中国のオープンウェイトAI戦略は勝利しつつある」を筆頭に、Kimi WorkやQwen-Image-3.0、「Kimi K3・Qwen 3.8とAnthropicの潜在的崩壊」など、フロンティアラボの事業モデルそのものへの脅威論が本格化した。 Googleは週末に「Gemini 3.6 Flash」「3.5 Flash-Lite」「3.5 Flash Cyber」を同時発表し、コスト対抗に動いた。Claude Code陣営は「Web Routineによる自動化」「bubblewrapサンドボックス自作理解」「仕様とコードのズレ検出」など、運用・安全設計の実践知が一段深化した週。 Ubieの「会社オントロジー」でAI精度が8→119に向上した事例や、政府のマイナカード×AIエージェント連携方針など、エンタープライズ・公共領域でのAI実装が具体度を増した。一方でAI生成論文疑惑・AI数学カウンター事例など、AIの能力と信頼性を測る動きも継続。</p>
+  <div class="meta-row">
+    <span>期間: 2026-07-16 〜 2026-07-22</span>
+    <span>エントリ数: 35</span>
+    <span>ソース: Hacker News / note / ほか13媒体</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#c1"><span class="num">01</span>中国発オープンウェイトAIの覇権論とAnthropicへの脅威<span class="cnt">8</span></a></li>
+    <li><a href="#c2"><span class="num">02</span>Claude Codeの実践知：自動化・サンドボックス・仕様管理<span class="cnt">7</span></a></li>
+    <li><a href="#c3"><span class="num">03</span>AI駆動開発の設計・組織・品質保証論<span class="cnt">6</span></a></li>
+    <li><a href="#c4"><span class="num">04</span>エンタープライズ・受託DX・公共AI実装事例<span class="cnt">6</span></a></li>
+    <li><a href="#c5"><span class="num">05</span>Google Gemini 3.6 Flash発表とAPI仕様変更<span class="cnt">3</span></a></li>
+    <li><a href="#c6"><span class="num">06</span>AIの限界・研究インパクト・信頼性論<span class="cnt">5</span></a></li>
+  </ol>
+</nav>
+
+<section class="cat" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>中国発オープンウェイトAIの覇権論とAnthropicへの脅威</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48979269" target="_blank" rel="noopener">中国のオープンウェイトAI戦略は勝利しつつある</a></h3>
+    <p class="summary">週の最高得点・758コメント。オープンウェイトモデルがクローズドAIの覇権を切り崩し つつあるという業界分析。フロンティアラボの事業モデルへの脅威論の核心的一本。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 926pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48980019" target="_blank" rel="noopener">Kimi K3・Qwen 3.8とAnthropicの（潜在的な）崩壊</a></h3>
+    <p class="summary">評価額1.2兆ドルのAnthropicの収益モデルが新興中国モデルに破壊されるリスクを 論じた分析。283コメントと議論が白熱し、事業リスク評価として注目された。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 270pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48981703" target="_blank" rel="noopener">Kimi Work — Moonshot AIのローカルAIエージェントツール</a></h3>
+    <p class="summary">ローカルフォルダ操作・Webナビゲーション・Pythonコード実行が可能なエージェント ツール。Claude Codeライクな中国製品として競合分析・価格比較の対象に。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 348pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48977128" target="_blank" rel="noopener">中国モデルを恐れるべきか？（Stratechery）</a></h3>
+    <p class="summary">中国オープンウェイトモデルの競争圧力を分析。「ハーネスがモデル乗り換えコストを 決定する」という指摘は、ツール選定戦略を考える上で重要な視点。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 139pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48989701" target="_blank" rel="noopener">Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge</a></h3>
+    <p class="summary">Alibaba Qwenチームの画像生成モデル。テキスト描画や新聞・ストーリーボード等の 複雑レイアウトに特化。211コメント。オープンウェイト画像生成の最前線。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 539pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48999291" target="_blank" rel="noopener">Kimi K3はFableと競争力あり；Kimi K3とFableがSoTA</a></h3>
+    <p class="summary">Fireworks AIによるKimi K3 vs Claude Fableベンチマーク比較。コストは1/3、 ルーター活用でコスト1.5〜50倍削減の可能性も。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 180pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48982681" target="_blank" rel="noopener">Nativ: MacでフロンティアオープンモデルをローカルRun</a></h3>
+    <p class="summary">MLX-VLM開発者によるMac向けネイティブローカルLLMアプリ。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 156pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/kun432/scraps/c070bfe51ac731" target="_blank" rel="noopener">「Agents-A1」を試す（4B）</a></h3>
+    <p class="summary">4B級軽量AIエージェントモデルの試用レポート。ローカルLLM・軽量エージェントの 活用コスト検討として、中国発モデル台頭の週に呼応する小粒だが実践的な検証。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Zenn</span><span class="tag">zenn 7 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c2">
+  <h2 class="cat-title"><span class="cat-num">02</span>Claude Codeの実践知：自動化・サンドボックス・仕様管理</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://zenn.dev/mizchi/scraps/4e5d72496e2bfc" target="_blank" rel="noopener">Claude Code Web の Routine で日々の開発を自動化する</a></h3>
+    <p class="summary">mizchiによるClaude Code Web Routineを使った日常開発自動化の実践スクラップ。 定期実行スケジュール設計・スケジューラ活用のリファレンスとして最注目。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Zenn</span><span class="tag">zenn 193 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.m3tech.blog/entry/2026/07/21/100000" target="_blank" rel="noopener">Claude CodeやCodexのサンドボックスを支えるbubblewrapを自作して理解する</a></h3>
+    <p class="summary">Claude Code・Codexのサンドボックス技術(bubblewrap)を自作実装しながら解説。 Claude Codeのセキュリティ基盤を理解する技術的バックグラウンドとして貴重。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">m3tech.blog</span><span class="tag">m3tech 73 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://techfeed.io/entries/6a5ab5cb3d5307dbb0d5779b" target="_blank" rel="noopener">AIエージェントには適切な仕様が必要（O&#x27;Reilly分析）</a></h3>
+    <p class="summary">AIエージェント運用に「仕様」が不可欠な理由をO&#x27;Reilly記事で紹介。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">techfeed.io</span><span class="tag">techfeed 108 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://qiita.com/Asahi_tech_dev/items/5a3c6420cb0b2fa0e823" target="_blank" rel="noopener">AIの時代のドキュメント駆動開発</a></h3>
+    <p class="summary">AIと共に開発する時代のドキュメント駆動開発手法を解説。Claude Codeとの コンテキスト共有設計として、受託案件の設計フレームに直結する内容。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Qiita</span><span class="tag">qiita 70 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/mrmtsntr/articles/artgraph-spec-code-drift" target="_blank" rel="noopener">仕様とコードのズレをハッシュで決定的に検出するツールを作った</a></h3>
+    <p class="summary">仕様・コード乖離を自動検出するOSSツール「ArtGraph」の開発記。AIコード 生成後の品質担保・仕様ドリフト防止として直結する実装。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Zenn</span><span class="tag">zenn 58 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.publickey1.jp/blog/26/claude_codeclaude_apps_gateway_for_awsgoogle_cloud.html" target="_blank" rel="noopener">Claude Apps Gateway for AWS/Google Cloud が登場</a></h3>
+    <p class="summary">AWS・GCP向けClaude Apps Gatewayの解説。SSO統合・コスト上限・組織管理機能。 法人向けClaude活用提案の価格・運用設計に直結する重要アップデート。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">publickey1.jp</span><span class="tag">publickey1 15 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/seekseep/articles/git-with-coding-agents-patterns" target="_blank" rel="noopener">コーディングエージェントとGitを組み合わせる — Simon Willisonのパターン集を読む</a></h3>
+    <p class="summary">Simon Willisonが整理したCoding Agent×Gitの実践パターンを日本語解説。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Zenn</span><span class="tag">zenn 83 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c3">
+  <h2 class="cat-title"><span class="cat-num">03</span>AI駆動開発の設計・組織・品質保証論</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry">
+    <h3><a href="https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda" target="_blank" rel="noopener">開発が速く安くなった後の話　AI時代のソフトウェアエンジニアリング組織論 #devsumi</a></h3>
+    <p class="summary">開発速度・コスト低下後の「組織とエンジニアリングの在り方」を問い直した DevelopersSummit2026夏セッション。AI時代の受託DX体制設計の根拠として直結。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">speakerdeck.com</span><span class="tag">speakerdeck 420 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://atmarkit.itmedia.co.jp/ait/articles/2607/21/news012.html" target="_blank" rel="noopener">「AIコーディングブーム」が去ったUSで、エンジニアに求められる「本体の強さ」</a></h3>
+    <p class="summary">AIコーディングツール普及後の米国市場でエンジニアに求められる基礎力論。 AIと共存する時代のスキル戦略・採用基準変化の論点として重要。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">atmarkit.itmedia.co.jp</span><span class="tag">atmarkit 405 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://qiita.com/Koukyosyumei/items/e9ee8e26cfdc40a8c2f9" target="_blank" rel="noopener">マルチエージェントに関する論文を40本再実装してみて分かったこと</a></h3>
+    <p class="summary">40本の論文を自ら実装した知見集。マルチエージェント設計・ハーネス エンジニアリングの理論背景として最前線に位置する労作。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Qiita</span><span class="tag">qiita 92 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://speakerdeck.com/yug1224/2026-07-18" target="_blank" rel="noopener">ルールを書いて終わらせないハーネスエンジニアリング</a></h3>
+    <p class="summary">「ルールを書いて終わり」にしない継続的ハーネス改善論。Claude Codeチーム 展開の品質維持フレームとして、運用寄りの実践的な視点を提供。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">speakerdeck.com</span><span class="tag">speakerdeck 87 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48979120" target="_blank" rel="noopener">「完璧」はオーバーエンジニアリングではない</a></h3>
+    <p class="summary">要件が明確なら「唯一の解」が存在するという品質論。AI生成コードの品質観 として、設計駆動開発論と接続する哲学的だが実践的な考察。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 185pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/awesome_kou/articles/engineer-performance-metrics" target="_blank" rel="noopener">エンジニアの成果、結局どう測ればいいのか</a></h3>
+    <p class="summary">エンジニア評価指標の設計論。AI補助でコード量が増える時代の「本当の成果」 定義として、受託PM・チーム設計の議論に直結する内容。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Zenn</span><span class="tag">zenn 61 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c4">
+  <h2 class="cat-title"><span class="cat-num">04</span>エンタープライズ・受託DX・公共AI実装事例</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry">
+    <h3><a href="https://note.com/ymdpharm3/n/n8515d151e56d" target="_blank" rel="noopener">AIに会社の地図を持たせたら、3年目社員のように働き始めた</a></h3>
+    <p class="summary">Ubieが実装した会社オントロジー（599エンティティ×1179関係）でAI精度スコアが 8→119に向上。社内AI活用の精度改善設計・コンテキスト設計の核となる実践例。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">note</span><span class="tag">note.com 223 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://japan.cnet.com/article/35250805/" target="_blank" rel="noopener">政府、マイナカードをAIエージェントと連携へ</a></h3>
+    <p class="summary">政府がマイナカードとAIエージェントを連携させる方針を発表。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">japan.cnet.com</span><span class="tag">japan.cnet 131 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://ascii.jp/elem/000/004/420/4420739/" target="_blank" rel="noopener">AIがBlenderを勝手に操作　3D制作のハードルが一気に下がった</a></h3>
+    <p class="summary">AIエージェントが自律的にBlenderを操作して3Dモデルを生成。非エンジニアが AIで制作できる時代の象徴的事例として、週内でも最大級の反響を得た。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">ascii.jp</span><span class="tag">ascii.jp 578 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://forbesjapan.com/articles/detail/101067" target="_blank" rel="noopener">「自分の分身」をAIで作れ、アンソロピック社員が教えるClaude活用術5選</a></h3>
+    <p class="summary">Anthropic社員直伝のClaude実践活用術。Claudeペルソナ・業務効率化の 具体事例として、提案ネタに直結する一次情報。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">forbesjapan.com</span><span class="tag">forbesjapan 409 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48995213" target="_blank" rel="noopener">Jack DorseyがBuzzを立ち上げ——チームチャット・AIエージェント・Gitホスティングを統合</a></h3>
+    <p class="summary">Nostrベースのオープンソース自己ホスト型ワークスペース。人間とAIエージェント が同一の身元構造（キーペア）を持つ設計。201コメント、統合型ツール設計の参考。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 215pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://gigazine.net/news/20260721-agent-swarm-model-economics/" target="_blank" rel="noopener">大規模AIプロジェクトで「高性能な計画役＋安価な実行役」を使うとコストが約8分の1に</a></h3>
+    <p class="summary">CursorのAIエージェント群による毎秒1,000コミット実現の日本語まとめ。 マルチエージェント×コスト最適化の実践論として、受託提案の原価設計に有用。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">gigazine.net</span><span class="tag">gigazine 5 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c5">
+  <h2 class="cat-title"><span class="cat-num">05</span>Google Gemini 3.6 Flash発表とAPI仕様変更</h2>
+  <p class="cat-desc">3本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48993414" target="_blank" rel="noopener">Gemini 3.6 Flash、3.5 Flash-Lite、3.5 Flash Cyber 発表</a></h3>
+    <p class="summary">3モデル同時発表。17%効率化と値下げを両立。中国オープンウェイトAIの攻勢に 対するGoogleの対抗策として、Workspace Gemini機能刷新の原動力にもなる。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 588pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://pc.watch.impress.co.jp/docs/news/2126733.html" target="_blank" rel="noopener">Gemini 3.6 Flash登場！17%効率化+値下げ。3.5 Flash-Liteも</a></h3>
+    <p class="summary">上記発表の日本語まとめ。API利用コスト削減と性能向上の両立を報道。 Claude代替コスト試算の更新材料として実務的に参照しやすい。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">pc.watch.impress.co.jp</span><span class="tag">pc.watch 35 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48998606" target="_blank" rel="noopener">Geminiの最新モデルでtemperature/top_p/top_kが非推奨に</a></h3>
+    <p class="summary">GeminiのAPIパラメータ仕様変更。Workspace統合・Gemini API活用コードの 設計変更が必要になる、開発者向けの地味だが重要な変更点。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 24pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c6">
+  <h2 class="cat-title"><span class="cat-num">06</span>AIの限界・研究インパクト・信頼性論</h2>
+  <p class="cat-desc">5本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48981206" target="_blank" rel="noopener">AIがarXiv論文に与えた影響の測定方法とその限界</a></h3>
+    <p class="summary">2026年1月時点でCS論文の65%がAI生成疑いと報告。AIライティング品質の 定量データ・AI活用証拠として、研究分野への影響の大きさを示す。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 189pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48983382" target="_blank" rel="noopener">AIが人間の数学者をカウンター事例で追い詰めている</a></h3>
+    <p class="summary">ヤコビアン予想の反例をAIが自動発見。AIが専門分野で人間を「超える」 最前線の事例として、能力評価の議論に一石を投じた。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 165pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://joisino.hatenablog.com/entry/hack" target="_blank" rel="noopener">LLMの「脳内」をハッキングする技術</a></h3>
+    <p class="summary">LLMの内部表現・推論プロセスを解釈・制御する技術の解説。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">joisino.hatenablog.com</span><span class="tag">はてなブログ 191 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/mc_motto/n/n919e0c8874f4" target="_blank" rel="noopener">フィジカルAI楽観論は、なぜ製造現場を舐めているのか</a></h3>
+    <p class="summary">ロボット・フィジカルAIの楽観論に対する製造現場目線の反論。DX提案での 過大期待抑制・現場実装の現実を伝える、地に足のついた批評。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">note</span><span class="tag">note.com 13 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=48998404" target="_blank" rel="noopener">モナリザをGPT-5.6・Claude・Gemini・Grokで「描く」比較</a></h3>
+    <p class="summary">主要4モデルの画像描画能力比較実験。各AIの創造的タスク能力の視覚的 差異を示す、モデル選定の参考になる軽めだが分かりやすい検証。</p>
+    <div class="tags"><span class="tag date">2026-07-22</span><span class="tag">Hacker News</span><span class="tag">HN 74pt</span></div>
+  </article>
+</section>
+
+<footer class="foot">
+  <p>対象は 7/16〜7/22 の trend ファイル7日分（欠落なし）。ただし 7/16〜7/20 の内容は前回の週次ダイジェスト（20260720-digest.md、対象7/14〜7/20）と大きく重複するため、本ダイジェストでは前回未掲載の記事を中心に、実質的に7/21〜7/22の新着情報を主軸としてキュレーションした。</p>
+  <p>前週（7/14〜7/20）から続く「Kimi K3ショック」のサガは、本週「中国オープンウェイトAI覇権論とAnthropicの事業モデルへの脅威論」として一段先鋭化。GoogleのGemini 3.6 Flash発表は、この対中国・対Anthropic圧力への対抗策と位置づけられる。Claude Code実践論はWeb Routine・サンドボックス自作理解・仕様ドリフト検出という「運用の質」へさらに踏み込んだ。</p>
+  <p>各記事は客観的な内容紹介にとどめ、用途や活用視点は読み手側で判断する形にした。</p>
+  <p>Reddit は本週も全日程・全13サブレッド（r/OpenAI除く一部日を除く）でAPI取得失敗（HTML返却）が継続しており、Reddit発の話題は本ダイジェストでは手薄になっている。次週以降の継続課題。</p>
+  <p>note.com は7/20にアクセスブロック（403）で取得不可だった日があり、掲載漏れの可能性がある。</p>
+  <p>Generated 2026-07-22 — companion to <code>20260722-digest.md</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>

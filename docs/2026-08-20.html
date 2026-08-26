@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — 2026-08-14 〜 2026-08-20</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">2026-08-14 〜 2026-08-20 ／ Coding Agent 基盤競争・n8n 業務自動化・エンタープライズ DX</h1>
+  <p class="lead">Claude Codeの週次利用制限50%増が8月末まで再延長される一方、CursorがGitHub代替の「Origin」を発表、Claude CodeへのAGENTS.md対応要望も上がるなど、Coding Agent基盤の主導権争いが表面化した5日間。 Qwen 3.8 27Bのローカル実行・高速化・ベンチマーク話題がほぼ毎日Reddit/HNに浮上し続け、Z.ai GLM-5.3や国産LLM-jp-4も加わってオープンウェイトAIの実用化が加速。 StripeによるOpenRouter買収がAI決済・API集約インフラの再編として繰り返し話題になったほか、「AIが思考しているように見える理由」「細かい指示がAIを下手にする」等、モデル運用・認知面の論考も並走した。</p>
+  <div class="meta-row">
+    <span>期間: 2026-08-14 〜 2026-08-20</span>
+    <span>エントリ数: 56</span>
+    <span>ソース: Hacker News / Reddit / note / ほか18媒体</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#c1"><span class="num">01</span>Claude Code / Anthropicの一週間<span class="cnt">7</span></a></li>
+    <li><a href="#c2"><span class="num">02</span>Coding Agent基盤競争と設計論<span class="cnt">12</span></a></li>
+    <li><a href="#c3"><span class="num">03</span>LLM認知論・モデル品質を巡る議論<span class="cnt">6</span></a></li>
+    <li><a href="#c4"><span class="num">04</span>ローカルLLM・中国発オープンウェイトAIの実用化<span class="cnt">7</span></a></li>
+    <li><a href="#c5"><span class="num">05</span>AI業界M&amp;A・資本の再編<span class="cnt">4</span></a></li>
+    <li><a href="#c6"><span class="num">06</span>MCP・RAG・エージェント基盤<span class="cnt">4</span></a></li>
+    <li><a href="#c7"><span class="num">07</span>Google Workspace/Gemini週次アップデートとn8n業務自動化実践<span class="cnt">8</span></a></li>
+    <li><a href="#c8"><span class="num">08</span>受託・エンタープライズDX実装事例と組織論<span class="cnt">8</span></a></li>
+  </ol>
+</nav>
+
+<section class="cat" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>Claude Code / Anthropicの一週間</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49319556" target="_blank" rel="noopener">Claude: System Prompts リリースノート</a></h3>
+    <p class="summary">Anthropicがモデルごとのシステムプロンプト変更履歴を公式にリリースノートとして 公開。ハーネス設計時のバージョン差分参照先として機能する。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 512pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49324087" target="_blank" rel="noopener">AnthropicがClaudeに仕込む「透かし」テキスト汚染は文章への冒涜</a></h3>
+    <p class="summary">Daring FireballがClaude出力へのウォーターマーク埋め込みを批判。ユーザーに無断で テキストを改変することの倫理性がHNで議論に。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 112pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://gigazine.net/news/20260817-anthropic-model-2/" target="_blank" rel="noopener">実はAnthropicには最上位のMythosよりも強力な「Model 2」というAIモデルがある</a></h3>
+    <p class="summary">未公開とされる社内モデル「Model 2」の存在に関する報道。真偽・位置づけは不明瞭ながら Anthropicのモデルラインナップ再編観測として拡散。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">gigazine.net</span><span class="tag">gigazine 9 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49348751" target="_blank" rel="noopener">Claude Code 2026年5〜8月 週制限プロモーション</a></h3>
+    <p class="summary">Claude Codeの週次使用量制限が5〜8月のプロモーションで50%増量されており、 月末まで延長されたことが公式サポートページで確認された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 251pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://pc.watch.impress.co.jp/docs/news/2133754.html" target="_blank" rel="noopener">Claude Codeの週次利用制限、50%増量を8月31日まで再延長</a></h3>
+    <p class="summary">上記の延長がさらに8/31まで再延長されたことを確認した続報。r/ClaudeCodeでも 同日中にコミュニティ報告が上がった。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">pc.watch.impress.co.jp</span><span class="tag">pc.watch 9 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49352806" target="_blank" rel="noopener">Claude CodeでmacOSがHP Laser 1008aに対応するドライバーを自作させた話</a></h3>
+    <p class="summary">存在しないプリンタドライバをClaude Codeにゼロから生成・動作確認させた事例。 LLMのコード生成能力の実用レベルを示す具体例として紹介された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 99pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49367350" target="_blank" rel="noopener">Feature Request：AGENTS.md対応をClaude Codeに追加</a></h3>
+    <p class="summary">GitHub Copilot等が採用するエージェント向け指示ファイル規格「AGENTS.md」への 対応を求めるissue。マルチエージェント時代の指示ファイル標準化論議の一端。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 108pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c2">
+  <h2 class="cat-title"><span class="cat-num">02</span>Coding Agent基盤競争と設計論</h2>
+  <p class="cat-desc">12本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49334209" target="_blank" rel="noopener">Cursor、Originを発表：GitHub代替コードホスティングサービス</a></h3>
+    <p class="summary">CursorがGit統合・PR管理・AI支援をネイティブに備えたGitHub代替サービス 「Cursor Origin」を発表。Coding Agent時代のVCS設計の転換点として注目された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 444pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://qiita.com/Kinopee/items/639d401573c09ab24667" target="_blank" rel="noopener">Cursor Originを触った。第一印象は「Cursor版GitHub」</a></h3>
+    <p class="summary">発表直後の実地レビュー。上記発表の即日ハンズオン記事として拡散。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Qiita</span><span class="tag">Qiita 11 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49353339" target="_blank" rel="noopener">fx：軽量オープンソースのネイティブCoding Agent</a></h3>
+    <p class="summary">fx.sh。小さなフットプリントで動くOSSのCoding Agent。8/19の初出から8/20にかけて ポイントが伸び、Claude Code代替・補完ツールの選択肢として関心が継続した。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 63pt→158pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49362401" target="_blank" rel="noopener">Ornith-1.5：自己スキャフォールディングから自己改善へ</a></h3>
+    <p class="summary">エージェントが自身の足場（スキャフォールディング）を自己生成し、そこから 自己改善ループを回すAI研究。Coding Agentの自律進化論として言及された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 164pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49363668" target="_blank" rel="noopener">LLM時代の拡張可能なソフトウェア設計</a></h3>
+    <p class="summary">LLMが普及する中でソフトウェアの「拡張性」の意味がどう変わるかを論じる。 ハーネス・プラグイン設計の理論的根拠として参照された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 98pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech.layerx.co.jp/entry/coding-agent-driven-development" target="_blank" rel="noopener">コーディングエージェント主体に実装の進め方を変え始めている話（LayerX）</a></h3>
+    <p class="summary">planner/reviewer/workerの役割分担でCoding Agentを複数並走させ、設計→レビュー→ 実装→再レビューを自律ループで回す実践記。Herdrワークスペースを活用。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">tech.layerx.co.jp</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://tech.layerx.co.jp/entry/icml-2026" target="_blank" rel="noopener">ICML 2026で分かった本番エージェント86システムの「地味な設計」という解（LayerX）</a></h3>
+    <p class="summary">本番運用中の86AIエージェントを調査した結果、追加学習せず最新モデルを使用（70%）、 自律ステップを10未満に制限（68%）など「地味で堅実な設計」への収束を実証。 週を通じて複数回言及された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">tech.layerx.co.jp</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://ai.itokoba.com/archives/861/" target="_blank" rel="noopener">AIを使っているなら全員入れるべきAgent Skill 4選【ChatGPT / Codex / Claude Code】</a></h3>
+    <p class="summary">ChatGPT・Codex・Claude Code向けに実務で効果的なAgent Skillを4本厳選。 具体的な設定方法と効果を解説し、週内で最もブクマを集めた記事のひとつ。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">ai.itokoba.com</span><span class="tag">411 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://github.com/coji/natural-japanese" target="_blank" rel="noopener">GitHub - coji/natural-japanese</a></h3>
+    <p class="summary">仕事の日本語文書を読みやすく直すAgent Skill。議事録・調査レポート・社内ガイド・ スライド構成に対応し、形態素解析でAI臭さを除去する機能を持つ。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">GitHub</span><span class="tag">109 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://qiita.com/minorun365/items/320b4230c0b0c169ba13" target="_blank" rel="noopener">AIエージェントの作業結果、マークダウンで読むの辛くない？「HTML共有くん」を作りました</a></h3>
+    <p class="summary">エージェントの出力をHTMLで見やすく共有するツールの実装記。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Qiita</span><span class="tag">33 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/aws_japan/articles/2b62886aa8735e" target="_blank" rel="noopener">AIエージェントの「認可疲れ」に効く処方箋：理論から実装まで</a></h3>
+    <p class="summary">頻発する権限確認プロンプトへの疲弊（認可疲れ）を、理論的背景から実装対策まで整理。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Zenn</span><span class="tag">31 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49330597" target="_blank" rel="noopener">GitHub.com 大規模インシデント（HN 511pt）／Ask HN: Alternatives to GitHub</a></h3>
+    <p class="summary">GitHub.com全体で断続的な障害が発生しCI/CDパイプラインが停止（885コメント）。 同日中にGitLab・Forgejo・Gitea等の代替案を募る実践的スレッドが立った。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 479pt</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c3">
+  <h2 class="cat-title"><span class="cat-num">03</span>LLM認知論・モデル品質を巡る議論</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49312845" target="_blank" rel="noopener">AIは人間の脳より遥かに大きなワーキングメモリを持つ</a></h3>
+    <p class="summary">LLMのコンテキストウィンドウを「ワーキングメモリ」として捉え直す論考。339コメント。 人間の認知制約を超えた処理能力とCoding Agentの設計論との接続が議論された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 380pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49309451" target="_blank" rel="noopener">AIとの協働はコーディングよりリーダーシップに近い感覚</a></h3>
+    <p class="summary">Stack Overflow Blog。AIとのペアプロが「指示・委任・フィードバック・軌道修正」という 管理職業務に近いと主張。166コメント。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 256pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49322695" target="_blank" rel="noopener">意図的にモデルを劣化させている</a></h3>
+    <p class="summary">AI企業がコスト削減のため意図的にモデル品質を下げているという主張。 「賢いが高い」から「安いが劣る」への業界トレンドを批判的に分析。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 240pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49336573" target="_blank" rel="noopener">AI;DR（AI; Didn&#x27;t Read）</a></h3>
+    <p class="summary">AIが要約・代読することで人間が一次情報を読まなくなる逆説的現象を論じる。 AI活用が情報の質と思考深度に与える影響についての考察。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 541pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/lifeisbeautiful/n/n890f00a6136a" target="_blank" rel="noopener">LLMは「次の単語を当てる」だけなのに、なぜ思考しているように見えるのか？｜中島聡</a></h3>
+    <p class="summary">『ソフトウェア神話からの脱出』著者による解説記事。トークン予測だけで「思考に見える」 仕組みを平易に説明し、週内で最大級の反響を得た。翌日にはてブでもまとめが拡散。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">note</span><span class="tag">527 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://kensuu.com/n/n490abc44dae6" target="_blank" rel="noopener">AIに細かく指示するほど、逆に下手になるかも？という話</a></h3>
+    <p class="summary">AIへの過度に細かい指示がかえって出力品質を低下させる可能性を論じる。 上記の中島聡記事と同じ週にプロンプト設計の原則論として並走した。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">kensuu.com</span><span class="tag">けんすう 24 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c4">
+  <h2 class="cat-title"><span class="cat-num">04</span>ローカルLLM・中国発オープンウェイトAIの実用化</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1voojjz/megathread_qwen_38_27b_release_day/" target="_blank" rel="noopener">Qwen 3.8 27B リリース日メガスレッド</a></h3>
+    <p class="summary">Qwen 3.8 27Bのリリースを受けたコミュニティ総まとめ。性能評価・量子化・実行環境の 情報が集積し、8/16・8/17・8/20と3日連続でr/LocalLLaMAのホット上位に浮上し続けた。 Artificial Analysisでは52ポイントを獲得（HN 291pt、8/18）。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1vp438p/if_you_would_have_told_me_half_a_year_ago_that_a/" target="_blank" rel="noopener">Qwen3.8-27BがSuper Marioクローンをワンショット生成</a></h3>
+    <p class="summary">ローカルで動くQwen3.8-27Bが Super Marioクローンをワンショット生成。 「半年前に言われたら信じなかった」という反応がコミュニティで共有された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49366792" target="_blank" rel="noopener">DFlash2：ドラフト並列化でQwen 3.8 27Bを最大4倍高速化</a></h3>
+    <p class="summary">Qwen3.8-27B Dynamic v3 Unsloth GGUFsの展開とあわせ、投機的デコーディングによる 推論高速化が週末に話題化した。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 63pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://gigazine.net/news/20260817-z-ai-glm-5-3/" target="_blank" rel="noopener">Z.aiがコーディング能力に優れたオープンウェイトAIモデル「GLM-5.3」リリース</a></h3>
+    <p class="summary">前モデル比50%性能向上を謳うオープンウェイトのコーディングモデル。 ローカルLLMでのClaude代替候補として言及された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">gigazine.net</span><span class="tag">9 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://llm-jp.nii.ac.jp/news/20260818/" target="_blank" rel="noopener">LLM-jp-4 33B Dense型モデル公開</a></h3>
+    <p class="summary">国立情報学研究所主導の国産オープンLLM最新版。日本語モデル選定の選択肢として。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">llm-jp.nii.ac.jp</span><span class="tag">13 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1vrqxqc/game_over_22gb_local_models_run_in_pi_now/" target="_blank" rel="noopener">ゲームオーバー。22GBのローカルモデルがPiで動き、Claude Code Opus 5 Highをリアルコード課題で上回る</a></h3>
+    <p class="summary">22GBのローカルLLMがRaspberry Pi上でClaude Code Opus 5 Highをトレーニング カットオフ以降のタスクで上回るという主張。ローカルLLM代替可能性の議論素材。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://voluntas.ghost.io/local-llm-2026-08/" target="_blank" rel="noopener">ローカル LLM 雑感 (2026-08)</a></h3>
+    <p class="summary">2026年8月時点でのローカルLLM使用感まとめ。Qwen等の最新モデルを実際に動かした際の コスト・品質比較。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">voluntas.ghost.io</span><span class="tag">125 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c5">
+  <h2 class="cat-title"><span class="cat-num">05</span>AI業界M&amp;A・資本の再編</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49323381" target="_blank" rel="noopener">StripeがAI企業OpenRouterを70億ドル超で買収へ</a></h3>
+    <p class="summary">BloombergによるStripe×OpenRouter買収報道。AI API集約プラットフォームが決済大手に 統合される可能性が8/17に報じられ、8/20には別記事（OpenRouterがStripeに参加）で 再浮上し週内で二度話題になった。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 155pt→574pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49320611" target="_blank" rel="noopener">AI クレジット転売経済</a></h3>
+    <p class="summary">AI APIクレジットを大量購入し転売するトークンブローカーが急増するAI経済圏の構造分析。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 218pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49323686" target="_blank" rel="noopener">NvidiaがOpenAIインフラへの保証額を大幅削減</a></h3>
+    <p class="summary">ReutersによるNvidiaがOpenAIデータセンターへの2500億ドル規模の保証を縮小との報道。 OpenAI資金調達構造の変化を示す一断面。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 74pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.nikkei.com/article/DGXZQOUB0752I0X00C26A8000000/" target="_blank" rel="noopener">ソフトバンクGが個人向け社債1兆円　AI投資へ</a></h3>
+    <p class="summary">AI投資資金確保のための大型個人向け社債発行。国内AI資本動向の一例。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">nikkei.com</span><span class="tag">nikkei 16 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c6">
+  <h2 class="cat-title"><span class="cat-num">06</span>MCP・RAG・エージェント基盤</h2>
+  <p class="cat-desc">4本</p>
+
+  <article class="entry">
+    <h3><a href="https://acro-engineer.hatenablog.com/entry/2026/08/18/120000" target="_blank" rel="noopener">MCPの仕組みと役割を理解する - 『MCP Deep Dive』社内講習会を実施</a></h3>
+    <p class="summary">Acroquest。MCPプロトコルの仕組み・役割・各コンポーネントを社内講習形式で解説。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">acro-engineer.hatenablog.com</span><span class="tag">114 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://techblog.insightedge.jp/entry/ontology-graph-rag" target="_blank" rel="noopener">オントロジー駆動でGraphRAGを構築してみた</a></h3>
+    <p class="summary">オントロジーで知識構造を定義し、GraphRAGのクエリ精度と説明可能性を向上させる 実装アプローチ。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">techblog.insightedge.jp</span><span class="tag">29 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/exwzd/articles/20260813-dogwood-agent-policy" target="_blank" rel="noopener">AWS の新ポリシー言語 Dogwood を試す</a></h3>
+    <p class="summary">AWSがオープンソースで発表したAIエージェント向けポリシー言語。きめ細かい アクセス制御を宣言的に記述できるアーキテクチャ。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Zenn</span><span class="tag">35 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/kimushun1101/articles/mikke-markdown-search-cli" target="_blank" rel="noopener">Markdownノートを日本語で全文検索できるCLI「mikke」を作った</a></h3>
+    <p class="summary">日本語対応の高速Markdown全文検索CLIツールの開発記録。Coding Agentとの組み合わせで ナレッジ管理を効率化する実装例。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Zenn</span><span class="tag">125 users</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c7">
+  <h2 class="cat-title"><span class="cat-num">07</span>Google Workspace/Gemini週次アップデートとn8n業務自動化実践</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence" target="_blank" rel="noopener">Workspace Intelligence：Workspace全体を横断する統合AIナレッジグラフ</a></h3>
+    <p class="summary">メール・チャット・ファイルを横断する統合AIナレッジグラフで「文脈の途切れない 自律的ワーク」を実現。エージェント型作業の前提インフラとして週を通じ言及された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/product-announcements/create-on-brand-presentations-in-minutes-with-gemini-in-google-slides" target="_blank" rel="noopener">Gemini in Google Slides：ブランドガイドラインに沿ったプレゼン自動生成</a></h3>
+    <p class="summary">テキスト指示でブランドカラー・ロゴ・フォントを適用した資料を数分で生成。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://workspace.google.com/blog/ai-and-machine-learning/learning-from-hogwarts-magic-three-blueprints-to-gamify-and-evangelize-ai-adoption" target="_blank" rel="noopener">AI導入ゲーミフィケーション：ホグワーツに学ぶ3つのブループリント</a></h3>
+    <p class="summary">ハウス型ポイント競争・250名クロスファンクショナルチャンピオンネットワーク・ CEO率先利用の3施策でAI採用を組織全体に浸透させるフレームワーク。AI採用率43%増の 事例付きで8/16〜8/18にかけ繰り返し参照された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">workspace.google.com</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.watch.impress.co.jp/docs/news/2133077.html" target="_blank" rel="noopener">GoogleスプレッドシートにCanvas　座席表などミニアプリ化</a></h3>
+    <p class="summary">Google SheetsにCanvas機能が追加され、ノーコードでミニアプリ（座席表・予約管理等）を 直接作成可能に。GASなしで業務ツール化できる新機能。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">watch.impress.co.jp</span><span class="tag">24 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/n8n/comments/1vq5n1t/need_help_with_creating_an_n8n_orchestration/" target="_blank" rel="noopener">個人エージェントのn8nオーケストレーション層の構築</a></h3>
+    <p class="summary">複数の個人AIエージェントを統括するn8nオーケストレーション層の設計相談。 エージェント間ルーティングやセッション管理の実装議論。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/n8n/comments/1vq87ef/built_a_full_leadgen_3email_drip_campaign/" target="_blank" rel="noopener">n8nでリードジェン+3通メールドリップキャンペーン全自動化を構築した</a></h3>
+    <p class="summary">Instantly/Clayを迂回してn8nでリードジェン→メールドリップを全自動化した構築レポート。 デリバリビリティ課題も共有された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/n8n/comments/1vsrxtz/why_n8n_give_me_23_reasons_why_i_should_use_it/" target="_blank" rel="noopener">n8nを使う理由を2〜3個教えてください——他のAI自動化ツールとの比較</a></h3>
+    <p class="summary">n8nを選ぶ理由を巡る議論スレ。同時期に実プロジェクトでのn8nセットアップ論や 「ノーコードAI自動化の学習に未来はあるか」を問うスレッドも並走した。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.reddit.com/r/gsuite/comments/1vqqsom/opensourced_the_script_we_use_to_audit_a_google/" target="_blank" rel="noopener">引き継いだGoogle WorkspaceテナントをGAM7+Pythonで監査するスクリプトをオープンソース公開</a></h3>
+    <p class="summary">新規引き継いだGWテナントの権限・設定を読み取り専用で監査するスクリプトを公開。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Reddit</span></div>
+  </article>
+</section>
+
+<section class="cat" id="c8">
+  <h2 class="cat-title"><span class="cat-num">08</span>受託・エンタープライズDX実装事例と組織論</h2>
+  <p class="cat-desc">8本</p>
+
+  <article class="entry">
+    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2608/17/2000000564/" target="_blank" rel="noopener">「ほんだし」ラベルがAIでぐちゃぐちゃ　味の素公式Xで謝罪</a></h3>
+    <p class="summary">AI生成画像をチェックなしで使用した結果、実在しない文字・崩れたデザインが拡散。 AI制作物の品質保証プロセス設計の反面教師事例として広く共有された。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">itmedia.co.jp</span><span class="tag">158 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://www.itmedia.co.jp/enterprise/articles/2608/17/news071.html" target="_blank" rel="noopener">「データがない・スキルがない・発想が広がらない」味の素冷凍食品のDX解消策</a></h3>
+    <p class="summary">消費財メーカーがAI×データ分析で新商品開発の3つの壁を突破した事例。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">itmedia.co.jp</span><span class="tag">33 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://forest.watch.impress.co.jp/docs/news/2133878.html" target="_blank" rel="noopener">Renewer、業務を録画してAIが自動化すべき業務を特定できる「メボシ」を提供開始</a></h3>
+    <p class="summary">業務録画データをAIが分析し、自動化すべき業務を特定するSaaS。業務可視化リサーチを 数か月から2週間に短縮すると主張。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">forest.watch.impress.co.jp</span><span class="tag">14 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://note.com/lifeisbeautiful/n/n7edad0d084c4" target="_blank" rel="noopener">年$600,000のSalesforce契約は、2ヶ月で作った自作CRMに置き換えられるのか？｜中島聡</a></h3>
+    <p class="summary">高額SaaS契約をAI活用の内製開発で代替するコスト試算と実現可能性を議論。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">note</span><span class="tag">41 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://togetter.com/li/2734257" target="_blank" rel="noopener">JTCのAIマンガ「動かない社員の代わりにAIエージェントを使う」回が共感を呼ぶ</a></h3>
+    <p class="summary">シニア層がAIをうまく使いこなすシーンへの共感まとめ。組織内AI活用の普及プロセスの 可視化として拡散した。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">togetter.com</span><span class="tag">202 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://zenn.dev/pdfractal/articles/c7af0a168c0552" target="_blank" rel="noopener">なぜ、ITの職場において低スキル者を排除することが成功のために重要だと誰も言わないのか？</a></h3>
+    <p class="summary">IT組織設計と採用基準を巡る議論。暗黙の前提を問い直す論考が週内最大級の反響を呼んだ。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Zenn</span><span class="tag">639 users</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49351324" target="_blank" rel="noopener">コンサルタントに注意せよ</a></h3>
+    <p class="summary">Icelandスーパーマーケットの「暗黒時代」回顧録。経営コンサルへの依存が企業文化を 破壊した体験談。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 422pt</span></div>
+  </article>
+  <article class="entry">
+    <h3><a href="https://news.ycombinator.com/item?id=49362934" target="_blank" rel="noopener">リモートワーカーが幸福度で最高評価——7,700名調査</a></h3>
+    <p class="summary">コロラド大学の研究。7,700人の調査でリモートワーカーのウェルビーイングが 最高スコアという結果。</p>
+    <div class="tags"><span class="tag date">2026-08-20</span><span class="tag">Hacker News</span><span class="tag">HN 466pt</span></div>
+  </article>
+</section>
+
+<footer class="foot">
+  <p>8/14・8/15分の trend ファイルは存在しない。日次トレンド収集は8/4〜8/15の12日間停止しており、8/16に再開したため、本ダイジェストは実質8/16〜8/20の5日分を対象とする。前々週（20260818-digest.md）・前週（20260820-digest.md旧版）は収集停止のため「対象記事なし」として作成されていたが、8/16以降のtrendファイルは既に存在していたため本版で内容を差し替えた。前回内容のある週次ダイジェストは20260728-digest.md（7/22〜7/28）。</p>
+  <p>対象は8/16〜8/20の5日分（8/14・8/15は日次収集が停止していたため欠落）。★★★を中心に、サーガ補完が必要な箇所のみ★★を採用した。</p>
+  <p>Reddit は r/OpenAI・r/nocode・r/automation・r/gsuite等でフィード取得が不安定な日もあったが、取得できた範囲でr/n8n・r/LocalLLaMA・r/ClaudeCodeを中心に採用した。</p>
+  <p>同一トピックが複数日にまたがって再浮上したもの（Qwen 3.8 27B、Stripe×OpenRouter買収、Claude Code週次利用制限延長、fx、Cursor Origin等）はサーガとしてまとめて1エントリーに集約した。</p>
+  <p>各記事は客観的な内容紹介にとどめ、用途や活用視点は読み手側で判断する形にした。</p>
+  <p>前回の内容のある週次ダイジェスト（20260728-digest.md、対象7/22〜7/28）からは3週間以上の間隔が空いたため、継続サーガの直接的な引き継ぎは限定的。オープンウェイトAI関連の関心は「規制論争」から「Qwen 3.8 27Bの実用化・高速化」へ、Anthropic関連の関心は「Opus 5発表」から「利用制限延長・エコシステム標準化（AGENTS.md等）」へと焦点が移った。</p>
+  <p>Generated 2026-08-20 — companion to <code>20260820-digest.md</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>
