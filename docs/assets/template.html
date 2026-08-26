@@ -20,26 +20,112 @@
   </div>
 </header>
 
+<!--
+  ═══ 今週のTOP3 ═══
+  全記事から厳選した3件。hero の直後・目次の前に置く（この位置は変えない）。
+  選定基準は SKILL.md「TOP3 の選定」を参照。反響数値の大きい順に並べるのではない。
+-->
+<section class="top3" id="top3">
+  <h2>今週のTOP3</h2>
+  <p class="top3-desc">{{TOP3_DESC}}</p>
+  <div class="top3-grid">
+
+    <!-- 3件ぶん繰り返す。rank は 01 / 02 / 03 -->
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">01</span>
+        <!-- OGP 画像が取れた場合。onerror で読み込み失敗時にファビコン表示へ差し替える -->
+        <img class="thumb" src="{{OGP_IMAGE}}" alt="" loading="lazy" decoding="async"
+             referrerpolicy="no-referrer"
+             onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain={{DOMAIN}}&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;{{DOMAIN}}&lt;/span&gt;&lt;/div&gt;&quot;">
+        <!-- OGP 画像が取れなかった場合は、上の <img> ごと下記に置き換える:
+        <div class="thumb-fallback">
+          <img src="https://www.google.com/s2/favicons?sz=64&amp;domain={{DOMAIN}}" alt="" loading="lazy">
+          <span>{{DOMAIN}}</span>
+        </div>
+        -->
+      </div>
+      <div class="pick-body">
+        <h3><a href="{{URL}}" target="_blank" rel="noopener">{{TITLE}}</a></h3>
+        <p class="summary">{{SUMMARY}}</p>
+        <!-- なぜ今週これを読むべきかの一言。1文で書く -->
+        <p class="why">{{WHY}}</p>
+        <div class="tags"><span class="tag date">{{DATE}}</span><span class="tag">{{SOURCE}}</span><span class="tag hot">{{TOPIC}}</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 <nav class="toc">
   <h2>目次</h2>
   <ol>
-    <!-- カテゴリの数だけ <li> を繰り返す。num は 01, 02, ... の連番、href はカテゴリセクションの id と対応させる -->
-    <li><a href="#c1"><span class="num">01</span>{{CAT_NAME}}<span class="cnt">{{N}}</span></a></li>
-    <!-- <li><a href="#c2"><span class="num">02</span>{{CAT_NAME}}<span class="cnt">{{N}}</span></a></li> -->
+    <!-- TOP3 への導線。常に先頭に置く -->
+    <li class="top3-link"><a href="#top3"><span class="num">★</span><span class="label">今週のTOP3</span><span class="cnt">3</span></a></li>
+    <!--
+      カテゴリの数だけ <li> を繰り返す。num は 01, 02, ... の連番、href は
+      カテゴリセクションの id と対応させる。
+      - .weight のバー幅 = そのカテゴリの記事数 ÷ 最大カテゴリの記事数（0〜100%）
+      - 主題カテゴリ（major）の <li> には class="lead-cat" を付けて太字にする
+    -->
+    <li class="lead-cat"><a href="#c1"><span class="num">01</span><span class="label">{{CAT_NAME}}</span><span class="weight"><i style="width:{{CAT_WEIGHT}}%"></i></span><span class="cnt">{{N}}</span></a></li>
+    <!-- <li><a href="#c2"><span class="num">02</span><span class="label">{{CAT_NAME}}</span><span class="weight"><i style="width:{{CAT_WEIGHT}}%"></i></span><span class="cnt">{{N}}</span></a></li> -->
   </ol>
 </nav>
 
-<!-- カテゴリセクション。カテゴリの数だけ <section class="cat" id="cN"> ブロックを繰り返す -->
-<section class="cat" id="c1">
+<!--
+  ═══ カテゴリセクション ═══
+  カテゴリの数だけ <section class="cat" id="cN"> を繰り返す。
+  section の class に軽重を付ける（SKILL.md「カテゴリの軽重」参照）:
+    class="cat major"  今週の主題カテゴリ（2〜3個まで）— 見出し大・左にアクセント帯
+    class="cat"        通常カテゴリ
+    class="cat minor"  周辺カテゴリ — 見出し小・区切り控えめ
+-->
+<section class="cat major" id="c1">
   <h2 class="cat-title"><span class="cat-num">01</span>{{CAT_TITLE}}</h2>
   <p class="cat-desc">{{CAT_DESC}}</p>
 
-  <!-- 記事エントリ。カテゴリ内の記事数だけ <article class="entry"> ブロックを繰り返す -->
-  <article class="entry">
-    <h3><a href="{{URL}}" target="_blank" rel="noopener">{{TITLE}}</a></h3>
-    <p class="summary">{{SUMMARY}}</p>
-    <div class="tags"><span class="tag date">{{DATE}}</span><span class="tag">{{SOURCE}}</span><span class="tag">{{TOPIC}}</span></div>
+  <!--
+    ── 記事エントリ ──
+    重要度で 3 段階に出し分ける（SKILL.md「記事の重要度判定」参照）。
+    カテゴリ内は tier-1 → tier-2 → tier-3 の順に並べる。
+    反響が同系統内で上位25%の記事は、数値タグに class="tag hot" を付ける。
+  -->
+
+  <!-- 上位（tier-1）: サムネ付き・要約2〜3行・大きめカード -->
+  <article class="entry tier-1">
+    <img class="thumb" src="{{OGP_IMAGE}}" alt="" loading="lazy" decoding="async"
+         referrerpolicy="no-referrer"
+         onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain={{DOMAIN}}&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;{{DOMAIN}}&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="{{URL}}" target="_blank" rel="noopener">{{TITLE}}</a></h3>
+      <p class="summary">{{SUMMARY}}</p>
+      <div class="tags"><span class="tag date">{{DATE}}</span><span class="tag">{{SOURCE}}</span><span class="tag hot">{{TOPIC}}</span></div>
+    </div>
   </article>
+
+  <!-- 中位（tier-2）: 小さいサムネ or ファビコン・要約1〜2行。OGP が無ければ下記のとおり thumb-fallback を直接置く -->
+  <article class="entry tier-2">
+    <div class="thumb-fallback">
+      <img src="https://www.google.com/s2/favicons?sz=64&amp;domain={{DOMAIN}}" alt="" loading="lazy">
+      <span>{{DOMAIN}}</span>
+    </div>
+    <div>
+      <h3><a href="{{URL}}" target="_blank" rel="noopener">{{TITLE}}</a></h3>
+      <p class="summary">{{SUMMARY}}</p>
+      <div class="tags"><span class="tag date">{{DATE}}</span><span class="tag">{{SOURCE}}</span><span class="tag">{{TOPIC}}</span></div>
+    </div>
+  </article>
+
+  <!-- 下位（tier-3）: サムネなし・タイトル + ソースの1行リスト。連続する tier-3 は 1 つの <ul> にまとめる -->
+  <ul class="entry-list">
+    <li class="entry tier-3">
+      <img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain={{DOMAIN}}" alt="" loading="lazy">
+      <a href="{{URL}}" target="_blank" rel="noopener">{{TITLE}}</a>
+      <span class="src">{{SOURCE}}</span>
+      <span class="tag">{{TOPIC}}</span>
+    </li>
+  </ul>
 </section>
 
 <footer class="foot">

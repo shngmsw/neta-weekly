@@ -20,434 +20,586 @@
   </div>
 </header>
 
+<section class="top3" id="top3">
+  <h2>今週のTOP3</h2>
+  <p class="top3-desc">今週の主題は「Skills の量産期入り」「代替 LLM 選定の現実化」「AI 時代の受託開発」。全68本のうち、まずこの3本。</p>
+  <div class="top3-grid">
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">01</span>
+        <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=claude.com" alt="" loading="lazy"><span>claude.com</span></div>
+      </div>
+      <div class="pick-body">
+        <h3><a href="https://claude.com/ja/blog/steering-claude-code-skills-hooks-rules-subagents-and-more" target="_blank" rel="noopener">Claude Code 公式ブログ：Skills/Hooks/Rules/Subagents</a></h3>
+        <p class="summary">Anthropic 公式ブログが、Claude Code の Skills、Hooks、Rules、Subagents の使い方を日本語で解説した。ハーネス設計の公式リファレンスがついに 整備された格好で、週内のはてブで 1 位級の反響を取った。</p>
+        <p class="why">今週の本流「Skills 量産期」の起点になった公式記事。以降の実践記事はおおむねここを参照している。</p>
+        <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Anthropic</span><span class="tag hot">はてブ 445 users</span></div>
+      </div>
+    </article>
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">02</span>
+        <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+      </div>
+      <div class="pick-body">
+        <h3><a href="https://news.ycombinator.com/item?id=48567759" target="_blank" rel="noopener">GLM-5.2 が Artificial Analysis のオープンウェイトモデルランキングで首位に</a></h3>
+        <p class="summary">Z.AI（北京）の GLM-5.2 が、Artificial Analysis 知性インデックスで オープンウェイト首位を獲得。HN では「Claude や GPT-4O 超えは誇大広告 ではないか」という批判もある。本週のオープンウェイト首位争い文脈の起点。</p>
+        <p class="why">オープンウェイトモデルがランキング首位に立った回。「代替 LLM 選定の現実化」カテゴリの前提になる出来事。</p>
+        <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag hot">HN 760pt</span></div>
+      </div>
+    </article>
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">03</span>
+        <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+      </div>
+      <div class="pick-body">
+        <h3><a href="https://news.ycombinator.com/item?id=48643180" target="_blank" rel="noopener">The Coming Loop</a></h3>
+        <p class="summary">Flask と Pallets の作者 Armin Ronacher による、AI がコードを書き、 テストし、修正するループの到来論。前週の Addy Osmani、Boris Cherny、 laiso の文脈を継承し、Plan→Build→Verify を軸にしたハーネス設計が 業界共通語彙になったことを示す。同日はてブにも 63 users で二重ランクイン。</p>
+        <p class="why">ループエンジニアリングが業界の共通語彙になった今週を象徴する論考。カテゴリ01の起点にあたる。</p>
+        <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 299pt</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
 <nav class="toc">
   <h2>目次</h2>
   <ol>
-    <li><a href="#c1"><span class="num">01</span>ループエンジニアリングが業界の共通語彙になる<span class="cnt">5</span></a></li>
-    <li><a href="#c2"><span class="num">02</span>Claude Code 公式 Skills とハーネス設計の量産期<span class="cnt">10</span></a></li>
-    <li><a href="#c3"><span class="num">03</span>代替 LLM 選定の現実化<span class="cnt">8</span></a></li>
-    <li><a href="#c4"><span class="num">04</span>Google Workspace の日本語対応と OKF<span class="cnt">6</span></a></li>
-    <li><a href="#c5"><span class="num">05</span>AI エージェント時代のインフラ<span class="cnt">6</span></a></li>
-    <li><a href="#c6"><span class="num">06</span>市民開発が本番運用に到達する<span class="cnt">6</span></a></li>
-    <li><a href="#c7"><span class="num">07</span>AI 時代の受託開発はどう変わるか<span class="cnt">7</span></a></li>
-    <li><a href="#c8"><span class="num">08</span>AI 出力の品質とモデル崩壊<span class="cnt">4</span></a></li>
-    <li><a href="#c9"><span class="num">09</span>AI 安全保障と規制動向<span class="cnt">4</span></a></li>
-    <li><a href="#c10"><span class="num">10</span>MCP、RAG、ナレッジ管理<span class="cnt">5</span></a></li>
-    <li><a href="#c11"><span class="num">11</span>ワークフロー自動化と OSS ツール<span class="cnt">7</span></a></li>
+    <li class="top3-link"><a href="#top3"><span class="num">★</span><span class="label">今週のTOP3</span><span class="cnt">3</span></a></li>
+    <li class="lead-cat"><a href="#c1"><span class="num">01</span><span class="label">ループエンジニアリングが業界の共通語彙になる</span><span class="weight"><i style="width:50%"></i></span><span class="cnt">5</span></a></li>
+    <li class="lead-cat"><a href="#c2"><span class="num">02</span><span class="label">Claude Code 公式 Skills とハーネス設計の量産期</span><span class="weight"><i style="width:100%"></i></span><span class="cnt">10</span></a></li>
+    <li><a href="#c3"><span class="num">03</span><span class="label">代替 LLM 選定の現実化</span><span class="weight"><i style="width:80%"></i></span><span class="cnt">8</span></a></li>
+    <li><a href="#c4"><span class="num">04</span><span class="label">Google Workspace の日本語対応と OKF</span><span class="weight"><i style="width:60%"></i></span><span class="cnt">6</span></a></li>
+    <li><a href="#c5"><span class="num">05</span><span class="label">AI エージェント時代のインフラ</span><span class="weight"><i style="width:60%"></i></span><span class="cnt">6</span></a></li>
+    <li><a href="#c6"><span class="num">06</span><span class="label">市民開発が本番運用に到達する</span><span class="weight"><i style="width:60%"></i></span><span class="cnt">6</span></a></li>
+    <li><a href="#c7"><span class="num">07</span><span class="label">AI 時代の受託開発はどう変わるか</span><span class="weight"><i style="width:70%"></i></span><span class="cnt">7</span></a></li>
+    <li><a href="#c8"><span class="num">08</span><span class="label">AI 出力の品質とモデル崩壊</span><span class="weight"><i style="width:40%"></i></span><span class="cnt">4</span></a></li>
+    <li><a href="#c9"><span class="num">09</span><span class="label">AI 安全保障と規制動向</span><span class="weight"><i style="width:40%"></i></span><span class="cnt">4</span></a></li>
+    <li><a href="#c10"><span class="num">10</span><span class="label">MCP、RAG、ナレッジ管理</span><span class="weight"><i style="width:50%"></i></span><span class="cnt">5</span></a></li>
+    <li><a href="#c11"><span class="num">11</span><span class="label">ワークフロー自動化と OSS ツール</span><span class="weight"><i style="width:70%"></i></span><span class="cnt">7</span></a></li>
   </ol>
 </nav>
 
-<section class="cat" id="c1">
+<section class="cat major" id="c1">
   <h2 class="cat-title"><span class="cat-num">01</span>ループエンジニアリングが業界の共通語彙になる</h2>
   <p class="cat-desc">5本</p>
 
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48643180" target="_blank" rel="noopener">The Coming Loop</a></h3>
-    <p class="summary">Flask と Pallets の作者 Armin Ronacher による、AI がコードを書き、 テストし、修正するループの到来論。前週の Addy Osmani、Boris Cherny、 laiso の文脈を継承し、Plan→Build→Verify を軸にしたハーネス設計が 業界共通語彙になったことを示す。同日はてブにも 63 users で二重ランクイン。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 299pt</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48643180" target="_blank" rel="noopener">The Coming Loop</a></h3>
+      <p class="summary">Flask と Pallets の作者 Armin Ronacher による、AI がコードを書き、 テストし、修正するループの到来論。前週の Addy Osmani、Boris Cherny、 laiso の文脈を継承し、Plan→Build→Verify を軸にしたハーネス設計が 業界共通語彙になったことを示す。同日はてブにも 63 users で二重ランクイン。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 299pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://qiita.com/Syoitu/items/97ed37e7ba9c38dc75d8" target="_blank" rel="noopener">入門から実践「🔁 ループエンジニアリング」</a></h3>
-    <p class="summary">ループエンジニアリングの概念を入門から実践まで整理した日本語記事。 n8n や Make などのワークフロー設計、繰り返し改善サイクルの実装パターン、 AI エージェントとの連携方式を一通り通している。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span><span class="tag">はてブ 222 users</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://ogimage.blog.st-hatena.com/8454420450094081900/14945776032045712761/1782265141" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=syu-m-5151.hatenablog.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;syu-m-5151.hatenablog.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://syu-m-5151.hatenablog.com/entry/2026/06/23/215158" target="_blank" rel="noopener">ループエンジニアリングはサイバネティクスの再発見だ</a></h3>
+      <p class="summary">ループエンジニアリングを Wiener のサイバネティクス（制御理論）の系譜 として位置づけ直す論考。AI ループは新しいパラダイムというより、 フィードバック制御の自然な拡張であるという整理。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">syu-m-5151.hatenablog.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://syu-m-5151.hatenablog.com/entry/2026/06/23/215158" target="_blank" rel="noopener">ループエンジニアリングはサイバネティクスの再発見だ</a></h3>
-    <p class="summary">ループエンジニアリングを Wiener のサイバネティクス（制御理論）の系譜 として位置づけ直す論考。AI ループは新しいパラダイムというより、 フィードバック制御の自然な拡張であるという整理。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">syu-m-5151.hatenablog.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://files.speakerdeck.com/presentations/f93f8a282e2b492eb0f25237b6dc8ffa/slide_0.jpg?39210519" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=speakerdeck.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;speakerdeck.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://speakerdeck.com/gotalab555/hanesuenziniaringuwoyarisugitahua-sonohanesuhajie-ti-sareta" target="_blank" rel="noopener">ハーネスエンジニアリングをやりすぎた話</a></h3>
+      <p class="summary">ハーネスを作り込みすぎた結果、複雑さに耐えられず解体したという反省事例。 ループエンジニアリングの流行へのカウンターとして読むと示唆深く、 シンプルなハーネスから始める基準として位置づけられる。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://speakerdeck.com/gotalab555/hanesuenziniaringuwoyarisugitahua-sonohanesuhajie-ti-sareta" target="_blank" rel="noopener">ハーネスエンジニアリングをやりすぎた話</a></h3>
-    <p class="summary">ハーネスを作り込みすぎた結果、複雑さに耐えられず解体したという反省事例。 ループエンジニアリングの流行へのカウンターとして読むと示唆深く、 シンプルなハーネスから始める基準として位置づけられる。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--85tthWqm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E5%25B7%25B1%25E6%2594%25B9%25E5%2596%2584%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25E5%2589%258D%25E6%258F%2590%25E3%2582%2592%25E8%25A6%2586%25E3%2581%259B%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2595%2520%25E5%25B1%2580%25E6%2589%2580%25E6%259C%2580%25E9%2581%25A9%25E3%2581%25A8%25E3%2583%258F%25E3%2583%25BC%25E3%2583%258D%25E3%2582%25B9%25E3%2581%25A7%25E3%2581%25AE%25E8%2584%25B1%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:223%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E2OTFlNjE4YzcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:LayerX%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzAwNjA5YTdlZmMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/layerx/articles/b36ceffe6b5e20" target="_blank" rel="noopener">自己改善エージェントはなぜ前提を覆せないのか（LayerX）</a></h3>
+      <p class="summary">自己改善エージェントが局所最適に陥る構造を解説し、ハーネス側で前提を 変えて脱出する手法を提案する。ループ内で改善する限り前提は変わらない という限界を踏まえた設計論。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/layerx/articles/b36ceffe6b5e20" target="_blank" rel="noopener">自己改善エージェントはなぜ前提を覆せないのか（LayerX）</a></h3>
-    <p class="summary">自己改善エージェントが局所最適に陥る構造を解説し、ハーネス側で前提を 変えて脱出する手法を提案する。ループ内で改善する限り前提は変わらない という限界を踏まえた設計論。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Ftech-festa-ogp-background-4b5015b2c518c7e6b9062a7c9f5f5e90.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMzIwMTY0JTJGcHJvZmlsZS1pbWFnZXMlMkYxNTQzMzExNzUyP2l4bGliPXJiLTQuMS4xJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz0wNGFkMDZhZjhkNDE3NDcxNTk2NGE0ZmZmNTNmMGQxMw%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkYxZTIwZGI1ZTdlNDA3ZWFlN2I5NzBlYzk5OTg4MGRjOGMzY2MwZjY0JTJGb3JpZ2luYWwuanBnJTNGMTY2NzI3NDk2Mz9peGxpYj1yYi00LjEuMSZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz04OTI0NDcwMDk1MDMyZjUxYmZlNzE3ZjVkOGUzYmE3ZA%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D0db5e6259bef720891efe507901d3252?ixlib=rb-4.1.1&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9JUU1JTg1JUE1JUU5JTk2JTgwJUUzJTgxJThCJUUzJTgyJTg5JUU1JUFFJTlGJUU4JUI3JUI1JTIwLSVFMyU4MCU4QyVGMCU5RiU5NCU4MSUyMCVFMyU4MyVBQiVFMyU4MyVCQyVFMyU4MyU5NyVFMyU4MiVBOCVFMyU4MyVCMyVFMyU4MiVCOCVFMyU4MyU4QiVFMyU4MiVBMiVFMyU4MyVBQSVFMyU4MyVCMyVFMyU4MiVCMCVFMyU4MCU4RCZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzRkZGRkZGJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTkyNzRlZWYwZDFmNzljZWZkZTdlNDAwYWY4MDg0MDg5&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBTeW9pdHUmdHh0LWNvbG9yPSUyM0ZGRkZGRiZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1kNWQ0ZDc5NmZhZTM4NjhjMDdlN2NkMmIwMmM3NWE0NQ&amp;blend-x=242&amp;blend-y=454&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;txt64=S0RESeOCouOCuOODo-OCpOODq-mWi-eZuuOCu-ODs-OCv-ODvOagquW8j-S8muekvg&amp;txt-x=242&amp;txt-y=539&amp;txt-width=838&amp;txt-clip=end%2Cellipsis&amp;txt-color=%23FFFFFF&amp;txt-font=Hiragino%20Sans%20W6&amp;txt-size=28&amp;s=fd6b3f5c96e2813644ebcdba8dfd2ecf" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=qiita.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;qiita.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://qiita.com/Syoitu/items/97ed37e7ba9c38dc75d8" target="_blank" rel="noopener">入門から実践「🔁 ループエンジニアリング」</a></h3>
+      <p class="summary">ループエンジニアリングの概念を入門から実践まで整理した日本語記事。 n8n や Make などのワークフロー設計、繰り返し改善サイクルの実装パターン、 AI エージェントとの連携方式を一通り通している。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span><span class="tag">はてブ 222 users</span></div>
+    </div>
   </article>
 </section>
 
-<section class="cat" id="c2">
+<section class="cat major" id="c2">
   <h2 class="cat-title"><span class="cat-num">02</span>Claude Code 公式 Skills とハーネス設計の量産期</h2>
   <p class="cat-desc">10本</p>
 
-  <article class="entry">
-    <h3><a href="https://claude.com/ja/blog/steering-claude-code-skills-hooks-rules-subagents-and-more" target="_blank" rel="noopener">Claude Code 公式ブログ：Skills/Hooks/Rules/Subagents</a></h3>
-    <p class="summary">Anthropic 公式ブログが、Claude Code の Skills、Hooks、Rules、Subagents の使い方を日本語で解説した。ハーネス設計の公式リファレンスがついに 整備された格好で、週内のはてブで 1 位級の反響を取った。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Anthropic</span><span class="tag">はてブ 445 users</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=claude.com" alt="" loading="lazy"><span>claude.com</span></div>
+    <div>
+      <h3><a href="https://claude.com/ja/blog/steering-claude-code-skills-hooks-rules-subagents-and-more" target="_blank" rel="noopener">Claude Code 公式ブログ：Skills/Hooks/Rules/Subagents</a></h3>
+      <p class="summary">Anthropic 公式ブログが、Claude Code の Skills、Hooks、Rules、Subagents の使い方を日本語で解説した。ハーネス設計の公式リファレンスがついに 整備された格好で、週内のはてブで 1 位級の反響を取った。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Anthropic</span><span class="tag hot">はてブ 445 users</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://qiita.com/enomoso_pm/items/68d1a29728e5ee339779" target="_blank" rel="noopener">AI に「図を描いて」と頼むと&quot;それっぽいけど使えない図&quot;が出てくる</a></h3>
-    <p class="summary">問題を、draw.io 生成スキルで倒した（はてブ 508 users） Claude Code の「見た目だけの図」問題を draw.io 生成スキルで解決した 実装ノウハウ。スキル設計の代表事例として、構造化と粒度の参考になる。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkYwJTJGNDE5NzQyOCUyRnByb2ZpbGUtaW1hZ2VzJTJGMTc2MTc1ODE5Mz9peGxpYj1yYi00LjEuMSZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9NzE3YWRkZWFiMTZjNWMzYTgxMzU1OTM5NjYwNDg0NGU%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D4ec77b39af33aa7e840bf906b087cb5b?ixlib=rb-4.1.1&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgwJTkwQUklRTklQTclODYlRTUlOEIlOTUlRTklOTYlOEIlRTclOTklQkElRTMlODAlOTFBSSVFMyU4MSVBQiVFMyU4MCU4QyVFNSU5QiVCMyVFMyU4MiU5MiVFNiU4RiU4RiVFMyU4MSU4NCVFMyU4MSVBNiVFMyU4MCU4RCVFMyU4MSVBOCVFOSVBMCVCQyVFMyU4MiU4MCVFMyU4MSVBOCVFMiU4MCU5QyVFMyU4MSU5RCVFMyU4MiU4QyVFMyU4MSVBMyVFMyU4MSVCRCVFMyU4MSU4NCVFMyU4MSU5MSVFMyU4MSVBOSVFNCVCRCVCRiVFMyU4MSU4OCVFMyU4MSVBQSVFMyU4MSU4NCVFNSU5QiVCMyVFMiU4MCU5RCVFMyU4MSU4QyVFNSU4NyVCQSVFMyU4MSVBNiVFMyU4MSU4RiVFMyU4MiU4QiVFNSU5NSU4RiVFOSVBMSU4QyVFMyU4MiU5MiVFMyU4MCU4MWRyYXcuaW8lRTclOTQlOUYlRTYlODglOTAlRTIlODAlQTYmdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz1lZDEyMDY4NTU5YTM3NzYzNjEyNmEzMzk4NDRjYjFmZA&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBlbm9tb3NvX3BtJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9N2YzYjgxMTVhOGE4MjVkMjMzMGY3NzA5YTdkNTFkNTc&amp;blend-x=242&amp;blend-y=480&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;s=5d5ae79157c38f6c5ba8cd5e15df5f49" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=qiita.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;qiita.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://qiita.com/enomoso_pm/items/68d1a29728e5ee339779" target="_blank" rel="noopener">AI に「図を描いて」と頼むと&quot;それっぽいけど使えない図&quot;が出てくる</a></h3>
+      <p class="summary">問題を、draw.io 生成スキルで倒した（はてブ 508 users） Claude Code の「見た目だけの図」問題を draw.io 生成スキルで解決した 実装ノウハウ。スキル設計の代表事例として、構造化と粒度の参考になる。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://voluntas.ghost.io/shiguredo-skill-20206-06/" target="_blank" rel="noopener">時雨堂のスキル</a></h3>
-    <p class="summary">ミドルウェア企業の時雨堂が本番運用している Claude Code Skill 群を公開。 プロダクション環境の Skill 設計の実例で、構造化、粒度、依存関係が 具体的に追える。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">voluntas.ghost.io</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=voluntas.ghost.io&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;voluntas.ghost.io&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://voluntas.ghost.io/shiguredo-skill-20206-06/" target="_blank" rel="noopener">時雨堂のスキル</a></h3>
+      <p class="summary">ミドルウェア企業の時雨堂が本番運用している Claude Code Skill 群を公開。 プロダクション環境の Skill 設計の実例で、構造化、粒度、依存関係が 具体的に追える。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">voluntas.ghost.io</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/pksha/articles/7a7db5c105f396" target="_blank" rel="noopener">デザインシステムの skill の精度が上がった8つの方法（PKSHA Technology）</a></h3>
-    <p class="summary">PKSHA デザイナーによる Skill 品質向上ノウハウ集。デザインシステム文脈 だが、Skill 設計全般に応用できる方法論として整理されている。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--uhulKJFV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2581%25AEskill%25E3%2581%25AE%25E7%25B2%25BE%25E5%25BA%25A6%25E3%2581%258C%25E4%25B8%258A%25E3%2581%258C%25E3%2581%25A3%25E3%2581%259F8%25E3%2581%25A4%25E3%2581%25AE%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E6%25B8%2585%25E6%25B0%25B4%25E3%2581%25AF%25E3%2582%258B%25E3%2581%258B%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJlOTZhNTRiYWMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:PKSHA%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2520%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VlZjI1MDMxOTIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/pksha/articles/7a7db5c105f396" target="_blank" rel="noopener">デザインシステムの skill の精度が上がった8つの方法（PKSHA Technology）</a></h3>
+      <p class="summary">PKSHA デザイナーによる Skill 品質向上ノウハウ集。デザインシステム文脈 だが、Skill 設計全般に応用できる方法論として整理されている。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://qiita.com/kamome_susume/items/467446c5a6cbd10a5ffa" target="_blank" rel="noopener">Claude Code で設計書作成に使えるサブエージェントの作り方</a></h3>
-    <p class="summary">Claude Code のサブエージェント機能を使い、要件定義から基本設計、 詳細設計までを自動生成するワークフロー実装。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkYxNjkzMjQ4JTJGZDhlMmU1OWNiMDVmY2Y3MDQ3ZDgyN2ZjNDlkNDAwMTkzZTU5NDdjOSUyRnhfbGFyZ2UucG5nJTNGMTY4NjMxODg1ND9peGxpYj1yYi00LjEuMSZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9MDkzMTg5ZWZkNTVmZTE1ZTUwNmMyN2Y1YTJjNDIzZDU%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D605cf3f61eb1f0adeb1fc856f0328ac3?ixlib=rb-4.1.1&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9Q2xhdWRlJTIwQ29kZSVFMyU4MSVBNyVFOCVBOCVBRCVFOCVBOCU4OCVFNiU5QiVCOCVFNCVCRCU5QyVFNiU4OCU5MCVFMyU4MSVBQiVFNCVCRCVCRiVFMyU4MSU4OCVFMyU4MiU4QiVFMyU4MiVCNSVFMyU4MyU5NiVFMyU4MiVBOCVFMyU4MyVCQyVFMyU4MiVCOCVFMyU4MiVBNyVFMyU4MyVCMyVFMyU4MyU4OCVFMyU4MSVBRSVFNCVCRCU5QyVFMyU4MiU4QSVFNiU5NiVCOSVFRiVCRCU5QyVFOCVBNiU4MSVFNCVCQiVCNiVFNSVBRSU5QSVFNyVCRSVBOSVFMyU4MSU4QiVFMyU4MiU4OSVFOCVBOSVCMyVFNyVCNCVCMCVFOCVBOCVBRCVFOCVBOCU4OCVFMyU4MSVCRSVFMyU4MSVBNyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTViNGM5N2IzYzI3Y2YwMTMyZTE0ZTRkOTQ5OGQ1OTll&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBrYW1vbWVfc3VzdW1lJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9MzY3MDk1NThkOGYyNDZiODJiNzE3MWMzNzEyODgwNjg&amp;blend-x=242&amp;blend-y=480&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;s=1a73171d04cc27fbe56d575061bcf518" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=qiita.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;qiita.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://qiita.com/kamome_susume/items/467446c5a6cbd10a5ffa" target="_blank" rel="noopener">Claude Code で設計書作成に使えるサブエージェントの作り方</a></h3>
+      <p class="summary">Claude Code のサブエージェント機能を使い、要件定義から基本設計、 詳細設計までを自動生成するワークフロー実装。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/nexta_/articles/be13a2395a5d2a" target="_blank" rel="noopener">Claude Code に「7人の意地悪な QA」を仕込んでテストケースの観点漏れを潰した</a></h3>
-    <p class="summary">7視点の批評型 QA エージェントを Claude Code 上で構築し、テスト観点の 漏れを潰した実装事例。Adversarial Verify パターンの実装例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--rL5eQxDf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%25E3%2581%25AB%25E3%2580%258C7%25E4%25BA%25BA%25E3%2581%25AE%25E6%2584%258F%25E5%259C%25B0%25E6%2582%25AA%25E3%2581%25AAQA%25E3%2580%258D%25E3%2582%2592%25E4%25BB%2595%25E8%25BE%25BC%25E3%2582%2593%25E3%2581%25A7%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AE%25E8%25A6%25B3%25E7%2582%25B9%25E6%25BC%258F%25E3%2582%258C%25E3%2582%2592%25E6%25BD%25B0%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Ayaka%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U0ZGE2N2U3OWYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Nexta%2520Tech%2520Blog%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2M4MGM4MWE2NzcuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/nexta_/articles/be13a2395a5d2a" target="_blank" rel="noopener">Claude Code に「7人の意地悪な QA」を仕込んでテストケースの観点漏れを潰した</a></h3>
+      <p class="summary">7視点の批評型 QA エージェントを Claude Code 上で構築し、テスト観点の 漏れを潰した実装事例。Adversarial Verify パターンの実装例。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://qiita.com/nogataka/items/bab35c7b58a664d3b8f1" target="_blank" rel="noopener">Claude Code セキュリティガードレールの実装テンプレ集</a></h3>
-    <p class="summary">Claude Code の settings.json と hook スクリプトのコピペ可能なテンプレ集。 本番運用のガードレール設計（破壊系コマンドの禁止、認証ファイル保護など） の具体例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://future-architect.github.io/articles/20260622a/" target="_blank" rel="noopener">エージェントスキルを評価する仕組みを作ってみる（フューチャー技術ブログ）</a></h3>
-    <p class="summary">Coding Agent の Skill 品質を評価するフレームワーク設計の考察。 AGENTS.md、MCP、Skills を横並びで比較しており、Skill 品質担保の 方法論として整理されている。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">future-architect.github.io</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/acntechjp/articles/c2bff25e230539" target="_blank" rel="noopener">会社員のための Codex 資料作成術：Skill で統一感のあるプレゼン資料を作る</a></h3>
-    <p class="summary">Codex と Skill の組み合わせで社内プレゼン資料を統一感ある仕上がりに 自動生成する実践ガイド。AI に任せた資料がそのまま使えない問題を Skill 設計で解決する。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span><span class="tag">はてブ 231 users</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://azukiazusa.dev/blog/workflow-to-reusable-skill/" target="_blank" rel="noopener">ワークフローを再利用可能なスキルに変換する Record &amp; Replay（azukiazusa）</a></h3>
-    <p class="summary">Codex の Record &amp; Replay でユーザー操作を録画し、Claude Code Skill に 変換する実験。Skill 設計の新しいアプローチ（手動操作からの自動生成）。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">azukiazusa.dev</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=qiita.com" alt="" loading="lazy"><a href="https://qiita.com/nogataka/items/bab35c7b58a664d3b8f1" target="_blank" rel="noopener">Claude Code セキュリティガードレールの実装テンプレ集</a><span class="src">Qiita</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=future-architect.github.io" alt="" loading="lazy"><a href="https://future-architect.github.io/articles/20260622a/" target="_blank" rel="noopener">エージェントスキルを評価する仕組みを作ってみる（フューチャー技術ブログ）</a><span class="src">future-architect.github.io</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=azukiazusa.dev" alt="" loading="lazy"><a href="https://azukiazusa.dev/blog/workflow-to-reusable-skill/" target="_blank" rel="noopener">ワークフローを再利用可能なスキルに変換する Record &amp; Replay（azukiazusa）</a><span class="src">azukiazusa.dev</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=zenn.dev" alt="" loading="lazy"><a href="https://zenn.dev/acntechjp/articles/c2bff25e230539" target="_blank" rel="noopener">会社員のための Codex 資料作成術：Skill で統一感のあるプレゼン資料を作る</a><span class="src">Zenn</span><span class="tag">はてブ 231 users</span></li>
+  </ul>
 </section>
 
 <section class="cat" id="c3">
   <h2 class="cat-title"><span class="cat-num">03</span>代替 LLM 選定の現実化</h2>
   <p class="cat-desc">8本</p>
 
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48567759" target="_blank" rel="noopener">GLM-5.2 が Artificial Analysis のオープンウェイトモデルランキングで首位に</a></h3>
-    <p class="summary">Z.AI（北京）の GLM-5.2 が、Artificial Analysis 知性インデックスで オープンウェイト首位を獲得。HN では「Claude や GPT-4O 超えは誇大広告 ではないか」という批判もある。本週のオープンウェイト首位争い文脈の起点。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 760pt</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48567759" target="_blank" rel="noopener">GLM-5.2 が Artificial Analysis のオープンウェイトモデルランキングで首位に</a></h3>
+      <p class="summary">Z.AI（北京）の GLM-5.2 が、Artificial Analysis 知性インデックスで オープンウェイト首位を獲得。HN では「Claude や GPT-4O 超えは誇大広告 ではないか」という批判もある。本週のオープンウェイト首位争い文脈の起点。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag hot">HN 760pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://gigazine.net/news/20260617-z-ai-glm-5-2-release/" target="_blank" rel="noopener">Claude Opus 4.7 超えの中華モデル「GLM-5.2」が正式発表</a></h3>
-    <p class="summary">GLM-5.2 のリリース解説（日本語）。一部テストで Claude Fable 5 超えと 主張するオープンウェイトモデル。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">gigazine.net</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--IhsxxsCW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E3%2582%2592%25E3%2581%2584%25E3%2581%25A4%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%25B9%25E3%2581%258D%25E3%2581%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:magatarou%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzM4MDY0MmJiMDcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:SOMPO%2520Digital%2520Lab%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZmR0eTR3X0QzaHd6VEQ3T0JkMklXRWNyZTZRZWlxd1BLeWpvd2I1MkxWPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/sompojapan_dx/articles/74624afa03040c" target="_blank" rel="noopener">ローカル LLM をいつ使うべきか？</a></h3>
+      <p class="summary">クラウド API ではなくローカル LLM を選ぶ判断フレームワーク。 コスト、プライバシー、精度のトレードオフを実務視点で整理。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span><span class="tag">損保ジャパン DX チーム / はてブ 285 users</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/sompojapan_dx/articles/74624afa03040c" target="_blank" rel="noopener">ローカル LLM をいつ使うべきか？</a></h3>
-    <p class="summary">クラウド API ではなくローカル LLM を選ぶ判断フレームワーク。 コスト、プライバシー、精度のトレードオフを実務視点で整理。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span><span class="tag">損保ジャパン DX チーム / はてブ 285 users</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://i.gzn.jp/img/2026/06/17/z-ai-glm-5-2-release/00.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=gigazine.net&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;gigazine.net&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://gigazine.net/news/20260617-z-ai-glm-5-2-release/" target="_blank" rel="noopener">Claude Opus 4.7 超えの中華モデル「GLM-5.2」が正式発表</a></h3>
+      <p class="summary">GLM-5.2 のリリース解説（日本語）。一部テストで Claude Fable 5 超えと 主張するオープンウェイトモデル。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">gigazine.net</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/finatext/articles/7180db2c0fce5b" target="_blank" rel="noopener">月100万件、50億トークンをローカル LLM で捌く（ナウキャスト）</a></h3>
-    <p class="summary">ローカル LLM で月100万件、50億トークンの明細名マッピングを処理する 事例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--0m10qXcv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2588%2520100%25E4%25B8%2587%25E4%25BB%25B6%25E3%2583%25BB%252050%25E5%2584%2584%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25B3%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E3%2581%25A7%25E6%258D%258C%25E3%2581%258F%2520-%2520%25E6%2598%258E%25E7%25B4%25B0%25E5%2590%258D%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%2588%25E3%2582%25A2%25E6%2583%2585%25E5%25A0%25B1%25E3%2583%259E%25E3%2583%2583%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:onagaway%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NjOTE1NmJhMjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Finatext%2520Tech%2520Blog%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzMyYTdlYzg1NWYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/finatext/articles/7180db2c0fce5b" target="_blank" rel="noopener">月100万件、50億トークンをローカル LLM で捌く（ナウキャスト）</a></h3>
+      <p class="summary">ローカル LLM で月100万件、50億トークンの明細名マッピングを処理する 事例。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/kojimaru/articles/2864ef6ce8b85c" target="_blank" rel="noopener">Antigravity とローカル LLM を MCP で繋ぐ</a></h3>
-    <p class="summary">Antigravity を MCP 経由でローカル LLM と連携し、クラウド API クオータを 99% 削減する手順。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--MTx8HjY9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Antigravity%25E3%2581%25A8%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E3%2582%2592MCP%25E3%2581%25A7%25E7%25B9%258B%25E3%2581%2590%25EF%25BC%2581%25E5%25AE%258C%25E5%2585%25A8%25E7%2584%25A1%25E6%2596%2599%25E3%2581%25A7%25E3%2582%25AF%25E3%2582%25AA%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%259299%2525%25E5%2589%258A%25E6%25B8%259B%25E3%2581%2599%25E3%2582%258B%25E9%2580%25A3%25E6%2590%25BA%25E8%25A1%2593%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2593%25E3%2581%2598%25E3%2581%25BE%25E3%2582%258B%25EF%25BC%25A0ViaCraft%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE0ZDliMTcxMmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/kojimaru/articles/2864ef6ce8b85c" target="_blank" rel="noopener">Antigravity とローカル LLM を MCP で繋ぐ</a></h3>
+      <p class="summary">Antigravity を MCP 経由でローカル LLM と連携し、クラウド API クオータを 99% 削減する手順。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.gizmodo.jp/article/opencode_google_gemma_4-krq/" target="_blank" rel="noopener">「OpenCode」とローカル LLM で&quot;無料 Claude Code&quot;してみた</a></h3>
-    <p class="summary">OSS の OpenCode と Google Gemma 4 で、コストゼロの Claude Code 相当 環境を構築する。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">gizmodo.jp</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://www.nikkei.com/article/DGXZQOUC2265B0S6A620C2000000/" target="_blank" rel="noopener">サカナ AI が新サービス「フグ」、複数 AI 束ねるプログラミングで高性能</a></h3>
-    <p class="summary">Sakana AI が複数モデルを束ねるプログラミング特化「Sakana Fugu」を公開。 OpenRouter「Fusion」（前週）に続くマルチモデル束ね路線の継承。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">nikkei.com</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uaebfe/best_local_agents_jun_2026/" target="_blank" rel="noopener">ベストローカルエージェント 2026年6月版（r/LocalLLaMA）</a></h3>
-    <p class="summary">コミュニティの「いま選ぶならコレ」議論。ローカル LLM とエージェントの 組み合わせ選定について、当事者の声がまとまっているスレッド。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Reddit</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=gizmodo.jp" alt="" loading="lazy"><a href="https://www.gizmodo.jp/article/opencode_google_gemma_4-krq/" target="_blank" rel="noopener">「OpenCode」とローカル LLM で&quot;無料 Claude Code&quot;してみた</a><span class="src">gizmodo.jp</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=nikkei.com" alt="" loading="lazy"><a href="https://www.nikkei.com/article/DGXZQOUC2265B0S6A620C2000000/" target="_blank" rel="noopener">サカナ AI が新サービス「フグ」、複数 AI 束ねるプログラミングで高性能</a><span class="src">nikkei.com</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1uaebfe/best_local_agents_jun_2026/" target="_blank" rel="noopener">ベストローカルエージェント 2026年6月版（r/LocalLLaMA）</a><span class="src">Reddit</span></li>
+  </ul>
 </section>
 
 <section class="cat" id="c4">
   <h2 class="cat-title"><span class="cat-num">04</span>Google Workspace の日本語対応と OKF</h2>
   <p class="cat-desc">6本</p>
 
-  <article class="entry">
-    <h3><a href="https://dev.classmethod.jp/articles/open-knowledge-format-okf-v01-guide/" target="_blank" rel="noopener">Google の AI エージェント向け知識共有フォーマット「OKF」を触ってみた</a></h3>
-    <p class="summary">前週 Google が公開した OKF（Open Knowledge Format）v0.1 を、 Classmethod が実際に試したガイド。AI エージェント間の知識やツール定義 の標準化フォーマットがどこまで実用に耐えるかの一次評価。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">dev.classmethod.jp</span><span class="tag">Classmethod / はてブ 263 users</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48600345" target="_blank" rel="noopener">Google Workspace が Firefox のアクセスをブロックすると警告</a></h3>
+      <p class="summary">Google Workspace が古い UA の Firefox からのアクセスをブロックする 動きが進む。エンタープライズ Workspace 展開でのブラウザ互換性リスク。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag hot">HN 396pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/knowledgesense/articles/14a874a9f423bb" target="_blank" rel="noopener">AI 時代のナレッジ管理手法、Google の「OKF」を解説</a></h3>
-    <p class="summary">Google が社内で使う「Organizational Knowledge Framework（OKF）」の ナレッジ管理手法を解説した記事。前項のフォーマット OKF と紛らわしいが、 こちらは社内ナレッジ運用の組織設計フレーム。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48649011" target="_blank" rel="noopener">Google のワークスペースツールを作ったら Google に解雇された件</a></h3>
+      <p class="summary">Google エンジニアが個人で Google Workspace CLI を作り、解雇された という衝撃事例。社内ツール内製と知財帰属問題のリスク事例。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 224pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://gihyo.jp/article/2026/06/gemini-in-sheets-japanese-support" target="_blank" rel="noopener">Google スプレッドシートの Gemini、日本語でスプレッドシート全体の作成、編集に対応</a></h3>
-    <p class="summary">Gemini in Sheets が、日本語での全体作成と編集に対応した。 Google Workspace 日本語環境の実用域での新展開。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">gihyo.jp</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://images.ctfassets.net/ct0aopd36mqt/271wVAxeN1rlKRsu2HX3i2/47104a220a7c282e824443292b7ac5bb/eyecatch_obsidian_1200x630.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=dev.classmethod.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;dev.classmethod.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://dev.classmethod.jp/articles/open-knowledge-format-okf-v01-guide/" target="_blank" rel="noopener">Google の AI エージェント向け知識共有フォーマット「OKF」を触ってみた</a></h3>
+      <p class="summary">前週 Google が公開した OKF（Open Knowledge Format）v0.1 を、 Classmethod が実際に試したガイド。AI エージェント間の知識やツール定義 の標準化フォーマットがどこまで実用に耐えるかの一次評価。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">dev.classmethod.jp</span><span class="tag">Classmethod / はてブ 263 users</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://ipadworkers.substack.com/p/receipt-automation-with-gas" target="_blank" rel="noopener">🧾 Gemini を使ってレシート整理を自動化する仕組み</a></h3>
-    <p class="summary">Gemini と GAS でレシート整理を自動化する実践手順。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">ipadworkers.substack.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--FqU8NmWM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E7%25AE%25A1%25E7%2590%2586%25E6%2589%258B%25E6%25B3%2595%2520-%2520Google%25E3%2581%25AE%25E3%2580%258COKF%25E3%2580%258D%25E3%2582%2592%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Atsushi%2520Kadowaki%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLmRldi9pbWFnZXMvZGVmYXVsdC1wdWJsaWNhdGlvbi1hdmF0YXIucG5n%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B9%2520-%2520%25E7%2594%259F%25E6%2588%2590AI%25E3%2581%25A8RAG%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585...%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRlMjk5Y2IwN2IuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/knowledgesense/articles/14a874a9f423bb" target="_blank" rel="noopener">AI 時代のナレッジ管理手法、Google の「OKF」を解説</a></h3>
+      <p class="summary">Google が社内で使う「Organizational Knowledge Framework（OKF）」の ナレッジ管理手法を解説した記事。前項のフォーマット OKF と紛らわしいが、 こちらは社内ナレッジ運用の組織設計フレーム。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48600345" target="_blank" rel="noopener">Google Workspace が Firefox のアクセスをブロックすると警告</a></h3>
-    <p class="summary">Google Workspace が古い UA の Firefox からのアクセスをブロックする 動きが進む。エンタープライズ Workspace 展開でのブラウザ互換性リスク。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 396pt</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://gihyo.jp/assets/images/ICON/2026/2907_01.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=gihyo.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;gihyo.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://gihyo.jp/article/2026/06/gemini-in-sheets-japanese-support" target="_blank" rel="noopener">Google スプレッドシートの Gemini、日本語でスプレッドシート全体の作成、編集に対応</a></h3>
+      <p class="summary">Gemini in Sheets が、日本語での全体作成と編集に対応した。 Google Workspace 日本語環境の実用域での新展開。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">gihyo.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48649011" target="_blank" rel="noopener">Google のワークスペースツールを作ったら Google に解雇された件</a></h3>
-    <p class="summary">Google エンジニアが個人で Google Workspace CLI を作り、解雇された という衝撃事例。社内ツール内製と知財帰属問題のリスク事例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 224pt</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=ipadworkers.substack.com" alt="" loading="lazy"><a href="https://ipadworkers.substack.com/p/receipt-automation-with-gas" target="_blank" rel="noopener">🧾 Gemini を使ってレシート整理を自動化する仕組み</a><span class="src">ipadworkers.substack.com</span></li>
+  </ul>
 </section>
 
-<section class="cat" id="c5">
+<section class="cat minor" id="c5">
   <h2 class="cat-title"><span class="cat-num">05</span>AI エージェント時代のインフラ</h2>
   <p class="cat-desc">6本</p>
 
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48608394" target="_blank" rel="noopener">AI エージェント用の一時的な Cloudflare アカウント機能</a></h3>
-    <p class="summary">Cloudflare が AI エージェント向けの一時アカウント発行機能を発表。 エージェントが独立したコンテキストで動作できる基盤として位置づけられ、 n8n や Make から Cloudflare Workers への自律デプロイの起点になる。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 154pt</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://ogp.azukiazusa.dev/blog/ogp/cloudflare-temporary-account-deploy.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=azukiazusa.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;azukiazusa.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://azukiazusa.dev/blog/cloudflare-temporary-account-deploy/" target="_blank" rel="noopener">Cloudflare の一時アカウントを使って即座にデプロイできるようになった</a></h3>
+      <p class="summary">上記機能の実装解説（azukiazusa）。AI エージェントがアカウント作成や ログインなしで Cloudflare Workers に即座にデプロイできる新パターン。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">azukiazusa.dev</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://azukiazusa.dev/blog/cloudflare-temporary-account-deploy/" target="_blank" rel="noopener">Cloudflare の一時アカウントを使って即座にデプロイできるようになった</a></h3>
-    <p class="summary">上記機能の実装解説（azukiazusa）。AI エージェントがアカウント作成や ログインなしで Cloudflare Workers に即座にデプロイできる新パターン。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">azukiazusa.dev</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://joho-todai.com/content/images/size/w1200/2026/06/ad767766793aec7f9dc06a02e.webp" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=joho-todai.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;joho-todai.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://joho-todai.com/epic-games-lore-version-control/" target="_blank" rel="noopener">Epic Games が Git の死角を突く。バージョン管理「Lore」公開</a></h3>
+      <p class="summary">大容量バイナリ管理に強い次世代 VCS「Lore」を Epic Games が公開。 AI 生成コードとアセットの大規模管理の新しい選択肢。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">joho-todai.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://joho-todai.com/epic-games-lore-version-control/" target="_blank" rel="noopener">Epic Games が Git の死角を突く。バージョン管理「Lore」公開</a></h3>
-    <p class="summary">大容量バイナリ管理に強い次世代 VCS「Lore」を Epic Games が公開。 AI 生成コードとアセットの大規模管理の新しい選択肢。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">joho-todai.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2606/17/2000000100/10000521/2048" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=itmedia.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;itmedia.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.itmedia.co.jp/aiplus/article/2606/17/2000000100/" target="_blank" rel="noopener">Cursor、Git ホスティング「Origin」発表（SpaceX による買収発表直後に）</a></h3>
+      <p class="summary">SpaceX による Cursor 買収直後に、Git ホスティング「Origin」を発表。 AI コーディングツールが VCS 市場にも参入する流れ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">itmedia.co.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2606/17/2000000100/" target="_blank" rel="noopener">Cursor、Git ホスティング「Origin」発表（SpaceX による買収発表直後に）</a></h3>
-    <p class="summary">SpaceX による Cursor 買収直後に、Git ホスティング「Origin」を発表。 AI コーディングツールが VCS 市場にも参入する流れ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">itmedia.co.jp</span></div>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48608394" target="_blank" rel="noopener">AI エージェント用の一時的な Cloudflare アカウント機能</a></h3>
+      <p class="summary">Cloudflare が AI エージェント向けの一時アカウント発行機能を発表。 エージェントが独立したコンテキストで動作できる基盤として位置づけられ、 n8n や Make から Cloudflare Workers への自律デプロイの起点になる。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 154pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48631726" target="_blank" rel="noopener">Show HN: Oak、AI エージェント向けに設計された Git 代替ツール</a></h3>
-    <p class="summary">AI エージェントが扱いやすいよう設計された Git 代替「Oak」。 Lore、GitLab Project Switch、Zed DeltaDB と並ぶ AI 時代の VCS シリーズ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 132pt</span></div>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48631726" target="_blank" rel="noopener">Show HN: Oak、AI エージェント向けに設計された Git 代替ツール</a></h3>
+      <p class="summary">AI エージェントが扱いやすいよう設計された Git 代替「Oak」。 Lore、GitLab Project Switch、Zed DeltaDB と並ぶ AI 時代の VCS シリーズ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 132pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48622590" target="_blank" rel="noopener">セッション間でプロジェクトを再説明する無駄をやめよう</a></h3>
-    <p class="summary">Claude Code のセッション間でプロジェクトコンテキストを自動保存する プラグイン Recall。TF-IDF と TextRank で 1〜2K トークンの要約を生成し、 ローカルに保存する。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">Recall for Claude Code / HN 55pt</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=48622590" target="_blank" rel="noopener">セッション間でプロジェクトを再説明する無駄をやめよう</a><span class="src">Hacker News</span><span class="tag">Recall for Claude Code / HN 55pt</span></li>
+  </ul>
 </section>
 
 <section class="cat" id="c6">
   <h2 class="cat-title"><span class="cat-num">06</span>市民開発が本番運用に到達する</h2>
   <p class="cat-desc">6本</p>
 
-  <article class="entry">
-    <h3><a href="https://note.com/memuro_dx_oss/n/nf982351d30ef" target="_blank" rel="noopener">捨てるつもりで作ったシステムが、本稼働している（自治体が Vibe Coding で「書かない窓口」を内製し OSS 公開）</a></h3>
-    <p class="summary">北海道の自治体が Vibe Coding で書類不要窓口システムを内製し、 本番稼働、OSS 公開に到達した実例。AI 駆動開発の本流が「内製から本番」 へ到達したことを示す事例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">note</span><span class="tag">はてブ 218 users</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://media.loom-app.com/loom/2026/06/21/d7086bc6-de72-45ad-ab0b-2eafdd592a44/original.jpg?w=1200&amp;h=630" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=businessinsider.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;businessinsider.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.businessinsider.jp/article/2606-openai-codex-farm-automation/" target="_blank" rel="noopener">OpenAI も注目、非エンジニア農家が Codex で進める「農業の DX」</a></h3>
+      <p class="summary">農家が Codex でビニールハウス温度管理と翻訳 LINE Bot を構築した事例。 非エンジニアの市民開発が現場で機能している好例。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">businessinsider.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.businessinsider.jp/article/2606-openai-codex-farm-automation/" target="_blank" rel="noopener">OpenAI も注目、非エンジニア農家が Codex で進める「農業の DX」</a></h3>
-    <p class="summary">農家が Codex でビニールハウス温度管理と翻訳 LINE Bot を構築した事例。 非エンジニアの市民開発が現場で機能している好例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">businessinsider.jp</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://image.itmedia.co.jp/business/articles/2606/10/cover_news039.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=itmedia.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;itmedia.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.itmedia.co.jp/business/articles/2606/10/news039.html" target="_blank" rel="noopener">AI で 4.5 時間、素人でもマネフォ風アプリ完成。それでも痛感した「SaaS の壁」</a></h3>
+      <p class="summary">AI 活用で会計アプリを 4.5 時間で構築した体験談。スケールと運用コスト という「SaaS の壁」に直面した教訓。市民開発ブームへのリアリスティック なカウンター。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">itmedia.co.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.itmedia.co.jp/business/articles/2606/10/news039.html" target="_blank" rel="noopener">AI で 4.5 時間、素人でもマネフォ風アプリ完成。それでも痛感した「SaaS の壁」</a></h3>
-    <p class="summary">AI 活用で会計アプリを 4.5 時間で構築した体験談。スケールと運用コスト という「SaaS の壁」に直面した教訓。市民開発ブームへのリアリスティック なカウンター。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">itmedia.co.jp</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://cdn.image.st-hatena.com/image/scale/2abacecbeaaaef6ca41452031ca69842b85ccfdd/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fm%2Fmyohei11%2F20260617%2F20260617184939.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=tech.layerx.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;tech.layerx.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://tech.layerx.co.jp/entry/prompt-log-driven-ai-workflow" target="_blank" rel="noopener">同じプロンプトを何度も書きたくないので、AI とのやりとりを棚卸しする仕組み作った（LayerX）</a></h3>
+      <p class="summary">プロンプトログのリファクタリング発想で、691 回中 652 回を Skill、 Command、Schedule で仕組み化した記事。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">tech.layerx.co.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://tech.layerx.co.jp/entry/prompt-log-driven-ai-workflow" target="_blank" rel="noopener">同じプロンプトを何度も書きたくないので、AI とのやりとりを棚卸しする仕組み作った（LayerX）</a></h3>
-    <p class="summary">プロンプトログのリファクタリング発想で、691 回中 652 回を Skill、 Command、Schedule で仕組み化した記事。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">tech.layerx.co.jp</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://s.tgstc.com/ogp3/d9c1056a0a2a714c534add12969afa6a-1200x630.jpeg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=togetter.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;togetter.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://togetter.com/li/2712705" target="_blank" rel="noopener">ポンコツ AI にマニュアルを実行させて暗黙知をあぶり出す</a></h3>
+      <p class="summary">賢い AI は暗黙知を補完してしまうので、わざと能力の低い AI に手順書を 実行させて暗黙知を発見する、という逆転の発想。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">togetter.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://togetter.com/li/2712705" target="_blank" rel="noopener">ポンコツ AI にマニュアルを実行させて暗黙知をあぶり出す</a></h3>
-    <p class="summary">賢い AI は暗黙知を補完してしまうので、わざと能力の低い AI に手順書を 実行させて暗黙知を発見する、という逆転の発想。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">togetter.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://www.itmedia.co.jp/news/article/ogp/2606/19/1260619102/831520/2048" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=itmedia.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;itmedia.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.itmedia.co.jp/news/articles/2606/19/news102.html" target="_blank" rel="noopener">画面操作を録画し、AI が作業代行する Codex 新機能「Record &amp; Replay」</a></h3>
+      <p class="summary">Codex が画面録画から手順を学習し、自動実行する Record &amp; Replay を追加。 ノーコード的な業務自動化の新アプローチ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">itmedia.co.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.itmedia.co.jp/news/articles/2606/19/news102.html" target="_blank" rel="noopener">画面操作を録画し、AI が作業代行する Codex 新機能「Record &amp; Replay」</a></h3>
-    <p class="summary">Codex が画面録画から手順を学習し、自動実行する Record &amp; Replay を追加。 ノーコード的な業務自動化の新アプローチ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">itmedia.co.jp</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=note.com" alt="" loading="lazy"><a href="https://note.com/memuro_dx_oss/n/nf982351d30ef" target="_blank" rel="noopener">捨てるつもりで作ったシステムが、本稼働している（自治体が Vibe Coding で「書かない窓口」を内製し OSS 公開）</a><span class="src">note</span><span class="tag">はてブ 218 users</span></li>
+  </ul>
 </section>
 
 <section class="cat" id="c7">
   <h2 class="cat-title"><span class="cat-num">07</span>AI 時代の受託開発はどう変わるか</h2>
   <p class="cat-desc">7本</p>
 
-  <article class="entry">
-    <h3><a href="https://zenn.dev/terurou/articles/eb9e7a4ca7b364" target="_blank" rel="noopener">AI 以後の受託システム開発はどうなっていくのか（2026年6月版）</a></h3>
-    <p class="summary">AI 時代の受託開発の変容を、2026 年 6 月時点で整理した論考。AI コーディング が量産型開発を代替し、人間が担う設計、PM、コミュニケーション領域が 前景化するという整理。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48566832" target="_blank" rel="noopener">創業者のプレイブック：AI ネイティブスタートアップの構築</a></h3>
+      <p class="summary">Anthropic 公式が、AI ネイティブスタートアップの構築プレイブックを公開。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">Anthropic 公式 / HN 206pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://speakerdeck.com/bunnchinn3/puroziekutoshi-bai-nitunagarudi-lei-wado" target="_blank" rel="noopener">プロジェクト失敗につながる地雷ワード</a></h3>
-    <p class="summary">受託 PM が警戒すべき危険ワードを体系化したスピーカーデッキ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--0UKg2aFI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E4%25BB%25A5%25E5%25BE%258C%25E3%2581%25AE%25E5%258F%2597%25E8%25A8%2597%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2586%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%25882026%25E5%25B9%25B46%25E6%259C%2588%25E7%2589%2588%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:terurou%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2o2X2MxUjc0UTlJYS1URDFlSG52N3ZTZzk3Y0t0cEVhaXBHSTg4UlE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/terurou/articles/eb9e7a4ca7b364" target="_blank" rel="noopener">AI 以後の受託システム開発はどうなっていくのか（2026年6月版）</a></h3>
+      <p class="summary">AI 時代の受託開発の変容を、2026 年 6 月時点で整理した論考。AI コーディング が量産型開発を代替し、人間が担う設計、PM、コミュニケーション領域が 前景化するという整理。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48620342" target="_blank" rel="noopener">販売可能なソフトウェアの最小単位</a></h3>
-    <p class="summary">「売れるソフトウェアの最小単位とは何か」を論じた記事。SaaS 設計、 PoC の成果物粒度の議論。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 114pt</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://files.speakerdeck.com/presentations/d4bba8d4e2db452f9af0501d497ef7b5/slide_0.jpg?39421477" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=speakerdeck.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;speakerdeck.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://speakerdeck.com/bunnchinn3/puroziekutoshi-bai-nitunagarudi-lei-wado" target="_blank" rel="noopener">プロジェクト失敗につながる地雷ワード</a></h3>
+      <p class="summary">受託 PM が警戒すべき危険ワードを体系化したスピーカーデッキ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://speakerdeck.com/whisaiyo/whidevelopers-linklight20260618" target="_blank" rel="noopener">AI 駆動開発を通して感じた、AI 時代のデザイナーの役割変化</a></h3>
-    <p class="summary">AI 駆動開発ワークショップを経て感じたデザイナーの役割変化の整理。 エンジニア以外が AI を使いこなす文脈での職種論。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://files.speakerdeck.com/presentations/1058da3b94b74318a21d0c34b7aa892e/slide_0.jpg?39746072" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=speakerdeck.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;speakerdeck.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://speakerdeck.com/whisaiyo/whidevelopers-linklight20260618" target="_blank" rel="noopener">AI 駆動開発を通して感じた、AI 時代のデザイナーの役割変化</a></h3>
+      <p class="summary">AI 駆動開発ワークショップを経て感じたデザイナーの役割変化の整理。 エンジニア以外が AI を使いこなす文脈での職種論。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://blog.smasato.net/entry/2026/06/21/181605" target="_blank" rel="noopener">ゼロをイチにする仕事の終わり、ソフトウェアエンジニアという仕事の終わり</a></h3>
-    <p class="summary">AI がゼロイチ開発を担う時代のエンジニア論。挑発的タイトルだが冷静な 整理が並ぶ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">blog.smasato.net</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://ogimage.blog.st-hatena.com/10328749687190562863/14945776032044930033/1782057158" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=blog.smasato.net&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;blog.smasato.net&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://blog.smasato.net/entry/2026/06/21/181605" target="_blank" rel="noopener">ゼロをイチにする仕事の終わり、ソフトウェアエンジニアという仕事の終わり</a></h3>
+      <p class="summary">AI がゼロイチ開発を担う時代のエンジニア論。挑発的タイトルだが冷静な 整理が並ぶ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">blog.smasato.net</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48566832" target="_blank" rel="noopener">創業者のプレイブック：AI ネイティブスタートアップの構築</a></h3>
-    <p class="summary">Anthropic 公式が、AI ネイティブスタートアップの構築プレイブックを公開。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">Anthropic 公式 / HN 206pt</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/mkj/articles/56245f7a34539c" target="_blank" rel="noopener">AI コーディングではコードではなく検証プロセスをレビューする</a></h3>
-    <p class="summary">AI が書いたコード本体ではなく、AI がどのように検証したかのプロセス そのものをレビューする、という新しいコードレビュー哲学。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=zenn.dev" alt="" loading="lazy"><a href="https://zenn.dev/mkj/articles/56245f7a34539c" target="_blank" rel="noopener">AI コーディングではコードではなく検証プロセスをレビューする</a><span class="src">Zenn</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=48620342" target="_blank" rel="noopener">販売可能なソフトウェアの最小単位</a><span class="src">Hacker News</span><span class="tag">HN 114pt</span></li>
+  </ul>
 </section>
 
-<section class="cat" id="c8">
+<section class="cat minor" id="c8">
   <h2 class="cat-title"><span class="cat-num">08</span>AI 出力の品質とモデル崩壊</h2>
   <p class="cat-desc">4本</p>
 
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48630535" target="_blank" rel="noopener">Claude Code の「拡張思考」出力テキストは本物ではない</a></h3>
-    <p class="summary">Claude Code の Extended Thinking が表示する「思考過程テキスト」は、 実際の推論プロセスそのものではなく、後付けで構成された表現である、 という分析。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 265pt</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://www.techno-edge.net/imgs/ogp_f/32439.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=techno-edge.net&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;techno-edge.net&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.techno-edge.net/article/2026/06/22/5209.html" target="_blank" rel="noopener">「AI 臭い文章を生成させない」ルール集</a></h3>
+      <p class="summary">LLM に日本語技術文書を書かせるための AI 向け文章規範スキル 「ja-writing-skill」。週内最高ブクマ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">techno-edge.net</span><span class="tag hot">はてブ 914 users</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.techno-edge.net/article/2026/06/22/5209.html" target="_blank" rel="noopener">「AI 臭い文章を生成させない」ルール集</a></h3>
-    <p class="summary">LLM に日本語技術文書を書かせるための AI 向け文章規範スキル 「ja-writing-skill」。週内最高ブクマ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">techno-edge.net</span><span class="tag">はてブ 914 users</span></div>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48630535" target="_blank" rel="noopener">Claude Code の「拡張思考」出力テキストは本物ではない</a></h3>
+      <p class="summary">Claude Code の Extended Thinking が表示する「思考過程テキスト」は、 実際の推論プロセスそのものではなく、後付けで構成された表現である、 という分析。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 265pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://joisino.hatenablog.com/entry/collapse" target="_blank" rel="noopener">AI のモデル崩壊と多様性</a></h3>
-    <p class="summary">AI が生成したテキストや画像が訓練データに混入するサイクルで、AI 性能 が崩壊する「モデル崩壊」の解説。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">joisino.hatenablog.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://cdn.image.st-hatena.com/image/scale/1045736c12803a4302162aed08b1a2d84dc21461/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fj%2Fjoisino%2F20260622%2F20260622084009.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=joisino.hatenablog.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;joisino.hatenablog.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://joisino.hatenablog.com/entry/collapse" target="_blank" rel="noopener">AI のモデル崩壊と多様性</a></h3>
+      <p class="summary">AI が生成したテキストや画像が訓練データに混入するサイクルで、AI 性能 が崩壊する「モデル崩壊」の解説。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">joisino.hatenablog.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://gigazine.net/news/20260617-openai-simulating-deployment/" target="_blank" rel="noopener">OpenAI が「AI にバレずに AI をテストする手法」の開発に成功</a></h3>
-    <p class="summary">AI が本番環境かテスト環境かを識別できない評価手法を、OpenAI が開発。 「お行儀よく振る舞う問題」を解決する評価インフラの動き。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">gigazine.net</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=gigazine.net" alt="" loading="lazy"><a href="https://gigazine.net/news/20260617-openai-simulating-deployment/" target="_blank" rel="noopener">OpenAI が「AI にバレずに AI をテストする手法」の開発に成功</a><span class="src">gigazine.net</span></li>
+  </ul>
 </section>
 
-<section class="cat" id="c9">
+<section class="cat minor" id="c9">
   <h2 class="cat-title"><span class="cat-num">09</span>AI 安全保障と規制動向</h2>
   <p class="cat-desc">4本</p>
 
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48584484" target="_blank" rel="noopener">Anthropic の「Mythos」輸出規制論争の中心にいる韓国大手通信企業</a></h3>
-    <p class="summary">Wired が、SK Telecom と Anthropic の Mythos 問題を深掘りした記事。 前週の「米政府指令停止」サーガの続報。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 87pt</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48565498" target="_blank" rel="noopener">米国、DeepSeek のブラックリスト入りを保留。100社超を安保リスクと認定</a></h3>
+      <p class="summary">米政府の DeepSeek 規制方針。AI データ安全保障問題が顕在化した事例。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag hot">HN 306pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48565498" target="_blank" rel="noopener">米国、DeepSeek のブラックリスト入りを保留。100社超を安保リスクと認定</a></h3>
-    <p class="summary">米政府の DeepSeek 規制方針。AI データ安全保障問題が顕在化した事例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 306pt</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://article-image-ix.nikkei.com/https%3A%2F%2Fimgix-proxy.n8s.jp%2FDSXZQO3187002018062026000000-1.jpg?auto=compress&amp;bg=FFFF&amp;crop=focalpoint&amp;fit=crop&amp;fm=jpg&amp;fp-x=0.26&amp;fp-y=0.33&amp;h=630&amp;w=1200&amp;s=dd4b893cda236261128ffd7c96a04a37" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=nikkei.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;nikkei.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.nikkei.com/article/DGXZQOUC179OF0X10C26A6000000/" target="_blank" rel="noopener">ChatGPT 内に広告表示、日本で OpenAI が展開</a></h3>
+      <p class="summary">OpenAI が日本市場で ChatGPT に広告を導入する。電通と博報堂が仲介役。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">nikkei.com</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.nikkei.com/article/DGXZQOUC179OF0X10C26A6000000/" target="_blank" rel="noopener">ChatGPT 内に広告表示、日本で OpenAI が展開</a></h3>
-    <p class="summary">OpenAI が日本市場で ChatGPT に広告を導入する。電通と博報堂が仲介役。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">nikkei.com</span></div>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48577208" target="_blank" rel="noopener">流出財務書類：OpenAI が年間数十億ドルの赤字</a></h3>
+      <p class="summary">Ars Technica が、OpenAI 財務書類の流出から年間数十億ドルの赤字を報じた。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 197pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48577208" target="_blank" rel="noopener">流出財務書類：OpenAI が年間数十億ドルの赤字</a></h3>
-    <p class="summary">Ars Technica が、OpenAI 財務書類の流出から年間数十億ドルの赤字を報じた。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">HN 197pt</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=48584484" target="_blank" rel="noopener">Anthropic の「Mythos」輸出規制論争の中心にいる韓国大手通信企業</a><span class="src">Hacker News</span><span class="tag">HN 87pt</span></li>
+  </ul>
 </section>
 
-<section class="cat" id="c10">
+<section class="cat minor" id="c10">
   <h2 class="cat-title"><span class="cat-num">10</span>MCP、RAG、ナレッジ管理</h2>
   <p class="cat-desc">5本</p>
 
-  <article class="entry">
-    <h3><a href="https://www.lifehacker.jp/article/2606-notebooklm-finally-has-an-open-source-rival-and-im-hooked/" target="_blank" rel="noopener">NotebookLM の限界を突破する代替ツール「Open Notebook」が自由すぎた</a></h3>
-    <p class="summary">Google の NotebookLM を超える OSS RAG ツール「Open Notebook」。 自分の資料のみを LLM の知識源として使える設計。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">lifehacker.jp</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://media.loom-app.com/loom/2026/06/22/fae03123-27ef-4344-ab22-bdef6c3ad914/original.jpg?w=1200&amp;h=630&amp;f=jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=lifehacker.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;lifehacker.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.lifehacker.jp/article/2606-notebooklm-finally-has-an-open-source-rival-and-im-hooked/" target="_blank" rel="noopener">NotebookLM の限界を突破する代替ツール「Open Notebook」が自由すぎた</a></h3>
+      <p class="summary">Google の NotebookLM を超える OSS RAG ツール「Open Notebook」。 自分の資料のみを LLM の知識源として使える設計。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">lifehacker.jp</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://qiita.com/hatsukaze/items/192403c9ff6a433fe0b6" target="_blank" rel="noopener">AI に記憶を持たせる5ステップ、Ollama×RAG でつくる長期記憶チャットボット</a></h3>
-    <p class="summary">Ollama、RAG、ChromaDB で、長期記憶付きチャットボットをゼロから実装する ステップバイステップ解説。完全ローカルでプライバシー確保。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkYzNTE3MzMyJTJGZWRiY2M1NzBkOGNiMjRiYzI5NGYxYzdlNGM2NTNhNTNiNDI3NmRkOCUyRnhfbGFyZ2UucG5nJTNGMTY4OTkwOTU1NT9peGxpYj1yYi00LjEuMSZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9Y2I1NzYxYzNhMTJiZTRjOGFmNzJiNjI1Njc5MThmZWU%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3Dcd5201c890e96bdbaecf6fd0c9aa6f6d?ixlib=rb-4.1.1&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgwJTkwJUU1JUFFJThDJUU1JTg1JUE4JUUzJTgzJUFEJUUzJTgzJUJDJUUzJTgyJUFCJUUzJTgzJUFCJUUzJTgwJTkxQUklRTMlODElQUIlRTglQTglOTglRTYlODYlQjYlRTMlODIlOTIlRTYlOEMlODElRTMlODElOUYlRTMlODElOUIlRTMlODIlOEI1JUUzJTgyJUI5JUUzJTgzJTg2JUUzJTgzJTgzJUUzJTgzJTk3JTIwJUUyJTgwJTk0JTIwT2xsYW1hJUMzJTk3UkFHJUUzJTgxJUE3JUUzJTgxJUE0JUUzJTgxJThGJUUzJTgyJThCJUU5JTk1JUI3JUU2JTlDJTlGJUU4JUE4JTk4JUU2JTg2JUI2JUUzJTgzJTgxJUUzJTgzJUEzJUUzJTgzJTgzJUUzJTgzJTg4JUUzJTgzJTlDJUUzJTgzJTgzJUUzJTgzJTg4JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9ZDYwMzc4YTc3NmU1MTE5MWJlMDNiNDMxN2UwMTg0YTY&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBoYXRzdWthemUmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1hNGU4YjliMzI0M2I0NDY0ZTViMzgwYzI5NjU5OWY4OQ&amp;blend-x=242&amp;blend-y=480&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;s=cdb89ef0184c9489e158e3529c5fc282" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=qiita.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;qiita.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://qiita.com/hatsukaze/items/192403c9ff6a433fe0b6" target="_blank" rel="noopener">AI に記憶を持たせる5ステップ、Ollama×RAG でつくる長期記憶チャットボット</a></h3>
+      <p class="summary">Ollama、RAG、ChromaDB で、長期記憶付きチャットボットをゼロから実装する ステップバイステップ解説。完全ローカルでプライバシー確保。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Qiita</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/usagi1975/articles/2026-06-21-000_mcp1" target="_blank" rel="noopener">VSCode、Continue、Ollama で構築するローカル MCP 開発環境（その１）</a></h3>
-    <p class="summary">Ollama ベースのローカル LLM 環境で、MCP を使ってローカルファイルや DB 操作を自動化する開発環境構築手順。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--5gZTiLfv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:VSCode%2520%252B%2520Continue%2520%252B%2520Ollama%2520%25E3%2581%25A7%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABMCP%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25EF%25BC%2588%25E3%2581%259D%25E3%2581%25AE%25EF%25BC%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:chihiro1234567%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkYmJlMGFmZmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/usagi1975/articles/2026-06-21-000_mcp1" target="_blank" rel="noopener">VSCode、Continue、Ollama で構築するローカル MCP 開発環境（その１）</a></h3>
+      <p class="summary">Ollama ベースのローカル LLM 環境で、MCP を使ってローカルファイルや DB 操作を自動化する開発環境構築手順。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://zenn.dev/aircloset/articles/a7cf65cc035572" target="_blank" rel="noopener">46リポジトリに跨るコードベースを、静的解析でひとつのナレッジグラフにした話（エアークローゼット 前編）</a></h3>
-    <p class="summary">本番46リポジトリを静的解析で1つのナレッジグラフ「code-graph」に 統合した事例。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--1DW6eYmT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:46%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2581%25AB%25E8%25B7%25A8%25E3%2582%258B%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%2592%25E3%2580%2581%25E9%259D%2599%25E7%259A%2584%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%25A7%25E4%25B8%2580%25E3%2581%25A4%25E3%2581%25AE%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%2595%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E8%25BE%25BB%2520%25E4%25BA%25AE%25E4%25BD%2591%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzkxZjY1NmYzNDQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A8%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25BC%25E3%2583%2583%25E3%2583%2588%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2EyNzdkMDFjYWQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/aircloset/articles/a7cf65cc035572" target="_blank" rel="noopener">46リポジトリに跨るコードベースを、静的解析でひとつのナレッジグラフにした話（エアークローゼット 前編）</a></h3>
+      <p class="summary">本番46リポジトリを静的解析で1つのナレッジグラフ「code-graph」に 統合した事例。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://speakerdeck.com/minorun365/yasasiia2aru-men" target="_blank" rel="noopener">やさしい A2A 入門（minorun365）</a></h3>
-    <p class="summary">A2A（Agent-to-Agent）プロトコルの入門資料。エージェント間連携規格の 仕組みをわかりやすく解説。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://files.speakerdeck.com/presentations/95ba0b88325745168cede57a1832e48b/slide_0.jpg?39724647" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=speakerdeck.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;speakerdeck.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://speakerdeck.com/minorun365/yasasiia2aru-men" target="_blank" rel="noopener">やさしい A2A 入門（minorun365）</a></h3>
+      <p class="summary">A2A（Agent-to-Agent）プロトコルの入門資料。エージェント間連携規格の 仕組みをわかりやすく解説。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">speakerdeck.com</span></div>
+    </div>
   </article>
 </section>
 
-<section class="cat" id="c11">
+<section class="cat minor" id="c11">
   <h2 class="cat-title"><span class="cat-num">11</span>ワークフロー自動化と OSS ツール</h2>
   <p class="cat-desc">7本</p>
 
-  <article class="entry">
-    <h3><a href="https://zenn.dev/alpha_omega/articles/56ca3136bc5cd8" target="_blank" rel="noopener">AI エージェントを「指揮」する OSS「TAKT」とは</a></h3>
-    <p class="summary">複数の AI エージェントを「指揮」する OSS「TAKT」の解説。n8n や Dify との棲み分け軸の整理に使える。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=48643426" target="_blank" rel="noopener">Unlimited OCR：1ショット長文脈 OCR 解析のオープンソース実装</a></h3>
+      <p class="summary">Baidu が GitHub で OSS 公開した高精度 OCR。長文書を 1 ショットで解析。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag hot">Baidu / HN 430pt</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">OfficeCLI：AI エージェント向け Office スイート（GitHub）</a></h3>
-    <p class="summary">Word、Excel、PowerPoint を AI エージェントが直接操作できる OSS ツール。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">GitHub</span></div>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--sve5oJ6k--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E3%2580%258C%25E6%258C%2587%25E6%258F%25AE%25E3%2580%258D%25E3%2581%2599%25E3%2582%258BOSS%25E3%2580%258CTAKT%25E3%2580%258D%25E3%2581%25A8%25E3%2581%25AF%2520%25E2%2580%2594%2520%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25A8%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:usshi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFlZmU5ZjcyMDUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25A2%25E3%2583%25AB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25AA%25E3%2583%25A1%25E3%2582%25AC%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgxOTk5YTkxZmQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/alpha_omega/articles/56ca3136bc5cd8" target="_blank" rel="noopener">AI エージェントを「指揮」する OSS「TAKT」とは</a></h3>
+      <p class="summary">複数の AI エージェントを「指揮」する OSS「TAKT」の解説。n8n や Dify との棲み分け軸の整理に使える。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Zenn</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.reddit.com/r/n8n/comments/1udq7f0/any_way_to_directly_integrate_codex_agents_into/" target="_blank" rel="noopener">n8n に Codex エージェントを langchain ノードを使わず直接統合する方法（r/n8n）</a></h3>
-    <p class="summary">n8n で Codex エージェントを langchain ノードを介さず直接使うための 議論。実装ヒントが並ぶ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Reddit</span></div>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://opengraph.githubassets.com/01ae6570d98f44e63567dac36df0c13aa3fbb2b8beec0ce932a040ff0ff98d6e/iOfficeAI/OfficeCLI" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=github.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;github.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">OfficeCLI：AI エージェント向け Office スイート（GitHub）</a></h3>
+      <p class="summary">Word、Excel、PowerPoint を AI エージェントが直接操作できる OSS ツール。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">GitHub</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.reddit.com/r/nocode/comments/1ud5yiy/i_log_every_n8n_workflow_error_to_google_sheets/" target="_blank" rel="noopener">n8n のワークフローエラーを Google Sheets に自動記録する仕組みを作った（r/nocode）</a></h3>
-    <p class="summary">n8n ワークフローのエラーを Google Sheets に自動ログする実装事例。 エラーパターンの可視化と運用改善のテンプレ。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Reddit</span></div>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1udq7f0/any_way_to_directly_integrate_codex_agents_into/" target="_blank" rel="noopener">n8n に Codex エージェントを langchain ノードを使わず直接統合する方法（r/n8n）</a></h3>
+      <p class="summary">n8n で Codex エージェントを langchain ノードを介さず直接使うための 議論。実装ヒントが並ぶ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Reddit</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://azukiazusa.dev/blog/ai-agent-framework-eve/" target="_blank" rel="noopener">AI エージェントフレームワーク eve を試してみた（azukiazusa）</a></h3>
-    <p class="summary">Vercel の新しい AI エージェントフレームワーク「eve」の実装検証。 n8n や Dify との比較ポジション把握用。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">azukiazusa.dev</span></div>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/nocode/comments/1ud5yiy/i_log_every_n8n_workflow_error_to_google_sheets/" target="_blank" rel="noopener">n8n のワークフローエラーを Google Sheets に自動記録する仕組みを作った（r/nocode）</a></h3>
+      <p class="summary">n8n ワークフローのエラーを Google Sheets に自動ログする実装事例。 エラーパターンの可視化と運用改善のテンプレ。</p>
+      <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Reddit</span></div>
+    </div>
   </article>
-  <article class="entry">
-    <h3><a href="https://www.publickey1.jp/blog/26/awsaiaws_transform_continuous_modernization.html" target="_blank" rel="noopener">AWS Transform Continuous Modernization：AI エージェントが技術的負債を自動指摘</a></h3>
-    <p class="summary">AWS が発表した、AI エージェントがリポジトリを自動スキャンして技術的 負債を指摘する「Continuous Modernization」。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">publickey1.jp</span></div>
-  </article>
-  <article class="entry">
-    <h3><a href="https://news.ycombinator.com/item?id=48643426" target="_blank" rel="noopener">Unlimited OCR：1ショット長文脈 OCR 解析のオープンソース実装</a></h3>
-    <p class="summary">Baidu が GitHub で OSS 公開した高精度 OCR。長文書を 1 ショットで解析。</p>
-    <div class="tags"><span class="tag date">2026-06-24</span><span class="tag">Hacker News</span><span class="tag">Baidu / HN 430pt</span></div>
-  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=azukiazusa.dev" alt="" loading="lazy"><a href="https://azukiazusa.dev/blog/ai-agent-framework-eve/" target="_blank" rel="noopener">AI エージェントフレームワーク eve を試してみた（azukiazusa）</a><span class="src">azukiazusa.dev</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=publickey1.jp" alt="" loading="lazy"><a href="https://www.publickey1.jp/blog/26/awsaiaws_transform_continuous_modernization.html" target="_blank" rel="noopener">AWS Transform Continuous Modernization：AI エージェントが技術的負債を自動指摘</a><span class="src">publickey1.jp</span></li>
+  </ul>
 </section>
 
 <footer class="foot">
-  <p>6/18〜6/24 の trend ファイル 7 日分から、興味度★★★中心にキュレーション。前週（6/10〜6/17）のサーガ続編（ループエンジニアリング、Anthropic 停止の余波、代替 LLM）と、新しい本流（Claude Code Skills 公式化、市民開発の本番化、AI エージェント向けインフラ）を軸に整理した。</p>
+  <p>6/18〜6/24 の trend ファイル 7 日分からキュレーション。前週（6/10〜6/17）のサーガ続編（ループエンジニアリング、Anthropic 停止の余波、代替 LLM）と、新しい本流（Claude Code Skills 公式化、市民開発の本番化、AI エージェント向けインフラ）を軸に整理した。</p>
   <p>各記事は客観的な内容紹介にとどめ、用途や活用視点は読み手側で判断する形にした。</p>
-  <p>Reddit 系は r/LocalLLaMA、r/ClaudeCode、r/n8n、r/nocode から実用性が高いものを優先選出。</p>
-  <p>Generated 2026-06-24 — companion to <code>20260624-digest.md</code></p>
 </footer>
 
 </div>
