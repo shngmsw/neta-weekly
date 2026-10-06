@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Trend Digest — 2026-09-30 〜 2026-10-06</title>
+<link rel="stylesheet" href="./assets/digest.css">
+</head>
+<body>
+<div class="wrap" id="top">
+
+<header class="hero">
+  <p class="eyebrow"><span class="dot"></span> Weekly Trend Digest</p>
+  <h1 class="title">2026-09-30 〜 2026-10-06 ／ OpenAI DevDay・Gemini 4 Argon・決定モデルの定着</h1>
+  <p class="lead">OpenAIがDevDayでGPT-6.1 Sol（Astra級の知性を5分の1の価格）と24時間常時稼働エージェント「dots」を発表し、GoogleもGemini 4 Argonを公開、先週のClaude 5.5ファミリーに続いて主要3社の新モデルが出揃った週。 先週のJev余波はCloudflareのClef、小型モデルJeff、llama.cppのデシジョンモデル統合、n8nのJev対応へと広がり、ローカルでもKolibri・Beam・Strataなど大型オープンウェイトとQwen 3.8の高速実行が進んだ。 現場ではAppleのフルディスクアクセス制限やMuseのシステムプロンプト炎上などエージェントの権限・安全の論点が増え、AIコードレビューの再設計やPM職への影響、n8n本番運用と受託の現実を扱う議論が並んだ。</p>
+  <div class="meta-row">
+    <span>期間: 2026-09-30 〜 2026-10-06</span>
+    <span>エントリ数: 105</span>
+    <span>ソース: Reddit / Hacker News / Zenn / ほか22媒体</span>
+  </div>
+</header>
+
+<section class="top3" id="top3">
+  <h2>今週のTOP3</h2>
+  <p class="top3-desc">今週の主題は「OpenAI DevDay — GPT-6.1 Sol・dots・Astra」「ローカルLLM・オープンウェイトの大型化」「n8n・自動化の現場 — 本番運用と受託の現実」。全105本の入口としてこの3本。</p>
+  <div class="top3-grid">
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">01</span>
+        <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+      </div>
+      <div class="pick-body">
+        <h3><a href="https://news.ycombinator.com/item?id=49896586" target="_blank" rel="noopener">GPT-6.1 Sol：Astraに近い知性を5分の1の価格で</a></h3>
+        <p class="summary">OpenAIがDevDayで発表。GPT-6 Astra級の知性を価格5分の1で提供するとし、HN本日トップスコア・686コメントの反響。 先週のGPT-6.1 Astra関連報道から続くOpenAIモデル群の新ラインナップ。</p>
+        <p class="why">今週の「OpenAI DevDay — GPT-6.1 Sol・dots・Astra」の中心にある記事。反響はHN 748pt。</p>
+        <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 748pt</span></div>
+      </div>
+    </article>
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">02</span>
+        <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+      </div>
+      <div class="pick-body">
+        <h3><a href="https://news.ycombinator.com/item?id=49913571" target="_blank" rel="noopener">Gemini 4 Argon</a></h3>
+        <p class="summary">Googleが新フロンティアモデルGemini 4 Argonを発表。週内HN最高スコアで圧倒的な反響。 10/1に公式ブログ・国内解説が一斉に出た。</p>
+        <p class="why">今週の「Gemini 4 Argon・Google の動き」の中心にある記事。反響はHN 870pt。</p>
+        <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 870pt</span></div>
+      </div>
+    </article>
+    <article class="pick">
+      <div class="thumb-wrap">
+        <span class="rank">03</span>
+        <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+      </div>
+      <div class="pick-body">
+        <h3><a href="https://news.ycombinator.com/item?id=49923692" target="_blank" rel="noopener">Clef: Cloudflareのオープンウェイト意思決定モデルと新RLファインチューニングプラットフォーム</a></h3>
+        <p class="summary">Cloudflareがオープンウェイトの意思決定モデル群とRLファインチューニング基盤を公開。 先週のJev余波がプロトコル対応・OSSモデルへ広がる流れの続報。</p>
+        <p class="why">今週の「決定モデルの定着 — Clef・Jeff・llama.cpp」の中心にある記事。反響はHN 403pt。</p>
+        <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 403pt</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li class="top3-link"><a href="#top3"><span class="num">★</span><span class="label">今週のTOP3</span><span class="cnt">3</span></a></li>
+    <li class="lead-cat"><a href="#c1"><span class="num">01</span><span class="label">OpenAI DevDay — GPT-6.1 Sol・dots・Astra</span><span class="weight"><i style="width:50%"></i></span><span class="cnt">9</span></a></li>
+    <li><a href="#c2"><span class="num">02</span><span class="label">Gemini 4 Argon・Google の動き</span><span class="weight"><i style="width:39%"></i></span><span class="cnt">7</span></a></li>
+    <li><a href="#c3"><span class="num">03</span><span class="label">Claude 5.5 運用期 — Sonnet 5.5・性能論争・提携</span><span class="weight"><i style="width:67%"></i></span><span class="cnt">12</span></a></li>
+    <li><a href="#c4"><span class="num">04</span><span class="label">Claude Code 実践 — mod 対応・ルーティン・作業環境</span><span class="weight"><i style="width:61%"></i></span><span class="cnt">11</span></a></li>
+    <li><a href="#c5"><span class="num">05</span><span class="label">Coding Agent 手法 — レビュー・ループ・メモリ設計</span><span class="weight"><i style="width:56%"></i></span><span class="cnt">10</span></a></li>
+    <li><a href="#c6"><span class="num">06</span><span class="label">エージェント基盤・権限・安全性</span><span class="weight"><i style="width:61%"></i></span><span class="cnt">11</span></a></li>
+    <li><a href="#c7"><span class="num">07</span><span class="label">決定モデルの定着 — Clef・Jeff・llama.cpp</span><span class="weight"><i style="width:33%"></i></span><span class="cnt">6</span></a></li>
+    <li class="lead-cat"><a href="#c8"><span class="num">08</span><span class="label">ローカルLLM・オープンウェイトの大型化</span><span class="weight"><i style="width:61%"></i></span><span class="cnt">11</span></a></li>
+    <li><a href="#c9"><span class="num">09</span><span class="label">仕事・組織・PM への波及</span><span class="weight"><i style="width:56%"></i></span><span class="cnt">10</span></a></li>
+    <li class="lead-cat"><a href="#c10"><span class="num">10</span><span class="label">n8n・自動化の現場 — 本番運用と受託の現実</span><span class="weight"><i style="width:100%"></i></span><span class="cnt">18</span></a></li>
+  </ol>
+</nav>
+
+<section class="cat major" id="c1">
+  <h2 class="cat-title"><span class="cat-num">01</span>OpenAI DevDay — GPT-6.1 Sol・dots・Astra</h2>
+  <p class="cat-desc">9本</p>
+
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49896586" target="_blank" rel="noopener">GPT-6.1 Sol：Astraに近い知性を5分の1の価格で</a></h3>
+      <p class="summary">OpenAIがDevDayで発表。GPT-6 Astra級の知性を価格5分の1で提供するとし、HN本日トップスコア・686コメントの反響。 先週のGPT-6.1 Astra関連報道から続くOpenAIモデル群の新ラインナップ。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 748pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49896604" target="_blank" rel="noopener">Dots：常時稼働エージェント（OpenAI）</a></h3>
+      <p class="summary">GPT-6 Astra搭載で、ユーザー定義のタスクをクラウド上で24時間自律実行する常時稼働エージェント。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 446pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49927747" target="_blank" rel="noopener">ChatGPTのサイト構築機能「Sites in ChatGPT」</a></h3>
+      <p class="summary">ChatGPTから直接ウェブサイトを作成・公開できる新機能。AIアシスト型のノーコードサイトビルダー。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 194pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://www.itmedia.co.jp/aiplus/article/ogp/2609/30/2000001864/10007929/2048" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=itmedia.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;itmedia.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.itmedia.co.jp/aiplus/article/2609/30/2000001864/" target="_blank" rel="noopener">OpenAI、「dots」発表　GPT-6 Astra搭載・クラウド上で常時稼働する24時間エージェント</a></h3>
+      <p class="summary">国内報道によるdotsの紹介。設定したタスクを継続的に自律実行する仕組みを整理。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">itmedia.co.jp</span><span class="tag">はてブ 27 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/OpenAI/comments/1w6hf6g/gpt6_astra_openai/" target="_blank" rel="noopener">GPT-6 Astra | OpenAI（公式発表）</a></h3>
+      <p class="summary">次世代フラッグシップモデルGPT-6 Astraの公式発表スレッド。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/OpenAI/comments/1wwq6yn/openai_publishes_a_model_guide_for_the_gpt6/" target="_blank" rel="noopener">OpenAIがGPT-6ファミリーのモデルガイドを公開</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/OpenAI/comments/1wcsciq/introducing_chatgpt_for_financial_services_openai/" target="_blank" rel="noopener">ChatGPT for Financial Servicesを発表</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49919910" target="_blank" rel="noopener">GPT-Synopsys: OpenAI×Synopsysによるフロンティア知性でチップ設計を革新</a><span class="src">Hacker News</span><span class="tag">HN 164pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=zenn.dev" alt="" loading="lazy"><a href="https://zenn.dev/schroneko/articles/openai-devday-2026" target="_blank" rel="noopener">OpenAI DevDay 2026 発表まとめ</a><span class="src">Zenn</span><span class="tag">はてブ 22 users</span></li>
+  </ul>
+</section>
+
+<section class="cat minor" id="c2">
+  <h2 class="cat-title"><span class="cat-num">02</span>Gemini 4 Argon・Google の動き</h2>
+  <p class="cat-desc">7本</p>
+
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49913571" target="_blank" rel="noopener">Gemini 4 Argon</a></h3>
+      <p class="summary">Googleが新フロンティアモデルGemini 4 Argonを発表。週内HN最高スコアで圧倒的な反響。 10/1に公式ブログ・国内解説が一斉に出た。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 870pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://www.itmedia.co.jp/news/article/ogp/2610/04/2000001987/10008359/2048" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=itmedia.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;itmedia.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.itmedia.co.jp/news/article/2610/04/2000001987/" target="_blank" rel="noopener">個人向けGeminiのモデル選択が厳格化　無料ユーザーが使えるのは「Flash-Lite」のみに</a></h3>
+      <p class="summary">個人向けGeminiのモデルアクセスを再編。無料プランはFlash-Liteのみ、高機能モデルは有料プランへ移行。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">itmedia.co.jp</span><span class="tag hot">はてブ 249 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.width-1300.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=blog.google&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;blog.google&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">Gemini 4 Argon: our next era of frontier intelligence</a></h3>
+      <p class="summary">Google公式ブログによる発表。フロンティアインテリジェンスの新世代と位置づけている。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">blog.google</span><span class="tag">はてブ 71 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://assets.st-note.com/production/uploads/images/318873135/rectangle_large_type_2_068d81e17d318c19e62559f53e449839.jpeg?fit=bounds&amp;quality=85&amp;width=1280" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=note.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;note.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://note.com/google_gemini/n/n41b26131f477" target="_blank" rel="noopener">非エンジニアでもできる！社内用語辞典を育てるAIエージェントを作ってみた</a></h3>
+      <p class="summary">Google Gemini活用で、社内用語辞典をAIエージェントが自律更新する仕組みの構築実録。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">note</span><span class="tag">note 203 スキ</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/gsuite/comments/1wuu882/my_readonly_workspace_audit_script_now_tells_you/" target="_blank" rel="noopener">Workspace監査スクリプトが「確認した内容」も出力するようにアップデートした</a></h3>
+      <p class="summary">読み取り専用のWorkspace監査スクリプトが「確認した項目」もレポートするよう改良された実装共有。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/gsuite/comments/1ww3s05/my_side_project_approved_on_the_workspace/" target="_blank" rel="noopener">Workspace Marketplaceに1時間でサイドプロジェクトが承認された</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=techno-edge.net" alt="" loading="lazy"><a href="https://www.techno-edge.net/article/2026/10/01/5543.html" target="_blank" rel="noopener">Google、新フロンティアモデルGemini 4 Argon発表（テクノエッジ解説）</a><span class="src">techno-edge.net</span><span class="tag">はてブ 12 users</span></li>
+  </ul>
+</section>
+
+<section class="cat" id="c3">
+  <h2 class="cat-title"><span class="cat-num">03</span>Claude 5.5 運用期 — Sonnet 5.5・性能論争・提携</h2>
+  <p class="cat-desc">12本</p>
+
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49970667" target="_blank" rel="noopener">Opus 5.5エージェントが室温磁性半導体の候補を2件発見</a></h3>
+      <p class="summary">vals.aiがOpus 5.5による材料科学研究で候補2件を発見したと発表。エージェントによる科学的発見の実証事例。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 178pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wsly42/introducing_claude_sonnet_55_the_second_model_in/" target="_blank" rel="noopener">Claude Sonnet 5.5を発表—Claude 5.5ファミリー第2弾</a></h3>
+      <p class="summary">先週29日に公開されたSonnet 5.5の公式発表スレッドが10/1〜10/5にかけて繰り返し上位に入った。 Opus 5.5に続くClaude 5.5ファミリー第2弾としての位置づけを議論。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wvypbl/the_app_i_dreamed_of_thank_opus_55/" target="_blank" rel="noopener">夢見ていたアプリが完成。Opus 5.5のおかげ</a></h3>
+      <p class="summary">長年温めていたアプリをOpus 5.5で実現できたという体験談。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wuemyx/opus_55_blender_mcp_free_google_api_20_minutes/" target="_blank" rel="noopener">Opus 5.5 + Blender MCP + Google API = 20分作業</a></h3>
+      <p class="summary">Opus 5.5とBlender MCP、無料Google APIを組み合わせた20分の実装デモ。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wx0v9b/65_billion_tokens_in_12_days/" target="_blank" rel="noopener">12日間で65億トークン</a></h3>
+      <p class="summary">Claude Codeを12日間集中使用して65億トークンを消費した事例。エージェント活用規模の感覚値。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wxex89/when_did_claude_stop_being_an_assistant_and_start/" target="_blank" rel="noopener">Claudeはいつからアシスタントではなくユーザーを管理するようになったのか？</a></h3>
+      <p class="summary">Claudeのエージェント的な振る舞いの変化を指摘し、自律性とユーザー主導のバランスを議論。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/ClaudeCode/comments/1wxqy2j/opus_55_and_gpt61_fills_my_brain_context_too/" target="_blank" rel="noopener">Opus 5.5とGPT-6.1では脳のコンテキストがすぐ埋まってしまう</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49946567" target="_blank" rel="noopener">Opus 5.5をClaude and Claude Codeで最大活用する方法</a><span class="src">Hacker News</span><span class="tag">HN 146pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49901736" target="_blank" rel="noopener">Livenerf：Opus 5.5はナーフ（性能低下）されたか？</a><span class="src">Hacker News</span><span class="tag">HN 109pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=qiita.com" alt="" loading="lazy"><a href="https://qiita.com/moritalous/items/1b6a05842724fc1fff66" target="_blank" rel="noopener">BedrockのClaudeに暗黙的なプロンプトキャッシュが登場</a><span class="src">Qiita</span><span class="tag">はてブ 15 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=kn.itmedia.co.jp" alt="" loading="lazy"><a href="https://kn.itmedia.co.jp/kn/article/2610/02/2000001932/" target="_blank" rel="noopener">「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」</a><span class="src">kn.itmedia.co.jp</span><span class="tag">はてブ 8 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=diamond.jp" alt="" loading="lazy"><a href="https://diamond.jp/articles/-/400443" target="_blank" rel="noopener">日立製作所とアンソロピックが提携、「米国AIの軍門に降った」と思う人が知らない事実</a><span class="src">diamond.jp</span><span class="tag">はてブ 7 users</span></li>
+  </ul>
+</section>
+
+<section class="cat" id="c4">
+  <h2 class="cat-title"><span class="cat-num">04</span>Claude Code 実践 — mod 対応・ルーティン・作業環境</h2>
+  <p class="cat-desc">11本</p>
+
+  <article class="entry tier-1">
+    <img class="thumb" src="https://eiji.page/og/ai-skill-eli5-is-great.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=eiji.page&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;eiji.page&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://eiji.page/blog/ai-skill-eli5-is-great" target="_blank" rel="noopener">全体像が知りたいんだよォー！そんな時は図解スキルeli5が便利</a></h3>
+      <p class="summary">複雑な技術の全体像を即座に図解してくれるClaude CodeのAgent Skill。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">eiji.page</span><span class="tag hot">はてブ 121 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://opengraph.githubassets.com/1f2faf917c633989c49ba4c562c2493757092cef53806de76ea4e5c4e06ab742/nanaism/yomiyasu" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=github.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;github.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">AI生成した文章を自然な日本語に書き直すAgent Skill「yomiyasu」</a></h3>
+      <p class="summary">AI生成文の不自然さを構造レベルで検出・修正するAgent Skill。同週に作者による技術解説記事（75 users）も公開。 解説記事: https://zenn.dev/algoartis/articles/0b1c731881b25c</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">github.com</span><span class="tag hot">はてブ 97 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://tellme.tokyo/og.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=tellme.tokyo&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;tellme.tokyo&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://tellme.tokyo/post/2026/10/01/ai-agent-first-dotfiles/" target="_blank" rel="noopener">dotfiles を AI agent のために作り変えた</a></h3>
+      <p class="summary">ターミナルのdotfilesをAIエージェントが使いやすい形に再設計した実践レポート。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">tellme.tokyo</span><span class="tag">はてブ 49 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://cdn.image.st-hatena.com/image/scale/f35bcf77e8499c1266ad2f1e5ab877401dba397c/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ft%2Ftech-rakus%2F20261005%2F20261005102405.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=tech-blog.rakus.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;tech-blog.rakus.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://tech-blog.rakus.co.jp/entry/20261005/claude-code-routines" target="_blank" rel="noopener">Claude Codeのルーティンを利用した開発フローの自動化</a></h3>
+      <p class="summary">RAKUSエンジニアによる事例。定型的な開発タスクをルーティン化して自動実行する構成の設計と実装。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">tech-blog.rakus.co.jp</span><span class="tag">はてブ 47 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wye4ix/i_just_wanted_to_try_the_new_claude_code_mods_i/" target="_blank" rel="noopener">Claude Codeのモッドを試してみたら、作りも買ってもいない物理的なモノが机の上にあった</a></h3>
+      <p class="summary">新しいmod機能を試したところ、コード生成を超えて物理的な製作物が完成したという体験共有。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1ww2ss4/my_workflow_as_product_and_process_owner/" target="_blank" rel="noopener">プロダクト/プロセスオーナーとしての私のワークフロー</a></h3>
+      <p class="summary">プロダクトとプロセス両方を担う立場でのClaude Code活用ワークフロー実践例。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/nocode/comments/1wtko0j/i_built_a_free_selfhosted_ad_tracker_crm_with/" target="_blank" rel="noopener">Claude Codeで無料のセルフホスト広告トラッカー+CRMを構築</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=github.com" alt="" loading="lazy"><a href="https://github.com/mizchi/explainer" target="_blank" rel="noopener">GitHub - mizchi/explainer：AIが概念を人間に説明するSkillsとtools</a><span class="src">github.com</span><span class="tag">はてブ 26 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=tech-lab.sios.jp" alt="" loading="lazy"><a href="https://tech-lab.sios.jp/archives/54936" target="_blank" rel="noopener">オレのClaude Code作業環境、控えめにいって最高すぎる〜Stream Deckでherdrを操作、完了はずんだもんが読み上げ〜</a><span class="src">tech-lab.sios.jp</span><span class="tag">はてブ 20 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=lifehacker.jp" alt="" loading="lazy"><a href="https://www.lifehacker.jp/article/2610-use-claude-code-every-day-tasks-nothing-coding/" target="_blank" rel="noopener">Claude Codeは、コードを書かない人こそ使える。散らかったフォルダもWindowsのエラーも「頼むだけ」で片づいた</a><span class="src">lifehacker.jp</span><span class="tag">はてブ 18 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=techno-edge.net" alt="" loading="lazy"><a href="https://www.techno-edge.net/article/2026/10/02/5550.html" target="_blank" rel="noopener">Claude Codeが拡張機能「mod」対応、UIや動作をカスタマイズ</a><span class="src">techno-edge.net</span><span class="tag">はてブ 12 users</span></li>
+  </ul>
+</section>
+
+<section class="cat" id="c5">
+  <h2 class="cat-title"><span class="cat-num">05</span>Coding Agent 手法 — レビュー・ループ・メモリ設計</h2>
+  <p class="cat-desc">10本</p>
+
+  <article class="entry tier-1">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--NK9_lu5L--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BF%25BA%25E3%2581%25AEAI%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E6%2589%258B%25E6%25B3%2595%25282026%252F10%252F05%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mizchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2liclRHT052Z3d3ay1fNGxlcVk4TGNGSlNuX0FoWnpEWVlKaXJNcWc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/mizchi/articles/ai-coding-loop-formal" target="_blank" rel="noopener">俺のAIプログラミング手法(2026/10/05)</a></h3>
+      <p class="summary">mizchiによるAIプログラミングの個人的方法論の体系化。LLMとのループ設計・エラー処理・コンテキスト管理の実践知を形式化。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Zenn</span><span class="tag hot">はてブ 412 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://type.jp/et/feature/wp-content/uploads/2026/10/takuto-wada-coding-review-og.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=type.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;type.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://type.jp/et/feature/31834/" target="_blank" rel="noopener">AIでコード生成は加速、でも人間の確認が追いつかない問題。t-wadaが示す「レビュー解体」という答え</a></h3>
+      <p class="summary">AI時代のコードレビュー危機に対する提案。AI生成コードの品質保証の設計論。 10/1にはてブで伸びた「コードレビューは人ではなく仕組みに向けろ」論とも地続き。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">type.jp</span><span class="tag hot">はてブ 265 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://assets.st-note.com/production/uploads/images/319433083/rectangle_large_type_2_77066a1f0a47615e85d5606f4b1f90ef.png?fit=bounds&amp;quality=85&amp;width=1280" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=note.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;note.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://note.com/npaka/n/n2b9c36c471b6" target="_blank" rel="noopener">Codex Security ・ Claude Security 入門｜npaka</a></h3>
+      <p class="summary">Codex・ClaudeのSecurity機能の入門解説。AIコーディングツールのセキュリティチェック自動化フロー。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">note</span><span class="tag hot">はてブ 134 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--XurFM321--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci8yZTdiNGE2MTg1LmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/sc30gsw/books/080faba713547b" target="_blank" rel="noopener">AIエージェントに開発を任せる環境をつくる ―月2,500件のPRを支えた開発基盤</a></h3>
+      <p class="summary">Cursorのpstackで月2,500件のPRを捌くAIエージェント開発環境の設計・構築ガイド。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Zenn</span><span class="tag">はてブ 30 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://res.cloudinary.com/zenn/image/upload/s--s2BPhy_r--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B6%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2593%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2581%25AEAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E3%2581%25A9%25E3%2581%2586%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yoshi%2520Yamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dMOUN2MU9tRlBwUUcwY0pWOHZUeW1SZ3ViT3VaWnplQ01HUTJjMHRnPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=zenn.dev&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;zenn.dev&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop" target="_blank" rel="noopener">オブザーバビリティのAIエージェントをどう評価するか</a></h3>
+      <p class="summary">オブザーバビリティ領域でAIエージェントを導入する際の評価ループ設計の考え方。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Zenn</span><span class="tag">はてブ 28 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/ClaudeCode/comments/1wwzw33/nothing_beats_a_database_for_agent_memory/" target="_blank" rel="noopener">エージェントメモリにはデータベースが最強</a></h3>
+      <p class="summary">Claude Codeエージェントのメモリ永続化にDBを使う設計パターン。上記の「ドキュメント派」と対照的。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49938616" target="_blank" rel="noopener">すべてのSaaSビジネスはモデル中心のハーネスになる</a><span class="src">Hacker News</span><span class="tag">HN 77pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=cognition.com" alt="" loading="lazy"><a href="https://cognition.com/agent-memory-repo" target="_blank" rel="noopener">Agent Memory Repo | Cognition</a><span class="src">cognition.com</span><span class="tag">はてブ 12 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49901973" target="_blank" rel="noopener">Vibe Codingで作ったウェブサイトがデザイナー作に見える方法</a><span class="src">Hacker News</span><span class="tag">HN 40pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49945933" target="_blank" rel="noopener">エージェントにメモリは不要、必要なのはドキュメントだ</a><span class="src">Hacker News</span><span class="tag">HN 27pt</span></li>
+  </ul>
+</section>
+
+<section class="cat" id="c6">
+  <h2 class="cat-title"><span class="cat-num">06</span>エージェント基盤・権限・安全性</h2>
+  <p class="cat-desc">11本</p>
+
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49926069" target="_blank" rel="noopener">Pi 1.0：分散型耐障害性コンピューティングプラットフォーム</a></h3>
+      <p class="summary">earendilによる耐障害性コンピューティングPi 1.0の正式リリース。10/2のHN最上位。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 661pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49906637" target="_blank" rel="noopener">MCPを「ノー」と言った話</a></h3>
+      <p class="summary">MCP採用を見送った開発者の判断理由と代替アプローチの考察。週内HN上位の議論。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 596pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49963171" target="_blank" rel="noopener">CloudflareがWeb Search APIをリリース</a></h3>
+      <p class="summary">Web検索を直接呼び出せるAPIが正式リリース。エージェントや自動化ツールから低コストで検索を組み込める。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 476pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49923466" target="_blank" rel="noopener">ベクターデータベースのR.I.P.</a></h3>
+      <p class="summary">ベクターDB専用製品が主流データベースへのネイティブ統合に置き換えられていく流れの解説。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 261pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49925969" target="_blank" rel="noopener">Pi Durable：耐障害性実行エンジン</a></h3>
+      <p class="summary">Pi 1.0の耐障害性実行（Durable Execution）エンジンの詳細仕様と使い方。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 189pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wx8ruy/metas_muse_agent_1_in_the_app_store_system_prompt/" target="_blank" rel="noopener">MetaのMuseエージェント（App Store 1位）のシステムプロンプト</a></h3>
+      <p class="summary">システムプロンプトに「ユーザーの権限は安全トレーニングより優先される」旨の指示が含まれていることが判明し炎上。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=speakerdeck.com" alt="" loading="lazy"><a href="https://speakerdeck.com/mtpooh/20261001-des37-mcpass" target="_blank" rel="noopener">MCPゲートウェイを作って運用してわかったこと — Agent時代の権限管理の現在地</a><span class="src">speakerdeck.com</span><span class="tag">はてブ 26 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=gigazine.net" alt="" loading="lazy"><a href="https://gigazine.net/news/20261001-magnitude/" target="_blank" rel="noopener">Magnitude (YC S25) – エージェント向け自己最適化推論エンジン</a><span class="src">gigazine.net</span><span class="tag">HN 120pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=kobonemi.com" alt="" loading="lazy"><a href="https://www.kobonemi.com/entry/2026/10/03/macOS-27-Full-Disk-Access-Additional-Controls" target="_blank" rel="noopener">AppleがAIエージェントのリスクを鑑みMacのフルディスクアクセスに制限を設ける</a><span class="src">kobonemi.com</span><span class="tag">はてブ 17 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=cloud.google.com" alt="" loading="lazy"><a href="https://cloud.google.com/blog/ja/products/identity-security/getting-started-with-the-mantis-harness-to-find-an" target="_blank" rel="noopener">バグの発見と修正を支援するオープンソースのAIハーネス、Mantisのスタートガイド</a><span class="src">cloud.google.com</span><span class="tag">はてブ 13 users</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49937304" target="_blank" rel="noopener">Show HN: Pi pod – 自サーバーでpiコーディングエージェントをサンドボックス実行</a><span class="src">Hacker News</span><span class="tag">HN 71pt</span></li>
+  </ul>
+</section>
+
+<section class="cat minor" id="c7">
+  <h2 class="cat-title"><span class="cat-num">07</span>決定モデルの定着 — Clef・Jeff・llama.cpp</h2>
+  <p class="cat-desc">6本</p>
+
+  <article class="entry tier-1">
+    <img class="thumb" src="https://i.gzn.jp/img/2026/09/29/jeff/00.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=gigazine.net&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;gigazine.net&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://gigazine.net/news/20260929-jeff/" target="_blank" rel="noopener">無料でJev互換の小型高速意思決定モデル「Jeff」、ローカル環境で約22〜28ミリ秒と爆速</a></h3>
+      <p class="summary">TypeSafe AI製Jevモデルと同フォーマットの0.8B意思決定モデルをOSS公開。ローカルで推論約22〜28ms。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">gigazine.net</span><span class="tag">はてブ 78 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49923692" target="_blank" rel="noopener">Clef: Cloudflareのオープンウェイト意思決定モデルと新RLファインチューニングプラットフォーム</a></h3>
+      <p class="summary">Cloudflareがオープンウェイトの意思決定モデル群とRLファインチューニング基盤を公開。 先週のJev余波がプロトコル対応・OSSモデルへ広がる流れの続報。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 403pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wv4zzi/clef_open_weights_decision_model_by_cloudflare/" target="_blank" rel="noopener">Clef: Cloudflareのオープンウェイト意思決定モデル</a></h3>
+      <p class="summary">Clefをローカル運用の観点から議論するスレッド。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wvv6im/new_in_llamacpp_decision_models/" target="_blank" rel="noopener">llama.cppの新機能：デシジョンモデル</a></h3>
+      <p class="summary">llama.cppにClef風の軽量デシジョンモデルが統合。ワークフロー内の条件分岐をLLMで制御できる。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wu96pk/n8n_adds_support_for_jev_with_free_gateway/" target="_blank" rel="noopener">n8nがJevとの連携追加、10月10日まで無料Gatewayクレジット提供</a></h3>
+      <p class="summary">n8nがJevプロトコル対応を追加。10/10までの期間限定で無料Gatewayクレジットを提供。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=blog.cloudflare.com" alt="" loading="lazy"><a href="https://blog.cloudflare.com/clef-decision-models/" target="_blank" rel="noopener">Introducing Clef: our open-source decision models, and new RL fine-tuning platform</a><span class="src">blog.cloudflare.com</span><span class="tag">はてブ 25 users</span></li>
+  </ul>
+</section>
+
+<section class="cat major" id="c8">
+  <h2 class="cat-title"><span class="cat-num">08</span>ローカルLLM・オープンウェイトの大型化</h2>
+  <p class="cat-desc">11本</p>
+
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49953495" target="_blank" rel="noopener">コンシューマーハードウェア（RTX 4090）でQwen 3.8 Flash Next（125B）を100トークン/秒で実行</a></h3>
+      <p class="summary">RTX 4090 1枚で125BのMoEモデルを100T/s以上で動かすOSS「Strata」の発表。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 571pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49942706" target="_blank" rel="noopener">Kolibri: 主権型オープンウェイトモデル</a></h3>
+      <p class="summary">Aleph Alphaが78B・アクティブ3.46B・最大1Mコンテキストのモデルを公開。 Reddit側（Kolibri-1）ではApache 2.0ライセンス・78Bパラメータとして紹介された。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag hot">HN 481pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=news.ycombinator.com" alt="" loading="lazy"><span>news.ycombinator.com</span></div>
+    <div>
+      <h3><a href="https://news.ycombinator.com/item?id=49969183" target="_blank" rel="noopener">Beam: Reflectionの5010億パラメータオープンウェイトモデル</a></h3>
+      <p class="summary">Reflection AIが501Bパラメータのオープンウェイトモデルを発表。GPT-4クラスの性能をオープンに提供。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Hacker News</span><span class="tag">HN 277pt</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wx1bi1/strata_qwen_38_flash_next_is_the_biggest_thing/" target="_blank" rel="noopener">Strata Qwen 3.8 flash nextはQwen 3.8 27b登場以来最大のできごと</a></h3>
+      <p class="summary">Strata経由のQwen 3.8 Flash Nextの性能評価スレッド。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wwwmy1/running_qwen38_flash_next_176b_on_a_16gb_rtx_3080/" target="_blank" rel="noopener">16GB RTX 3080 Laptop + 32GB RAM + SSDでQwen3.8 Flash Next 176Bを動かす</a></h3>
+      <p class="summary">低スペック環境での176B MoE実行レポート。オフロード設定と速度のトレードオフ。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wyh03u/llamacpp_v060_released_with_mtp_speculative/" target="_blank" rel="noopener">llama.cpp v0.6.0リリース：QwenExp向けMTP投機的デコーディングと多数の新機能</a></h3>
+      <p class="summary">Qwen4Exp向けの投機的デコーディング（MTP）が実装され、推論速度が大幅改善。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wvz1ex/i_made_my_iphone_a_second_gpu_for_my_24_gb/" target="_blank" rel="noopener">iPhoneを24GBのMacBookの第2GPUとして使いQwen 3.8 27BをPrefill 29〜44%高速化</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wufzrh/qwen3827bpi_effortordered_reasoning_for_agentic/" target="_blank" rel="noopener">Qwen3.8-27B-pi：エージェント向けコーディングの効率順推論</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wwu6zj/the_rise_of_overfit_inference_engines/" target="_blank" rel="noopener">オーバーフィット推論エンジンの台頭</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49936575" target="_blank" rel="noopener">Redisの開発者が作るローカルLLM実行ツール「ds4/dwarfstar」</a><span class="src">Hacker News</span><span class="tag">HN 125pt</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=news.ycombinator.com" alt="" loading="lazy"><a href="https://news.ycombinator.com/item?id=49934620" target="_blank" rel="noopener">GLM 5.3 Flashで1ヶ月コーディングして分かったこと</a><span class="src">Hacker News</span><span class="tag">HN 95pt</span></li>
+  </ul>
+</section>
+
+<section class="cat" id="c9">
+  <h2 class="cat-title"><span class="cat-num">09</span>仕事・組織・PM への波及</h2>
+  <p class="cat-desc">10本</p>
+
+  <article class="entry tier-1">
+    <img class="thumb" src="https://www.itmedia.co.jp/news/article/ogp/2609/29/2000001854/10007888/2048" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=itmedia.co.jp&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;itmedia.co.jp&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://www.itmedia.co.jp/news/article/2609/29/2000001854/" target="_blank" rel="noopener">IIJ、新人エンジニア向け研修教材を無料公開　生成AI活用まで20講義超</a></h3>
+      <p class="summary">「IIJ Bootcamp」2026年度版を無償公開。Web基礎からAWS・コンテナ・生成AI活用まで20講義超。週内のはてブ最高クラスの反響。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">itmedia.co.jp</span><span class="tag hot">はてブ 444 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <img class="thumb" src="https://resources.portalshit.net/b0f4affb3031b2605835590f81748b7a.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=portalshit.net&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;portalshit.net&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://portalshit.net/2026/10/03/ai-is-eating-product-management" target="_blank" rel="noopener">AI に仕事を奪われるのはエンジニアではなくプロダクトマネージャーの方だった</a></h3>
+      <p class="summary">コード生成が自動化されるほど、人間に残るのは「何を作るか」の意思決定。PM職がAI代替リスクに直面しているという論考。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">portalshit.net</span><span class="tag hot">はてブ 319 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://s.tgstc.com/ogp3/357559ffd5cd82a66695db51f44fe2c8-1200x630.jpeg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=togetter.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;togetter.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://togetter.com/li/2753949" target="_blank" rel="noopener">AIでの人員削減は現実的ではないと希望で語る人がいる中、外注はゼロにして社内の人間を20人から4人にした経営者の経験談を語る</a></h3>
+      <p class="summary">AI活用による組織スリム化の実例。外注廃止・社内人員を1/5に圧縮した中小企業経営者の体験談まとめ。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">togetter.com</span><span class="tag hot">はてブ 118 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://files.speakerdeck.com/presentations/fcd8323c5fc24005a3f3257386682bd2/slide_0.jpg?39026644" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=speakerdeck.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;speakerdeck.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://speakerdeck.com/pauli/how-to-hand-over-the-decision-making-process" target="_blank" rel="noopener">「決め方」の渡し方</a></h3>
+      <p class="summary">意思決定プロセス自体を組織に渡す設計論。受託開発・チームマネジメントの文脈にも触れる。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">speakerdeck.com</span><span class="tag">はてブ 75 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=voluntas.ghost.io&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;voluntas.ghost.io&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://voluntas.ghost.io/2026-10-first-half-llm/" target="_blank" rel="noopener">2026 年 10 月前半の LLM 利用状況</a></h3>
+      <p class="summary">実務者視点での10月前半のLLM活用状況。モデル別の使用感・切替動向を記録。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">voluntas.ghost.io</span><span class="tag">はてブ 67 users</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <img class="thumb" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnNlY3VyZS5ncmF2YXRhci5jb20lMkZhdmF0YXIlMkYzZDg4MjZmNWJmOTkzNmM5ZTU1MmE2NzNmMDRkOGNmMz9peGxpYj1yYi00LjEuMSZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9MGIzYTJjMGU3MjljMDM4NjFkMWFmNDIzMTE0ZGZkOGY%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY0ZDAzMGQzMDliM2M0YzNlMmRiZTJjNTU0ODAzYWUwZjY1NGI5OGU3JTJGb3JpZ2luYWwuanBnJTNGMTY3OTA0MTQzNT9peGxpYj1yYi00LjEuMSZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz0yYmI2NThkMmE3OGI0NTFkNWI2YjQ3YzQ1ZWIzMjM3MQ%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D7d2949bbd0899b87aa8e5ebb36bf4652?ixlib=rb-4.1.1&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9QUklRTMlODIlOTIlRTYlQTUlQUQlRTUlOEIlOTklRTYlOTQlQjklRTUlOTYlODQlRTMlODElQUIlRTMlODElQTQlRTMlODElQUElRTMlODElOTIlRTMlODIlOEIlRTMlODElOUYlRTMlODIlODElRTMlODElQUU1JUUzJTgyJUI5JUUzJTgzJTg2JUUzJTgzJTgzJUUzJTgzJTk3JTIwJUUyJTgwJTk1JTIwJUUzJTgyJUI1JUUzJTgzJUJDJUUzJTgzJTkzJUUzJTgyJUI5JUUzJTgzJTg3JUUzJTgyJUI2JUUzJTgyJUE0JUUzJTgzJUIzJUUzJTgyJTkyJUU2JUI0JUJCJUU3JTk0JUE4JUUzJTgxJTk3JUUzJTgxJTlGJUU4JUE2JTgxJUU0JUJCJUI2JUU1JUFFJTlBJUU3JUJFJUE5JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9YjJlMzc5Y2YxY2JkZDQ1NzEzMWRkY2FiMDI3MWVhM2M&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBUYW1ha2lTZWtpJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9NTlkYzkzZjQyMjBkOGM5N2Q5ZGFiMmIxNWRlMjM3NTY&amp;blend-x=242&amp;blend-y=454&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;txt64=QklQUk9HWeagquW8j-S8muekvg&amp;txt-x=242&amp;txt-y=539&amp;txt-width=838&amp;txt-clip=end%2Cellipsis&amp;txt-color=%231E2121&amp;txt-font=Hiragino%20Sans%20W6&amp;txt-size=28&amp;s=25a42210b88878f7f2181c7a6ede2063" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.outerHTML=&quot;&lt;div class=&#x27;thumb-fallback&#x27;&gt;&lt;img src=&#x27;https://www.google.com/s2/favicons?sz=64&amp;domain=qiita.com&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;span&gt;qiita.com&lt;/span&gt;&lt;/div&gt;&quot;">
+    <div>
+      <h3><a href="https://qiita.com/TamakiSeki/items/ac268db56f92b991970b" target="_blank" rel="noopener">AIを業務改善につなげるための5ステップ ― サービスデザインを活用した要件定義</a></h3>
+      <p class="summary">生成AI・AIエージェントを業務改善に活かすための要件定義5ステップ。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Qiita</span><span class="tag">はてブ 57 users</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/programming/comments/1wyo5ne/state_of_devs_2026_survey_results_developers_are/" target="_blank" rel="noopener">State of Devs 2026 調査結果：開発者は疲弊している</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=note.com" alt="" loading="lazy"><a href="https://note.com/minato_systems/n/n617137a56e5d" target="_blank" rel="noopener">はじめまして、ミナトです｜AI・自動化を「知識」から「実装」へ</a><span class="src">note</span><span class="tag">note 1505 スキ</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/technology/comments/1wxr6az/sam_altman_to_decoded_the_world_should_accept/" target="_blank" rel="noopener">Sam Altmanが「AI普及のためには悪影響も許容すべき」と発言</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/OpenAI/comments/1wvtedh/were_cooked_this_is_the_first_model_to_pass_the/" target="_blank" rel="noopener">初めてビデオ・チューリングテストを突破したAIモデル</a><span class="src">Reddit</span></li>
+  </ul>
+</section>
+
+<section class="cat major" id="c10">
+  <h2 class="cat-title"><span class="cat-num">10</span>n8n・自動化の現場 — 本番運用と受託の現実</h2>
+  <p class="cat-desc">18本</p>
+
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wtbxdo/selfhosted_n8n_checklist_before_a_client_depends/" target="_blank" rel="noopener">クライアントが本番運用する前にやるべきセルフホストn8nチェックリスト</a></h3>
+      <p class="summary">セキュリティ・スケーリング・モニタリングの観点を網羅したチェックリスト。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-1">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wtdeje/7_checks_i_run_on_every_production_n8n_workflow/" target="_blank" rel="noopener">本番n8nワークフローで毎回確認する7つのチェック</a></h3>
+      <p class="summary">エラーハンドリング・データ検証・ログ設計など、リリース前の7項目。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wu5xjg/one_workflow_was_75_of_my_llm_bill_how_i_measured/" target="_blank" rel="noopener">n8nのLLMコストを91%削減した話</a></h3>
+      <p class="summary">1つのワークフローがLLM費用の75%を占めていた問題をコスト計測で特定し、91%削減。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wwja82/migrated_a_client_from_make_to_n8n_recently_here/" target="_blank" rel="noopener">クライアントをmakeからn8nに移行した際の実際の料金体系の違い</a></h3>
+      <p class="summary">オペレーション課金と実行回数課金の違いを実例で比較。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wxsr8b/how_do_you_actually_hand_off_an_n8n_instagram/" target="_blank" rel="noopener">n8n Instagramチャットボットをeコマースクライアントに引き渡す方法</a></h3>
+      <p class="summary">Meta審査・権限委譲・ドキュメントなど、本番引き渡し手順の質疑スレッド。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wxobpa/scheduledagent_folks_have_you_ever_migrated_a/" target="_blank" rel="noopener">スケジュールエージェントを使っている人へ：ワークフローを移行したことがある？何が壊れた？</a></h3>
+      <p class="summary">バージョン・環境移行で発生する問題の経験談収集スレッド。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1ww2ucc/scheduledagent_folks_how_do_you_force_the_agent/" target="_blank" rel="noopener">スケジュール実行エージェントにブリーフを最初に読ませる方法</a></h3>
+      <p class="summary">スケジュール実行エージェントが確実に指示書を参照するようにする設計パターン。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <article class="entry tier-2">
+    <div class="thumb-fallback"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=reddit.com" alt="" loading="lazy"><span>reddit.com</span></div>
+    <div>
+      <h3><a href="https://www.reddit.com/r/n8n/comments/1wt203w/built_an_n8n_workflow_that_scores_new_form/" target="_blank" rel="noopener">AIでフォーム送信をスコアリングしTelegramに通知するn8nワークフロー構築</a></h3>
+      <p class="summary">新規フォーム投稿をAIでスコアリングし、高スコア案件をTelegramで即時通知する実装共有。</p>
+      <div class="tags"><span class="tag date">2026-10-06</span><span class="tag">Reddit</span><span class="tag">Reddit r/n8n</span></div>
+    </div>
+  </article>
+  <ul class="entry-list">
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/n8n/comments/1wx2q9k/i_built_a_multipage_n8n_form_app_that_makes_ugc/" target="_blank" rel="noopener">マルチページn8nフォーム「アプリ」でUGC動画広告を作るワークフローを構築した</a><span class="src">Reddit</span><span class="tag">Reddit r/n8n</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/n8n/comments/1wtzj4w/3_document_workflows_small_businesses_should_set/" target="_blank" rel="noopener">中小企業が年末までに整備すべき3つのドキュメントワークフロー</a><span class="src">Reddit</span><span class="tag">Reddit r/n8n</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/n8n/comments/1wvi8w6/selling_ai_automations_ruined/" target="_blank" rel="noopener">AI自動化の販売がやりにくくなった理由</a><span class="src">Reddit</span><span class="tag">Reddit r/n8n</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/automation/comments/1wtpinc/ai_agencies_are_selling_prompt_wrappers_that/" target="_blank" rel="noopener">「AIエージェンシー」は90日で壊れるプロンプトラッパーを販売している</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/automation/comments/1wu5en4/unpopular_opinion_most_client_automations_fail/" target="_blank" rel="noopener">クライアント自動化は最初のノードが動く前に失敗する</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/automation/comments/1wwojao/all_the_mistakes_i_made_in_the_last_15_months_as/" target="_blank" rel="noopener">フルタイム自動化プロバイダーとして15ヶ月で犯したすべてのミス</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/automation/comments/1wxgmw4/testing_agent_workflows_without_connecting_real/" target="_blank" rel="noopener">リアルアカウントを接続せずにエージェントワークフローをテストする</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/automation/comments/1wwy2ka/built_a_way_to_automate_phone_apps_that_have_no/" target="_blank" rel="noopener">APIなしのスマホアプリを大規模に自動化する方法を構築した</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/automation/comments/1wxet6n/someone_asked_me_to_automate_neatly_arranging/" target="_blank" rel="noopener">AIで画像をPowerPointに整理する自動化を構築した</a><span class="src">Reddit</span></li>
+    <li class="entry tier-3"><img class="fav" src="https://www.google.com/s2/favicons?sz=32&amp;domain=reddit.com" alt="" loading="lazy"><a href="https://www.reddit.com/r/nocode/comments/1wymq7p/what_if_nocode_worked_inside_the_websites_you/" target="_blank" rel="noopener">ノーコードがもう使っているウェブサイトの中で動いたら？</a><span class="src">Reddit</span></li>
+  </ul>
+</section>
+
+<footer class="foot">
+  <p>Generated 2026-10-06 — companion to <code>20261006-digest.md</code></p>
+</footer>
+
+</div>
+<a href="#top" class="top" title="トップへ">↑</a>
+</body>
+</html>
